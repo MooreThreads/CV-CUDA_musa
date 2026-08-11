@@ -28,10 +28,22 @@ set(CMAKE_POSITION_INDEPENDENT_CODE true)
 set(PYBIND11_PYTHON_VERSION ${PYTHON_VERSION})
 add_subdirectory(${PYBIND11_SOURCE_DIR} pybind11)
 
+if(USE_MUSA)
+    list(PREPEND CMAKE_MODULE_PATH
+        "$ENV{MUSA_HOME}/cmake"
+        "/usr/local/musa/cmake"
+        "/usr/local/musa-5.1.0/cmake")
+endif()
+
 find_package(nvcv_types REQUIRED)
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../src/nvcv/util nvcv_util)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../src/cvcuda/util cvcuda_util)
+if(USE_MUSA)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../src/nvcv/util_musa nvcv_util)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../src/cvcuda/util_musa cvcuda_util)
+else()
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../src/nvcv/util nvcv_util)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../src/cvcuda/util cvcuda_util)
+endif()
 
 set(PYTHON_MODULE_NAME python${PYTHON_VERSION})
 string(REPLACE "." "" PYTHON_MODULE_NAME "${PYTHON_MODULE_NAME}")
@@ -106,6 +118,10 @@ function(cvcuda_python_add_module)
         COMPONENT ${PYTHON_MODULE_NAME}
 )
 endfunction()
+
+if(USE_MUSA)
+    target_compile_definitions(pybind11::pybind11 INTERFACE NVCV_USE_MUSA=1)
+endif()
 
 add_subdirectory(common)
 add_subdirectory(mod_cvcuda)

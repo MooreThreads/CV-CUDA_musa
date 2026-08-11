@@ -14,7 +14,11 @@
 # limitations under the License.
 
 find_package(cvcuda REQUIRED)
-find_package(CUDAToolkit REQUIRED)
+if(USE_MUSA)
+    find_package(MUSAToolkit REQUIRED)
+else()
+    find_package(CUDAToolkit REQUIRED)
+endif()
 
 # Set up dlpack (needed for NVCV types)
 set(save_policy_0077 ${CMAKE_POLICY_DEFAULT_CMP0077})
@@ -40,6 +44,62 @@ add_custom_command(OUTPUT ${dtype_defs}
     COMMAND ${dtype_script} "${dtype_header}" > ${dtype_defs}
     DEPENDS ${dtype_script} ${dtype_header}
 )
+
+set(_cvcuda_python_operator_sources
+    operators/OpResizeCropConvertReformat.cpp
+    operators/OpPairwiseMatcher.cpp
+    operators/OpStack.cpp
+    operators/OpLabel.cpp
+    operators/OpHistogramEq.cpp
+    operators/OpOSD.cpp
+    operators/OpAdvCvtColor.cpp
+    operators/OpSIFT.cpp
+    operators/OpMinMaxLoc.cpp
+    operators/OpHistogram.cpp
+    operators/OpMinAreaRect.cpp
+    operators/OpBndBox.cpp
+    operators/OpBoxBlur.cpp
+    operators/OpBrightnessContrast.cpp
+    operators/OpColorTwist.cpp
+    operators/OpHQResize.cpp
+    operators/OpCropFlipNormalizeReformat.cpp
+    operators/OpNonMaximumSuppression.cpp
+    operators/OpReformat.cpp
+    operators/OpResize.cpp
+    operators/OpCustomCrop.cpp
+    operators/OpNormalize.cpp
+    operators/OpConvertTo.cpp
+    operators/OpPadAndStack.cpp
+    operators/OpCopyMakeBorder.cpp
+    operators/OpRotate.cpp
+    operators/OpErase.cpp
+    operators/OpGaussian.cpp
+    operators/OpMedianBlur.cpp
+    operators/OpLaplacian.cpp
+    operators/OpAverageBlur.cpp
+    operators/OpConv2D.cpp
+    operators/OpBilateralFilter.cpp
+    operators/OpJointBilateralFilter.cpp
+    operators/OpCenterCrop.cpp
+    operators/OpWarpAffine.cpp
+    operators/OpWarpPerspective.cpp
+    operators/OpChannelReorder.cpp
+    operators/OpMorphology.cpp
+    operators/OpFlip.cpp
+    operators/OpCvtColor.cpp
+    operators/OpComposite.cpp
+    operators/OpGammaContrast.cpp
+    operators/OpPillowResize.cpp
+    operators/OpThreshold.cpp
+    operators/OpAdaptiveThreshold.cpp
+    operators/OpRandomResizedCrop.cpp
+    operators/OpGaussianNoise.cpp
+    operators/OpInpaint.cpp
+)
+
+if(NOT USE_MUSA)
+    list(APPEND _cvcuda_python_operator_sources operators/OpFindHomography.cpp)
+endif()
 
 cvcuda_python_add_module(
     TARGET cvcuda_module_python MODULE
@@ -89,56 +149,7 @@ cvcuda_python_add_module(
         CvtColorUtil.cpp
         NormType.cpp
         # CV-CUDA operators
-        operators/OpResizeCropConvertReformat.cpp
-        operators/OpPairwiseMatcher.cpp
-        operators/OpStack.cpp
-        operators/OpLabel.cpp
-        operators/OpHistogramEq.cpp
-        operators/OpOSD.cpp
-        operators/OpAdvCvtColor.cpp
-        operators/OpSIFT.cpp
-        operators/OpMinMaxLoc.cpp
-        operators/OpHistogram.cpp
-        operators/OpMinAreaRect.cpp
-        operators/OpBndBox.cpp
-        operators/OpBoxBlur.cpp
-        operators/OpBrightnessContrast.cpp
-        operators/OpColorTwist.cpp
-        operators/OpHQResize.cpp
-        operators/OpCropFlipNormalizeReformat.cpp
-        operators/OpNonMaximumSuppression.cpp
-        operators/OpReformat.cpp
-        operators/OpResize.cpp
-        operators/OpCustomCrop.cpp
-        operators/OpNormalize.cpp
-        operators/OpConvertTo.cpp
-        operators/OpPadAndStack.cpp
-        operators/OpCopyMakeBorder.cpp
-        operators/OpRotate.cpp
-        operators/OpErase.cpp
-        operators/OpGaussian.cpp
-        operators/OpMedianBlur.cpp
-        operators/OpLaplacian.cpp
-        operators/OpAverageBlur.cpp
-        operators/OpConv2D.cpp
-        operators/OpBilateralFilter.cpp
-        operators/OpJointBilateralFilter.cpp
-        operators/OpCenterCrop.cpp
-        operators/OpWarpAffine.cpp
-        operators/OpWarpPerspective.cpp
-        operators/OpChannelReorder.cpp
-        operators/OpMorphology.cpp
-        operators/OpFlip.cpp
-        operators/OpCvtColor.cpp
-        operators/OpComposite.cpp
-        operators/OpGammaContrast.cpp
-        operators/OpPillowResize.cpp
-        operators/OpThreshold.cpp
-        operators/OpAdaptiveThreshold.cpp
-        operators/OpRandomResizedCrop.cpp
-        operators/OpGaussianNoise.cpp
-        operators/OpInpaint.cpp
-        operators/OpFindHomography.cpp
+        ${_cvcuda_python_operator_sources}
 )
 
 target_include_directories(cvcuda_module_python
@@ -149,14 +160,16 @@ target_include_directories(cvcuda_module_python
 
 target_link_libraries(cvcuda_module_python
     PRIVATE
-        CUDA::cudart_static
+        $<$<BOOL:${USE_MUSA}>:MUSA::musart_static>
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:CUDA::cudart_static>
         nvcv_types
         nvcv_util_compat
         cvcuda
         cvcuda_util
         cvcuda_python_common
         nvcv_util
-        CUDA::cuda_driver
+        $<$<BOOL:${USE_MUSA}>:MUSA::musa_driver>
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:CUDA::cuda_driver>
         dlpack::dlpack
         -lrt
 )

@@ -1,0 +1,133 @@
+[==========] Running 49 tests from 10 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from CheckLegacyHelpersDataType
+[ RUN      ] CheckLegacyHelpersDataType.invalid_tensor_layout
+[       OK ] CheckLegacyHelpersDataType.invalid_tensor_layout (0 ms)
+[----------] 1 test from CheckLegacyHelpersDataType (30 ms total)
+
+[----------] 1 test from CheckLegacyHelpersDataFormat
+[ RUN      ] CheckLegacyHelpersDataFormat.check_image_batch_invalid_different_fmt
+[       OK ] CheckLegacyHelpersDataFormat.check_image_batch_invalid_different_fmt (0 ms)
+[----------] 1 test from CheckLegacyHelpersDataFormat (0 ms total)
+
+[----------] 1 test from CheckLegacyTranslateError
+[ RUN      ] CheckLegacyTranslateError.invalid_conversion
+[       OK ] CheckLegacyTranslateError.invalid_conversion (0 ms)
+[----------] 1 test from CheckLegacyTranslateError (0 ms total)
+
+[----------] 14 tests from _/CheckLegacyFormatHelpers
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/bd0e4e07
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/bd0e4e07 (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/4de4d095
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/4de4d095 (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/b2356ae0
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/b2356ae0 (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/ec2f37ef
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/ec2f37ef (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/ee6a3d19
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/ee6a3d19 (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/6e787b27
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/6e787b27 (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/f87aac91
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/f87aac91 (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/f8582586
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/f8582586 (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/27239d60
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/27239d60 (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/4d6464ae
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/4d6464ae (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/287a7e26
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/287a7e26 (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/3c59ea2c
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/3c59ea2c (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/209d6c6a
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/209d6c6a (0 ms)
+[ RUN      ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/a1a6805b
+[       OK ] _/CheckLegacyFormatHelpers.check_conversion_to_legacy_data_format/a1a6805b (0 ms)
+[----------] 14 tests from _/CheckLegacyFormatHelpers (0 ms total)
+
+[----------] 1 test from _/CheckLegacyFormatHelpersInvalid
+[ RUN      ] _/CheckLegacyFormatHelpersInvalid.check_conversion_to_legacy_data_format_invalid/d0cd1539
+[       OK ] _/CheckLegacyFormatHelpersInvalid.check_conversion_to_legacy_data_format_invalid/d0cd1539 (0 ms)
+[----------] 1 test from _/CheckLegacyFormatHelpersInvalid (0 ms total)
+
+[----------] 8 tests from _/CheckLegacyHelpersDataType
+[ RUN      ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/4f25ada1
+[       OK ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/4f25ada1 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/906b4b44
+[       OK ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/906b4b44 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/175a6acd
+[       OK ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/175a6acd (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/f4385726
+[       OK ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/f4385726 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/58220986
+[       OK ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/58220986 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/9fd58a5e
+[       OK ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/9fd58a5e (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/d97fa8c5
+[       OK ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/d97fa8c5 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/bcf55974
+[       OK ] _/CheckLegacyHelpersDataType.check_conversion_to_legacy_data_type/bcf55974 (0 ms)
+[----------] 8 tests from _/CheckLegacyHelpersDataType (0 ms total)
+
+[----------] 5 tests from _/CheckLegacyHelpersDataTypeInvalid
+[ RUN      ] _/CheckLegacyHelpersDataTypeInvalid.check_conversion_to_legacy_data_type_invalid/2cf777d1
+[       OK ] _/CheckLegacyHelpersDataTypeInvalid.check_conversion_to_legacy_data_type_invalid/2cf777d1 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataTypeInvalid.check_conversion_to_legacy_data_type_invalid/ccd18da5
+[       OK ] _/CheckLegacyHelpersDataTypeInvalid.check_conversion_to_legacy_data_type_invalid/ccd18da5 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataTypeInvalid.check_conversion_to_legacy_data_type_invalid/9acc58d9
+[       OK ] _/CheckLegacyHelpersDataTypeInvalid.check_conversion_to_legacy_data_type_invalid/9acc58d9 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataTypeInvalid.check_conversion_to_legacy_data_type_invalid/cb37bd4a
+[       OK ] _/CheckLegacyHelpersDataTypeInvalid.check_conversion_to_legacy_data_type_invalid/cb37bd4a (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataTypeInvalid.check_conversion_to_legacy_data_type_invalid/c320fd40
+[       OK ] _/CheckLegacyHelpersDataTypeInvalid.check_conversion_to_legacy_data_type_invalid/c320fd40 (0 ms)
+[----------] 5 tests from _/CheckLegacyHelpersDataTypeInvalid (0 ms total)
+
+[----------] 8 tests from _/CheckLegacyHelpersDataFormat
+[ RUN      ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion/d194eea3
+[       OK ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion/d194eea3 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion/4e6a15ce
+[       OK ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion/4e6a15ce (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion/f8bdd7cd
+[       OK ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion/f8bdd7cd (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion/11e131c0
+[       OK ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion/11e131c0 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion_exported/d194eea3
+[       OK ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion_exported/d194eea3 (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion_exported/4e6a15ce
+[       OK ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion_exported/4e6a15ce (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion_exported/f8bdd7cd
+[       OK ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion_exported/f8bdd7cd (0 ms)
+[ RUN      ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion_exported/11e131c0
+[       OK ] _/CheckLegacyHelpersDataFormat.check_image_batch_conversion_exported/11e131c0 (0 ms)
+[----------] 8 tests from _/CheckLegacyHelpersDataFormat (2 ms total)
+
+[----------] 5 tests from _/CheckLegacyTranslateError
+[ RUN      ] _/CheckLegacyTranslateError.check_error_conversion/0d05f874
+[       OK ] _/CheckLegacyTranslateError.check_error_conversion/0d05f874 (0 ms)
+[ RUN      ] _/CheckLegacyTranslateError.check_error_conversion/06121747
+[       OK ] _/CheckLegacyTranslateError.check_error_conversion/06121747 (0 ms)
+[ RUN      ] _/CheckLegacyTranslateError.check_error_conversion/1aff4034
+[       OK ] _/CheckLegacyTranslateError.check_error_conversion/1aff4034 (0 ms)
+[ RUN      ] _/CheckLegacyTranslateError.check_error_conversion/ee11a6e9
+[       OK ] _/CheckLegacyTranslateError.check_error_conversion/ee11a6e9 (0 ms)
+[ RUN      ] _/CheckLegacyTranslateError.check_error_conversion/2f9365a6
+[       OK ] _/CheckLegacyTranslateError.check_error_conversion/2f9365a6 (0 ms)
+[----------] 5 tests from _/CheckLegacyTranslateError (0 ms total)
+
+[----------] 5 tests from _/CheckLegacyToString
+[ RUN      ] _/CheckLegacyToString.check_error_to_string_conversion/64e37353
+[       OK ] _/CheckLegacyToString.check_error_to_string_conversion/64e37353 (0 ms)
+[ RUN      ] _/CheckLegacyToString.check_error_to_string_conversion/f3d89e22
+[       OK ] _/CheckLegacyToString.check_error_to_string_conversion/f3d89e22 (0 ms)
+[ RUN      ] _/CheckLegacyToString.check_error_to_string_conversion/a445729c
+[       OK ] _/CheckLegacyToString.check_error_to_string_conversion/a445729c (0 ms)
+[ RUN      ] _/CheckLegacyToString.check_error_to_string_conversion/158a6910
+[       OK ] _/CheckLegacyToString.check_error_to_string_conversion/158a6910 (0 ms)
+[ RUN      ] _/CheckLegacyToString.check_error_to_string_conversion/79bb6930
+[       OK ] _/CheckLegacyToString.check_error_to_string_conversion/79bb6930 (0 ms)
+[----------] 5 tests from _/CheckLegacyToString (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 49 tests from 10 test suites ran. (34 ms total)
+[  PASSED  ] 49 tests.

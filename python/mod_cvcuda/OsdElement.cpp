@@ -18,7 +18,7 @@
 #include "OsdElement.hpp"
 
 #include <common/String.hpp>
-#include <cuda_runtime.h>
+#include <common/CudaCompat.hpp>
 #include <cvcuda/Types.h>
 #include <cvcuda/priv/Types.hpp>
 #include <pybind11/numpy.h>

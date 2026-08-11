@@ -1,0 +1,1630 @@
+[==========] Running 679 tests from 85 test suites.
+[----------] Global test environment set-up.
+[----------] 17 tests from HashMD5Tests
+[ RUN      ] HashMD5Tests.empty
+[       OK ] HashMD5Tests.empty (0 ms)
+[ RUN      ] HashMD5Tests.fp32
+[       OK ] HashMD5Tests.fp32 (0 ms)
+[ RUN      ] HashMD5Tests.fp32_different_mem_repr
+[       OK ] HashMD5Tests.fp32_different_mem_repr (0 ms)
+[ RUN      ] HashMD5Tests.fp64_different_mem_repr
+[       OK ] HashMD5Tests.fp64_different_mem_repr (0 ms)
+[ RUN      ] HashMD5Tests.fp64
+[       OK ] HashMD5Tests.fp64 (0 ms)
+[ RUN      ] HashMD5Tests.vector
+[       OK ] HashMD5Tests.vector (0 ms)
+[ RUN      ] HashMD5Tests.reset_works
+[       OK ] HashMD5Tests.reset_works (0 ms)
+[ RUN      ] HashMD5Tests.optional_empty
+[       OK ] HashMD5Tests.optional_empty (0 ms)
+[ RUN      ] HashMD5Tests.optional_empty_same_hash_no_matter_what_type
+[       OK ] HashMD5Tests.optional_empty_same_hash_no_matter_what_type (0 ms)
+[ RUN      ] HashMD5Tests.char_ptr
+[       OK ] HashMD5Tests.char_ptr (0 ms)
+[ RUN      ] HashMD5Tests.std_string
+[       OK ] HashMD5Tests.std_string (0 ms)
+[ RUN      ] HashMD5Tests.std_string_view_char_ptr
+[       OK ] HashMD5Tests.std_string_view_char_ptr (0 ms)
+[ RUN      ] HashMD5Tests.std_string_view_string
+[       OK ] HashMD5Tests.std_string_view_string (0 ms)
+[ RUN      ] HashMD5Tests.null_char_ptr
+[       OK ] HashMD5Tests.null_char_ptr (0 ms)
+[ RUN      ] HashMD5Tests.multiple
+[       OK ] HashMD5Tests.multiple (0 ms)
+[ RUN      ] HashMD5Tests.typeids
+[       OK ] HashMD5Tests.typeids (0 ms)
+[ RUN      ] HashMD5Tests.unique_mem_repr
+[       OK ] HashMD5Tests.unique_mem_repr (0 ms)
+[----------] 17 tests from HashMD5Tests (30 ms total)
+
+[----------] 4 tests from JoinTupleTests
+[ RUN      ] JoinTupleTests.only_values
+[       OK ] JoinTupleTests.only_values (0 ms)
+[ RUN      ] JoinTupleTests.all_tuples
+[       OK ] JoinTupleTests.all_tuples (0 ms)
+[ RUN      ] JoinTupleTests.tuples_and_values_value_first
+[       OK ] JoinTupleTests.tuples_and_values_value_first (0 ms)
+[ RUN      ] JoinTupleTests.tuples_and_values_tuple_first
+[       OK ] JoinTupleTests.tuples_and_values_tuple_first (0 ms)
+[----------] 4 tests from JoinTupleTests (0 ms total)
+
+[----------] 13 tests from ExtractTupleTests
+[ RUN      ] ExtractTupleTests.extract_first_element_of_tuple_with_many
+[       OK ] ExtractTupleTests.extract_first_element_of_tuple_with_many (0 ms)
+[ RUN      ] ExtractTupleTests.extract_middle_element_of_tuple_with_many
+[       OK ] ExtractTupleTests.extract_middle_element_of_tuple_with_many (0 ms)
+[ RUN      ] ExtractTupleTests.extract_last_element_of_tuple_with_many
+[       OK ] ExtractTupleTests.extract_last_element_of_tuple_with_many (0 ms)
+[ RUN      ] ExtractTupleTests.extract_first_few_elements_of_tuple_with_many
+[       OK ] ExtractTupleTests.extract_first_few_elements_of_tuple_with_many (0 ms)
+[ RUN      ] ExtractTupleTests.extract_middle_few_elements_of_tuple_with_many
+[       OK ] ExtractTupleTests.extract_middle_few_elements_of_tuple_with_many (0 ms)
+[ RUN      ] ExtractTupleTests.extract_last_few_elements_of_tuple_with_many
+[       OK ] ExtractTupleTests.extract_last_few_elements_of_tuple_with_many (0 ms)
+[ RUN      ] ExtractTupleTests.extract_all_elements_of_tuple_with_many
+[       OK ] ExtractTupleTests.extract_all_elements_of_tuple_with_many (0 ms)
+[ RUN      ] ExtractTupleTests.extract_element_of_tuple_with_one
+[       OK ] ExtractTupleTests.extract_element_of_tuple_with_one (0 ms)
+[ RUN      ] ExtractTupleTests.extract_no_elements_of_tuple_with_many
+[       OK ] ExtractTupleTests.extract_no_elements_of_tuple_with_many (0 ms)
+[ RUN      ] ExtractTupleTests.extract_no_elements_of_tuple_with_one
+[       OK ] ExtractTupleTests.extract_no_elements_of_tuple_with_one (0 ms)
+[ RUN      ] ExtractTupleTests.extract_same_element_multiple_times_from_tuple_with_one
+[       OK ] ExtractTupleTests.extract_same_element_multiple_times_from_tuple_with_one (0 ms)
+[ RUN      ] ExtractTupleTests.extract_same_element_multiple_times_from_tuple_with_many
+[       OK ] ExtractTupleTests.extract_same_element_multiple_times_from_tuple_with_many (0 ms)
+[ RUN      ] ExtractTupleTests.extract_multiple_elements_with_repetition_from_tuple_with_many
+[       OK ] ExtractTupleTests.extract_multiple_elements_with_repetition_from_tuple_with_many (0 ms)
+[----------] 13 tests from ExtractTupleTests (0 ms total)
+
+[----------] 151 tests from ValueListTests
+[ RUN      ] ValueListTests.concat_lists
+[       OK ] ValueListTests.concat_lists (0 ms)
+[ RUN      ] ValueListTests.concat_one_list
+[       OK ] ValueListTests.concat_one_list (0 ms)
+[ RUN      ] ValueListTests.concat_one_value
+[       OK ] ValueListTests.concat_one_value (0 ms)
+[ RUN      ] ValueListTests.concat_multiple_value
+[       OK ] ValueListTests.concat_multiple_value (0 ms)
+[ RUN      ] ValueListTests.concat_with_value_at_beginning
+[       OK ] ValueListTests.concat_with_value_at_beginning (0 ms)
+[ RUN      ] ValueListTests.concat_with_value_at_in_the_middle
+[       OK ] ValueListTests.concat_with_value_at_in_the_middle (0 ms)
+[ RUN      ] ValueListTests.concat_with_value_at_end
+[       OK ] ValueListTests.concat_with_value_at_end (0 ms)
+[ RUN      ] ValueListTests.concat_with_multiple_value
+[       OK ] ValueListTests.concat_with_multiple_value (0 ms)
+[ RUN      ] ValueListTests.concat_keep_repeated_values
+[       OK ] ValueListTests.concat_keep_repeated_values (0 ms)
+[ RUN      ] ValueListTests.combine_one_list_is_identity
+[       OK ] ValueListTests.combine_one_list_is_identity (0 ms)
+[ RUN      ] ValueListTests.combine_same_list_twice
+[       OK ] ValueListTests.combine_same_list_twice (0 ms)
+[ RUN      ] ValueListTests.combine_with_value_begin
+[       OK ] ValueListTests.combine_with_value_begin (0 ms)
+[ RUN      ] ValueListTests.combine_with_value_at_end
+[       OK ] ValueListTests.combine_with_value_at_end (0 ms)
+[ RUN      ] ValueListTests.combine_complex_lists
+[       OK ] ValueListTests.combine_complex_lists (0 ms)
+[ RUN      ] ValueListTests.combine_associativity
+[       OK ] ValueListTests.combine_associativity (0 ms)
+[ RUN      ] ValueListTests.difference_subtract_empty
+[       OK ] ValueListTests.difference_subtract_empty (0 ms)
+[ RUN      ] ValueListTests.difference_from_empty_is_empty
+[       OK ] ValueListTests.difference_from_empty_is_empty (0 ms)
+[ RUN      ] ValueListTests.difference_works1
+[       OK ] ValueListTests.difference_works1 (0 ms)
+[ RUN      ] ValueListTests.difference_result_empty
+[       OK ] ValueListTests.difference_result_empty (0 ms)
+[ RUN      ] ValueListTests.nested_parameters
+[       OK ] ValueListTests.nested_parameters (0 ms)
+[ RUN      ] ValueListTests.select_if_one_match_simple
+[       OK ] ValueListTests.select_if_one_match_simple (0 ms)
+[ RUN      ] ValueListTests.select_if_no_match_simple
+[       OK ] ValueListTests.select_if_no_match_simple (0 ms)
+[ RUN      ] ValueListTests.select_if_all_match_simple
+[       OK ] ValueListTests.select_if_all_match_simple (0 ms)
+[ RUN      ] ValueListTests.select_if_one_match_list_simple
+[       OK ] ValueListTests.select_if_one_match_list_simple (0 ms)
+[ RUN      ] ValueListTests.select_if_no_match_list_simple
+[       OK ] ValueListTests.select_if_no_match_list_simple (0 ms)
+[ RUN      ] ValueListTests.select_if_all_match_list_simple
+[       OK ] ValueListTests.select_if_all_match_list_simple (0 ms)
+[ RUN      ] ValueListTests.select_if_one_match_multi
+[       OK ] ValueListTests.select_if_one_match_multi (0 ms)
+[ RUN      ] ValueListTests.select_if_no_match_multi
+[       OK ] ValueListTests.select_if_no_match_multi (0 ms)
+[ RUN      ] ValueListTests.select_if_match_some_multi
+[       OK ] ValueListTests.select_if_match_some_multi (0 ms)
+[ RUN      ] ValueListTests.select_if_match_some_multi_repeated_args
+[       OK ] ValueListTests.select_if_match_some_multi_repeated_args (0 ms)
+[ RUN      ] ValueListTests.select_if_match_some_value
+[       OK ] ValueListTests.select_if_match_some_value (0 ms)
+[ RUN      ] ValueListTests.select_if_all_match_multi_first_same_value
+[       OK ] ValueListTests.select_if_all_match_multi_first_same_value (0 ms)
+[ RUN      ] ValueListTests.select_if_all_match_multi_first_different_values
+[       OK ] ValueListTests.select_if_all_match_multi_first_different_values (0 ms)
+[ RUN      ] ValueListTests.select_fn_one_arg
+[       OK ] ValueListTests.select_fn_one_arg (0 ms)
+[ RUN      ] ValueListTests.select_fn_multiple_args
+[       OK ] ValueListTests.select_fn_multiple_args (0 ms)
+[ RUN      ] ValueListTests.select_any_single_match
+[       OK ] ValueListTests.select_any_single_match (0 ms)
+[ RUN      ] ValueListTests.select_any_single_no_match
+[       OK ] ValueListTests.select_any_single_no_match (0 ms)
+[ RUN      ] ValueListTests.select_any_single_all_match
+[       OK ] ValueListTests.select_any_single_all_match (0 ms)
+[ RUN      ] ValueListTests.select_any_multi_match
+[       OK ] ValueListTests.select_any_multi_match (0 ms)
+[ RUN      ] ValueListTests.select_any_multi_no_match
+[       OK ] ValueListTests.select_any_multi_no_match (0 ms)
+[ RUN      ] ValueListTests.select_any_multi_all_match
+[       OK ] ValueListTests.select_any_multi_all_match (0 ms)
+[ RUN      ] ValueListTests.select_all_single_match
+[       OK ] ValueListTests.select_all_single_match (0 ms)
+[ RUN      ] ValueListTests.select_all_single_no_match
+[       OK ] ValueListTests.select_all_single_no_match (0 ms)
+[ RUN      ] ValueListTests.select_all_single_all_match
+[       OK ] ValueListTests.select_all_single_all_match (0 ms)
+[ RUN      ] ValueListTests.select_all_multi_no_match
+[       OK ] ValueListTests.select_all_multi_no_match (0 ms)
+[ RUN      ] ValueListTests.select_all_multi_all_match
+[       OK ] ValueListTests.select_all_multi_all_match (0 ms)
+[ RUN      ] ValueListTests.select_all_multi
+[       OK ] ValueListTests.select_all_multi (0 ms)
+[ RUN      ] ValueListTests.remove_all_args_same_one_arg
+[       OK ] ValueListTests.remove_all_args_same_one_arg (0 ms)
+[ RUN      ] ValueListTests.remove_all_args_same_several_different_args
+[       OK ] ValueListTests.remove_all_args_same_several_different_args (0 ms)
+[ RUN      ] ValueListTests.remove_all_args_same_all_args_are_the_same
+[       OK ] ValueListTests.remove_all_args_same_all_args_are_the_same (0 ms)
+[ RUN      ] ValueListTests.remove_all_args_same_some_args_are_the_same
+[       OK ] ValueListTests.remove_all_args_same_some_args_are_the_same (0 ms)
+[ RUN      ] ValueListTests.remove_any_single_match
+[       OK ] ValueListTests.remove_any_single_match (0 ms)
+[ RUN      ] ValueListTests.remove_any_single_no_match
+[       OK ] ValueListTests.remove_any_single_no_match (0 ms)
+[ RUN      ] ValueListTests.remove_any_single_all_match
+[       OK ] ValueListTests.remove_any_single_all_match (0 ms)
+[ RUN      ] ValueListTests.remove_any_multi_match
+[       OK ] ValueListTests.remove_any_multi_match (0 ms)
+[ RUN      ] ValueListTests.remove_any_multi_no_match
+[       OK ] ValueListTests.remove_any_multi_no_match (0 ms)
+[ RUN      ] ValueListTests.remove_any_multi_all_match
+[       OK ] ValueListTests.remove_any_multi_all_match (0 ms)
+[ RUN      ] ValueListTests.remove_all_single_match
+[       OK ] ValueListTests.remove_all_single_match (0 ms)
+[ RUN      ] ValueListTests.remove_all_single_no_match
+[       OK ] ValueListTests.remove_all_single_no_match (0 ms)
+[ RUN      ] ValueListTests.remove_all_single_all_match
+[       OK ] ValueListTests.remove_all_single_all_match (0 ms)
+[ RUN      ] ValueListTests.remove_all_multi_no_match
+[       OK ] ValueListTests.remove_all_multi_no_match (0 ms)
+[ RUN      ] ValueListTests.remove_all_multi_all_match
+[       OK ] ValueListTests.remove_all_multi_all_match (0 ms)
+[ RUN      ] ValueListTests.remove_all_multi
+[       OK ] ValueListTests.remove_all_multi (0 ms)
+[ RUN      ] ValueListTests.exists_positive
+[       OK ] ValueListTests.exists_positive (0 ms)
+[ RUN      ] ValueListTests.exists_negative
+[       OK ] ValueListTests.exists_negative (0 ms)
+[ RUN      ] ValueListTests.exists_empty_list_negative
+[       OK ] ValueListTests.exists_empty_list_negative (0 ms)
+[ RUN      ] ValueListTests.combine_with_only_values
+[       OK ] ValueListTests.combine_with_only_values (0 ms)
+[ RUN      ] ValueListTests.erase_only_one
+[       OK ] ValueListTests.erase_only_one (0 ms)
+[ RUN      ] ValueListTests.erase_several
+[       OK ] ValueListTests.erase_several (0 ms)
+[ RUN      ] ValueListTests.erase_doesnt_exist
+[       OK ] ValueListTests.erase_doesnt_exist (0 ms)
+[ RUN      ] ValueListTests.transform_same_arg_count_1
+[       OK ] ValueListTests.transform_same_arg_count_1 (0 ms)
+[ RUN      ] ValueListTests.transform_same_arg_count_2
+[       OK ] ValueListTests.transform_same_arg_count_2 (0 ms)
+[ RUN      ] ValueListTests.transform_increase_arg_count
+[       OK ] ValueListTests.transform_increase_arg_count (0 ms)
+[ RUN      ] ValueListTests.transform_decrease_arg_count
+[       OK ] ValueListTests.transform_decrease_arg_count (0 ms)
+[ RUN      ] ValueListTests.transform_multiple_params_per_input
+[       OK ] ValueListTests.transform_multiple_params_per_input (0 ms)
+[ RUN      ] ValueListTests.intersection_with_empty_is_empty
+[       OK ] ValueListTests.intersection_with_empty_is_empty (0 ms)
+[ RUN      ] ValueListTests.intersection_disjoint_sets
+[       OK ] ValueListTests.intersection_disjoint_sets (0 ms)
+[ RUN      ] ValueListTests.intersection_not_sorted_some_overlapping_elements
+[       OK ] ValueListTests.intersection_not_sorted_some_overlapping_elements (0 ms)
+[ RUN      ] ValueListTests.intersection_sorted_some_overlapping_elements
+[       OK ] ValueListTests.intersection_sorted_some_overlapping_elements (0 ms)
+[ RUN      ] ValueListTests.intersection_sorted_one_set_includes_the_other
+[       OK ] ValueListTests.intersection_sorted_one_set_includes_the_other (0 ms)
+[ RUN      ] ValueListTests.intersection_sorted_more_than_two_sets
+[       OK ] ValueListTests.intersection_sorted_more_than_two_sets (0 ms)
+[ RUN      ] ValueListTests.zip_one_list_is_identity
+[       OK ] ValueListTests.zip_one_list_is_identity (0 ms)
+[ RUN      ] ValueListTests.zip_same_list_twice
+[       OK ] ValueListTests.zip_same_list_twice (0 ms)
+[ RUN      ] ValueListTests.zip_complex_lists
+[       OK ] ValueListTests.zip_complex_lists (0 ms)
+[ RUN      ] ValueListTests.zip_associativity
+[       OK ] ValueListTests.zip_associativity (0 ms)
+[ RUN      ] ValueListTests.zip_error_lists_size_dont_match
+[       OK ] ValueListTests.zip_error_lists_size_dont_match (0 ms)
+[ RUN      ] ValueListTests.conversion_from_vector_one_parameter
+[       OK ] ValueListTests.conversion_from_vector_one_parameter (0 ms)
+[ RUN      ] ValueListTests.conversion_from_vector_multiple_parameters
+[       OK ] ValueListTests.conversion_from_vector_multiple_parameters (0 ms)
+[ RUN      ] ValueListTests.lists_are_not_sorted
+[       OK ] ValueListTests.lists_are_not_sorted (0 ms)
+[ RUN      ] ValueListTests.unique_sort_simple
+[       OK ] ValueListTests.unique_sort_simple (0 ms)
+[ RUN      ] ValueListTests.unique_sort_complex
+[       OK ] ValueListTests.unique_sort_complex (0 ms)
+[ RUN      ] ValueListTests.unique_sort_subset_simple
+[       OK ] ValueListTests.unique_sort_subset_simple (0 ms)
+[ RUN      ] ValueListTests.unique_sort_subset_multiple
+[       OK ] ValueListTests.unique_sort_subset_multiple (0 ms)
+[ RUN      ] ValueListTests.unique_sort_with_extractor
+[       OK ] ValueListTests.unique_sort_with_extractor (0 ms)
+[ RUN      ] ValueListTests.unique_sort_subset_simple_with_extractor_simple
+[       OK ] ValueListTests.unique_sort_subset_simple_with_extractor_simple (0 ms)
+[ RUN      ] ValueListTests.unique_sort_subset_complex_with_extractor_simple
+[       OK ] ValueListTests.unique_sort_subset_complex_with_extractor_simple (0 ms)
+[ RUN      ] ValueListTests.unique_sort_subset_complex_with_extractor_complex
+[       OK ] ValueListTests.unique_sort_subset_complex_with_extractor_complex (0 ms)
+[ RUN      ] ValueListTests.symmetric_difference_list_list_notempty
+[       OK ] ValueListTests.symmetric_difference_list_list_notempty (0 ms)
+[ RUN      ] ValueListTests.symmetric_difference_list_list_disjoint
+[       OK ] ValueListTests.symmetric_difference_list_list_disjoint (0 ms)
+[ RUN      ] ValueListTests.symmetric_difference_list_list_same_different_order
+[       OK ] ValueListTests.symmetric_difference_list_list_same_different_order (0 ms)
+[ RUN      ] ValueListTests.symmetric_difference_list_list_same_same_order
+[       OK ] ValueListTests.symmetric_difference_list_list_same_same_order (0 ms)
+[ RUN      ] ValueListTests.symmetric_difference_list_list_empty_input
+[       OK ] ValueListTests.symmetric_difference_list_list_empty_input (0 ms)
+[ RUN      ] ValueListTests.symmetric_difference_list_val
+[       OK ] ValueListTests.symmetric_difference_list_val (0 ms)
+[ RUN      ] ValueListTests.symmetric_difference_val_list
+[       OK ] ValueListTests.symmetric_difference_val_list (0 ms)
+[ RUN      ] ValueListTests.extract_single_from_non_empty_simple_list
+[       OK ] ValueListTests.extract_single_from_non_empty_simple_list (0 ms)
+[ RUN      ] ValueListTests.extract_single_from_non_empty_homogeneous_multi_list
+[       OK ] ValueListTests.extract_single_from_non_empty_homogeneous_multi_list (0 ms)
+[ RUN      ] ValueListTests.extract_single_from_non_empty_heterogeneous_multi_list
+[       OK ] ValueListTests.extract_single_from_non_empty_heterogeneous_multi_list (0 ms)
+[ RUN      ] ValueListTests.extract_multi_from_non_empty_homogeneous_multi_list
+[       OK ] ValueListTests.extract_multi_from_non_empty_homogeneous_multi_list (0 ms)
+[ RUN      ] ValueListTests.extract_multi_from_non_empty_heterogeneous_multi_list
+[       OK ] ValueListTests.extract_multi_from_non_empty_heterogeneous_multi_list (0 ms)
+[ RUN      ] ValueListTests.extract_from_empty_list
+[       OK ] ValueListTests.extract_from_empty_list (0 ms)
+[ RUN      ] ValueListTests.extract_nothing_from_list
+[       OK ] ValueListTests.extract_nothing_from_list (0 ms)
+[ RUN      ] ValueListTests.extract_nothing_from_void_list
+[       OK ] ValueListTests.extract_nothing_from_void_list (0 ms)
+[ RUN      ] ValueListTests.operator_sub_list_list
+[       OK ] ValueListTests.operator_sub_list_list (0 ms)
+[ RUN      ] ValueListTests.operator_sub_list_val
+[       OK ] ValueListTests.operator_sub_list_val (0 ms)
+[ RUN      ] ValueListTests.operator_sub_val_list
+[       OK ] ValueListTests.operator_sub_val_list (0 ms)
+[ RUN      ] ValueListTests.operator_sub_functor
+[       OK ] ValueListTests.operator_sub_functor (0 ms)
+[ RUN      ] ValueListTests.operator_or_list_list
+[       OK ] ValueListTests.operator_or_list_list (0 ms)
+[ RUN      ] ValueListTests.operator_or_list_val
+[       OK ] ValueListTests.operator_or_list_val (0 ms)
+[ RUN      ] ValueListTests.operator_or_val_list
+[       OK ] ValueListTests.operator_or_val_list (0 ms)
+[ RUN      ] ValueListTests.operator_and_list_list
+[       OK ] ValueListTests.operator_and_list_list (0 ms)
+[ RUN      ] ValueListTests.operator_and_list_val
+[       OK ] ValueListTests.operator_and_list_val (0 ms)
+[ RUN      ] ValueListTests.operator_and_val_list
+[       OK ] ValueListTests.operator_and_val_list (0 ms)
+[ RUN      ] ValueListTests.operator_mul_list_list
+[       OK ] ValueListTests.operator_mul_list_list (0 ms)
+[ RUN      ] ValueListTests.operator_mul_list_val
+[       OK ] ValueListTests.operator_mul_list_val (0 ms)
+[ RUN      ] ValueListTests.operator_mul_val_list
+[       OK ] ValueListTests.operator_mul_val_list (0 ms)
+[ RUN      ] ValueListTests.operator_modulo_list_list
+[       OK ] ValueListTests.operator_modulo_list_list (0 ms)
+[ RUN      ] ValueListTests.operator_xor_list_list
+[       OK ] ValueListTests.operator_xor_list_list (0 ms)
+[ RUN      ] ValueListTests.operator_xor_list_val
+[       OK ] ValueListTests.operator_xor_list_val (0 ms)
+[ RUN      ] ValueListTests.operator_xor_val_list
+[       OK ] ValueListTests.operator_xor_val_list (0 ms)
+[ RUN      ] ValueListTests.make_simple_empty
+[       OK ] ValueListTests.make_simple_empty (0 ms)
+[ RUN      ] ValueListTests.make_simple_identity
+[       OK ] ValueListTests.make_simple_identity (0 ms)
+[ RUN      ] ValueListTests.make_struct
+[       OK ] ValueListTests.make_struct (0 ms)
+[ RUN      ] ValueListTests.make_struct_implicit_ctor
+[       OK ] ValueListTests.make_struct_implicit_ctor (0 ms)
+[ RUN      ] ValueListTests.make_struct_explicit_ctor
+[       OK ] ValueListTests.make_struct_explicit_ctor (0 ms)
+[ RUN      ] ValueListTests.make_optional_struct_implicit_ctor
+[       OK ] ValueListTests.make_optional_struct_implicit_ctor (0 ms)
+[ RUN      ] ValueListTests.make_optional_struct_explicit_ctor
+[       OK ] ValueListTests.make_optional_struct_explicit_ctor (0 ms)
+[ RUN      ] ValueListTests.make_optional_struct_no_ctor
+[       OK ] ValueListTests.make_optional_struct_no_ctor (0 ms)
+[ RUN      ] ValueListTests.not_works
+[       OK ] ValueListTests.not_works (0 ms)
+[ RUN      ] ValueListTests.and_works
+[       OK ] ValueListTests.and_works (0 ms)
+[ RUN      ] ValueListTests.or_works
+[       OK ] ValueListTests.or_works (0 ms)
+[ RUN      ] ValueListTests.implicit_conversion_different_types_multiple
+[       OK ] ValueListTests.implicit_conversion_different_types_multiple (0 ms)
+[ RUN      ] ValueListTests.explicit_conversion_different_types_multiple
+[       OK ] ValueListTests.explicit_conversion_different_types_multiple (0 ms)
+[ RUN      ] ValueListTests.implicit_conversion_different_types_single
+[       OK ] ValueListTests.implicit_conversion_different_types_single (0 ms)
+[ RUN      ] ValueListTests.default_ctor_implicit_conversion_different_types_single
+[       OK ] ValueListTests.default_ctor_implicit_conversion_different_types_single (0 ms)
+[ RUN      ] ValueListTests.explicit_conversion_different_types_single
+[       OK ] ValueListTests.explicit_conversion_different_types_single (0 ms)
+[ RUN      ] ValueListTests.default_ctor_explicit_conversion_different_types_single
+[       OK ] ValueListTests.default_ctor_explicit_conversion_different_types_single (0 ms)
+[ RUN      ] ValueListTests.create_with_default_parameters
+[       OK ] ValueListTests.create_with_default_parameters (0 ms)
+[ RUN      ] ValueListTests.create_with_default_parameters_mixed
+[       OK ] ValueListTests.create_with_default_parameters_mixed (0 ms)
+[ RUN      ] ValueListTests.dup_zero
+[       OK ] ValueListTests.dup_zero (0 ms)
+[ RUN      ] ValueListTests.dup_one
+[       OK ] ValueListTests.dup_one (0 ms)
+[ RUN      ] ValueListTests.dup_many
+[       OK ] ValueListTests.dup_many (0 ms)
+[----------] 151 tests from ValueListTests (0 ms total)
+
+[----------] 23 tests from TypeListTests
+[ RUN      ] TypeListTests.get_type
+[       OK ] TypeListTests.get_type (0 ms)
+[ RUN      ] TypeListTests.create_values
+[       OK ] TypeListTests.create_values (0 ms)
+[ RUN      ] TypeListTests.get_value
+[       OK ] TypeListTests.get_value (0 ms)
+[ RUN      ] TypeListTests.subset
+[       OK ] TypeListTests.subset (0 ms)
+[ RUN      ] TypeListTests.concat
+[       OK ] TypeListTests.concat (0 ms)
+[ RUN      ] TypeListTests.flatten
+[       OK ] TypeListTests.flatten (0 ms)
+[ RUN      ] TypeListTests.combine
+[       OK ] TypeListTests.combine (0 ms)
+[ RUN      ] TypeListTests.all_same
+[       OK ] TypeListTests.all_same (0 ms)
+[ RUN      ] TypeListTests.exists
+[       OK ] TypeListTests.exists (0 ms)
+[ RUN      ] TypeListTests.contained_in
+[       OK ] TypeListTests.contained_in (0 ms)
+[ RUN      ] TypeListTests.remove_if
+[       OK ] TypeListTests.remove_if (0 ms)
+[ RUN      ] TypeListTests.transform
+[       OK ] TypeListTests.transform (0 ms)
+[ RUN      ] TypeListTests.apply
+[       OK ] TypeListTests.apply (0 ms)
+[ RUN      ] TypeListTests.deref
+[       OK ] TypeListTests.deref (0 ms)
+[ RUN      ] TypeListTests.append
+[       OK ] TypeListTests.append (0 ms)
+[ RUN      ] TypeListTests.unique
+[       OK ] TypeListTests.unique (0 ms)
+[ RUN      ] TypeListTests.contains
+[       OK ] TypeListTests.contains (0 ms)
+[ RUN      ] TypeListTests.remove
+[       OK ] TypeListTests.remove (0 ms)
+[ RUN      ] TypeListTests.get_size
+[       OK ] TypeListTests.get_size (0 ms)
+[ RUN      ] TypeListTests.zip
+[       OK ] TypeListTests.zip (0 ms)
+[ RUN      ] TypeListTests.set_difference
+[       OK ] TypeListTests.set_difference (0 ms)
+[ RUN      ] TypeListTests.empty_to_value_list
+[       OK ] TypeListTests.empty_to_value_list (0 ms)
+[ RUN      ] TypeListTests.heterogeneous_but_implicitly_convertible_types_to_value_list
+[       OK ] TypeListTests.heterogeneous_but_implicitly_convertible_types_to_value_list (0 ms)
+[----------] 23 tests from TypeListTests (0 ms total)
+
+[----------] 1 test from TypedTest/0, where TypeParam = testing::internal::ProxyTypeList<Foo, nvcv::test::type::Value<1> >
+[ RUN      ] TypedTest/0.test
+[       OK ] TypedTest/0.test (0 ms)
+[----------] 1 test from TypedTest/0 (0 ms total)
+
+[----------] 1 test from TypedTest/1, where TypeParam = testing::internal::ProxyTypeList<Foo, nvcv::test::type::Value<2> >
+[ RUN      ] TypedTest/1.test
+[       OK ] TypedTest/1.test (0 ms)
+[----------] 1 test from TypedTest/1 (0 ms total)
+
+[----------] 1 test from TypedTest/2, where TypeParam = testing::internal::ProxyTypeList<Foo, nvcv::test::type::Value<3> >
+[ RUN      ] TypedTest/2.test
+[       OK ] TypedTest/2.test (0 ms)
+[----------] 1 test from TypedTest/2 (0 ms total)
+
+[----------] 1 test from TypedTest/3, where TypeParam = testing::internal::ProxyTypeList<Bar, nvcv::test::type::Value<1> >
+[ RUN      ] TypedTest/3.test
+[       OK ] TypedTest/3.test (0 ms)
+[----------] 1 test from TypedTest/3 (0 ms total)
+
+[----------] 1 test from TypedTest/4, where TypeParam = testing::internal::ProxyTypeList<Bar, nvcv::test::type::Value<2> >
+[ RUN      ] TypedTest/4.test
+[       OK ] TypedTest/4.test (0 ms)
+[----------] 1 test from TypedTest/4 (0 ms total)
+
+[----------] 1 test from TypedTest/5, where TypeParam = testing::internal::ProxyTypeList<Bar, nvcv::test::type::Value<3> >
+[ RUN      ] TypedTest/5.test
+[       OK ] TypedTest/5.test (0 ms)
+[----------] 1 test from TypedTest/5 (0 ms total)
+
+[----------] 1 test from CheckErrorCudaTests
+[ RUN      ] CheckErrorCudaTests.success_no_throw
+[       OK ] CheckErrorCudaTests.success_no_throw (0 ms)
+[----------] 1 test from CheckErrorCudaTests (0 ms total)
+
+[----------] 1 test from CheckStatusMacroTests
+[ RUN      ] CheckStatusMacroTests.throw_with_extra_string
+[       OK ] CheckStatusMacroTests.throw_with_extra_string (0 ms)
+[----------] 1 test from CheckStatusMacroTests (0 ms total)
+
+[----------] 2 tests from CheckErrorTest
+[ RUN      ] CheckErrorTest.GetFunctionName
+[       OK ] CheckErrorTest.GetFunctionName (0 ms)
+[ RUN      ] CheckErrorTest.cudaErr_to_String
+[       OK ] CheckErrorTest.cudaErr_to_String (0 ms)
+[----------] 2 tests from CheckErrorTest (0 ms total)
+
+[----------] 4 tests from BufferOStreamTests
+[ RUN      ] BufferOStreamTests.is_zero_terminated_on_dtor
+[       OK ] BufferOStreamTests.is_zero_terminated_on_dtor (0 ms)
+[ RUN      ] BufferOStreamTests.is_flushed_on_dtor
+[       OK ] BufferOStreamTests.is_flushed_on_dtor (0 ms)
+[ RUN      ] BufferOStreamTests.data_is_written
+[       OK ] BufferOStreamTests.data_is_written (0 ms)
+[ RUN      ] BufferOStreamTests.overflow
+[       OK ] BufferOStreamTests.overflow (0 ms)
+[----------] 4 tests from BufferOStreamTests (0 ms total)
+
+[----------] 128 tests from StaticVector
+[ RUN      ] StaticVector.default_constructed_is_empty
+[       OK ] StaticVector.default_constructed_is_empty (0 ms)
+[ RUN      ] StaticVector.destructor_destroys_items
+[       OK ] StaticVector.destructor_destroys_items (0 ms)
+[ RUN      ] StaticVector.capacity_is_correct
+[       OK ] StaticVector.capacity_is_correct (0 ms)
+[ RUN      ] StaticVector.value_type_is_correct
+[       OK ] StaticVector.value_type_is_correct (0 ms)
+[ RUN      ] StaticVector.empty_has_size_zero
+[       OK ] StaticVector.empty_has_size_zero (0 ms)
+[ RUN      ] StaticVector.ctor_with_size_has_correct_size
+[       OK ] StaticVector.ctor_with_size_has_correct_size (0 ms)
+[ RUN      ] StaticVector.ctor_with_size_is_default_initialized
+[       OK ] StaticVector.ctor_with_size_is_default_initialized (0 ms)
+[ RUN      ] StaticVector.ctor_with_size_and_value
+[       OK ] StaticVector.ctor_with_size_and_value (0 ms)
+[ RUN      ] StaticVector.resize_to_big_throws_bad_alloc
+[       OK ] StaticVector.resize_to_big_throws_bad_alloc (0 ms)
+[ RUN      ] StaticVector.resize_to_smaller_destroy_objects
+[       OK ] StaticVector.resize_to_smaller_destroy_objects (0 ms)
+[ RUN      ] StaticVector.resize_to_smaller_doesnt_touch_non_destroyed_objects
+[       OK ] StaticVector.resize_to_smaller_doesnt_touch_non_destroyed_objects (0 ms)
+[ RUN      ] StaticVector.resize_to_smaller_updates_size
+[       OK ] StaticVector.resize_to_smaller_updates_size (0 ms)
+[ RUN      ] StaticVector.resize_to_bigger_default_construct_new_objects
+[       OK ] StaticVector.resize_to_bigger_default_construct_new_objects (0 ms)
+[ RUN      ] StaticVector.resize_to_bigger_doesnt_touch_existing_objects
+[       OK ] StaticVector.resize_to_bigger_doesnt_touch_existing_objects (0 ms)
+[ RUN      ] StaticVector.resize_to_bigger_updates_size
+[       OK ] StaticVector.resize_to_bigger_updates_size (0 ms)
+[ RUN      ] StaticVector.ctor_with_too_large_size_throws_bad_alloc
+[       OK ] StaticVector.ctor_with_too_large_size_throws_bad_alloc (0 ms)
+[ RUN      ] StaticVector.populated_vector_isnt_empty
+[       OK ] StaticVector.populated_vector_isnt_empty (0 ms)
+[ RUN      ] StaticVector.ctor_with_empty_initializer_list
+[       OK ] StaticVector.ctor_with_empty_initializer_list (0 ms)
+[ RUN      ] StaticVector.ctor_with_nonempty_initializer_list_has_correct_size
+[       OK ] StaticVector.ctor_with_nonempty_initializer_list_has_correct_size (0 ms)
+[ RUN      ] StaticVector.ctor_with_too_big_initializer_list_throws_exception
+[       OK ] StaticVector.ctor_with_too_big_initializer_list_throws_exception (0 ms)
+[ RUN      ] StaticVector.assign_with_empty_initializer_list
+[       OK ] StaticVector.assign_with_empty_initializer_list (0 ms)
+[ RUN      ] StaticVector.assign_with_nonempty_initializer_list_has_correct_size
+[       OK ] StaticVector.assign_with_nonempty_initializer_list_has_correct_size (0 ms)
+[ RUN      ] StaticVector.assign_with_too_big_initializer_list_throws_exception
+[       OK ] StaticVector.assign_with_too_big_initializer_list_throws_exception (0 ms)
+[ RUN      ] StaticVector.push_back_increment_size
+[       OK ] StaticVector.push_back_increment_size (0 ms)
+[ RUN      ] StaticVector.pop_back_decrement_size
+[       OK ] StaticVector.pop_back_decrement_size (0 ms)
+[ RUN      ] StaticVector.pop_back_destroys_removed_item
+[       OK ] StaticVector.pop_back_destroys_removed_item (0 ms)
+[ RUN      ] StaticVector.push_back_when_its_full_throws_exception
+[       OK ] StaticVector.push_back_when_its_full_throws_exception (0 ms)
+[ RUN      ] StaticVector.const_array_access_on_nonempty_works
+[       OK ] StaticVector.const_array_access_on_nonempty_works (0 ms)
+[ RUN      ] StaticVector.array_access_on_nonempty_works
+[       OK ] StaticVector.array_access_on_nonempty_works (0 ms)
+[ RUN      ] StaticVector.move_ctor_src_isnt_emptied
+[       OK ] StaticVector.move_ctor_src_isnt_emptied (0 ms)
+[ RUN      ] StaticVector.move_ctor_dst_has_same_size_as_src_before_move
+[       OK ] StaticVector.move_ctor_dst_has_same_size_as_src_before_move (0 ms)
+[ RUN      ] StaticVector.move_ctor_contents_are_moved
+[       OK ] StaticVector.move_ctor_contents_are_moved (0 ms)
+[ RUN      ] StaticVector.move_assign_src_isnt_emptied
+[       OK ] StaticVector.move_assign_src_isnt_emptied (0 ms)
+[ RUN      ] StaticVector.move_assign_dst_has_same_size_as_src_before_move
+[       OK ] StaticVector.move_assign_dst_has_same_size_as_src_before_move (0 ms)
+[ RUN      ] StaticVector.move_assign_contents_are_moved
+[       OK ] StaticVector.move_assign_contents_are_moved (0 ms)
+[ RUN      ] StaticVector.copy_ctor_not_available_when_elements_arent_copiable
+[       OK ] StaticVector.copy_ctor_not_available_when_elements_arent_copiable (0 ms)
+[ RUN      ] StaticVector.copy_assign_not_available_when_elements_arent_copiable
+[       OK ] StaticVector.copy_assign_not_available_when_elements_arent_copiable (0 ms)
+[ RUN      ] StaticVector.copy_ctor_available_when_elements_are_copiable
+[       OK ] StaticVector.copy_ctor_available_when_elements_are_copiable (0 ms)
+[ RUN      ] StaticVector.copy_assign_available_when_elements_are_copiable
+[       OK ] StaticVector.copy_assign_available_when_elements_are_copiable (0 ms)
+[ RUN      ] StaticVector.move_ctor_available_when_elements_arent_copiable
+[       OK ] StaticVector.move_ctor_available_when_elements_arent_copiable (0 ms)
+[ RUN      ] StaticVector.move_assign_available_when_elements_arent_copiable
+[       OK ] StaticVector.move_assign_available_when_elements_arent_copiable (0 ms)
+[ RUN      ] StaticVector.move_ctor_available_when_elements_are_copiable
+[       OK ] StaticVector.move_ctor_available_when_elements_are_copiable (0 ms)
+[ RUN      ] StaticVector.move_assign_available_when_elements_are_copiable
+[       OK ] StaticVector.move_assign_available_when_elements_are_copiable (0 ms)
+[ RUN      ] StaticVector.copy_ctor_src_size_is_unchanged
+[       OK ] StaticVector.copy_ctor_src_size_is_unchanged (0 ms)
+[ RUN      ] StaticVector.copy_ctor_dst_and_src_have_same_size
+[       OK ] StaticVector.copy_ctor_dst_and_src_have_same_size (0 ms)
+[ RUN      ] StaticVector.copy_ctor_contents_are_copied
+[       OK ] StaticVector.copy_ctor_contents_are_copied (0 ms)
+[ RUN      ] StaticVector.copy_assign_src_size_is_unchanged
+[       OK ] StaticVector.copy_assign_src_size_is_unchanged (0 ms)
+[ RUN      ] StaticVector.copy_assign_dst_and_src_have_same_size
+[       OK ] StaticVector.copy_assign_dst_and_src_have_same_size (0 ms)
+[ RUN      ] StaticVector.copy_assign_contents_are_copied
+[       OK ] StaticVector.copy_assign_contents_are_copied (0 ms)
+[ RUN      ] StaticVector.begin_and_end_are_equal_on_empty_static_vector
+[       OK ] StaticVector.begin_and_end_are_equal_on_empty_static_vector (0 ms)
+[ RUN      ] StaticVector.begin_and_end_range_maps_contained_values
+[       OK ] StaticVector.begin_and_end_range_maps_contained_values (0 ms)
+[ RUN      ] StaticVector.const_begin_and_end_are_equal_on_empty_static_vector
+[       OK ] StaticVector.const_begin_and_end_are_equal_on_empty_static_vector (0 ms)
+[ RUN      ] StaticVector.const_begin_and_end_range_maps_contained_values
+[       OK ] StaticVector.const_begin_and_end_range_maps_contained_values (0 ms)
+[ RUN      ] StaticVector.cbegin_and_mutable_begin_are_the_same
+[       OK ] StaticVector.cbegin_and_mutable_begin_are_the_same (0 ms)
+[ RUN      ] StaticVector.cbegin_and_const_begin_are_the_same
+[       OK ] StaticVector.cbegin_and_const_begin_are_the_same (0 ms)
+[ RUN      ] StaticVector.iterator_converts_to_const_iterator
+[       OK ] StaticVector.iterator_converts_to_const_iterator (0 ms)
+[ RUN      ] StaticVector.const_iterator_doesnt_convert_to_iterator
+[       OK ] StaticVector.const_iterator_doesnt_convert_to_iterator (0 ms)
+[ RUN      ] StaticVector.front_is_the_first_element
+[       OK ] StaticVector.front_is_the_first_element (0 ms)
+[ RUN      ] StaticVector.back_is_the_last_element
+[       OK ] StaticVector.back_is_the_last_element (0 ms)
+[ RUN      ] StaticVector.clear_makes_vector_empty
+[       OK ] StaticVector.clear_makes_vector_empty (0 ms)
+[ RUN      ] StaticVector.clear_properly_deletes_objects
+[       OK ] StaticVector.clear_properly_deletes_objects (0 ms)
+[ RUN      ] StaticVector.move_assignment_src_is_larger_than_src_items_lifetime_are_handled_correctly
+[       OK ] StaticVector.move_assignment_src_is_larger_than_src_items_lifetime_are_handled_correctly (0 ms)
+[ RUN      ] StaticVector.move_assignment_src_is_smaller_than_src_items_lifetime_are_handled_correctly
+[       OK ] StaticVector.move_assignment_src_is_smaller_than_src_items_lifetime_are_handled_correctly (0 ms)
+[ RUN      ] StaticVector.move_assignment_src_has_same_element_count_as_dst_items_lifetime_are_handled_correctly
+[       OK ] StaticVector.move_assignment_src_has_same_element_count_as_dst_items_lifetime_are_handled_correctly (0 ms)
+[ RUN      ] StaticVector.copy_assignment_src_is_larger_than_src_items_lifetime_are_handled_correctly
+[       OK ] StaticVector.copy_assignment_src_is_larger_than_src_items_lifetime_are_handled_correctly (0 ms)
+[ RUN      ] StaticVector.copy_assignment_src_is_smaller_than_src_items_lifetime_are_handled_correctly
+[       OK ] StaticVector.copy_assignment_src_is_smaller_than_src_items_lifetime_are_handled_correctly (0 ms)
+[ RUN      ] StaticVector.copy_assignment_src_has_same_element_count_as_src_items_lifetime_are_handled_correctly
+[       OK ] StaticVector.copy_assignment_src_has_same_element_count_as_src_items_lifetime_are_handled_correctly (0 ms)
+[ RUN      ] StaticVector.swap_non_trivial_type_a_is_larger_than_b_dont_destroy_objects
+[       OK ] StaticVector.swap_non_trivial_type_a_is_larger_than_b_dont_destroy_objects (0 ms)
+[ RUN      ] StaticVector.swap_non_trivial_type_a_is_smaller_than_b_dont_destroy_objects
+[       OK ] StaticVector.swap_non_trivial_type_a_is_smaller_than_b_dont_destroy_objects (0 ms)
+[ RUN      ] StaticVector.swap_non_trivial_type_a_has_same_element_count_as_b_dont_destroy_objects
+[       OK ] StaticVector.swap_non_trivial_type_a_has_same_element_count_as_b_dont_destroy_objects (0 ms)
+[ RUN      ] StaticVector.swap_trivial_type_a_is_larger_than_b_dont_destroy_objects
+[       OK ] StaticVector.swap_trivial_type_a_is_larger_than_b_dont_destroy_objects (0 ms)
+[ RUN      ] StaticVector.swap_trivial_type_a_is_smaller_than_b_dont_destroy_objects
+[       OK ] StaticVector.swap_trivial_type_a_is_smaller_than_b_dont_destroy_objects (0 ms)
+[ RUN      ] StaticVector.swap_trivial_type_a_has_same_element_count_as_b_dont_destroy_objects
+[       OK ] StaticVector.swap_trivial_type_a_has_same_element_count_as_b_dont_destroy_objects (0 ms)
+[ RUN      ] StaticVector.copy_ctor_trivial_type_does_copy
+[       OK ] StaticVector.copy_ctor_trivial_type_does_copy (0 ms)
+[ RUN      ] StaticVector.copy_assign_trivial_type_does_copy
+[       OK ] StaticVector.copy_assign_trivial_type_does_copy (0 ms)
+[ RUN      ] StaticVector.move_ctor_trivial_type_doesnt_reset_src
+[       OK ] StaticVector.move_ctor_trivial_type_doesnt_reset_src (0 ms)
+[ RUN      ] StaticVector.move_assign_trivial_type_doesnt_reset_src
+[       OK ] StaticVector.move_assign_trivial_type_doesnt_reset_src (0 ms)
+[ RUN      ] StaticVector.move_ctor_trivial_type_copy_items
+[       OK ] StaticVector.move_ctor_trivial_type_copy_items (0 ms)
+[ RUN      ] StaticVector.move_assign_trivial_type_copy_items
+[       OK ] StaticVector.move_assign_trivial_type_copy_items (0 ms)
+[ RUN      ] StaticVector.cant_copy_ctor_from_different_type
+[       OK ] StaticVector.cant_copy_ctor_from_different_type (0 ms)
+[ RUN      ] StaticVector.cant_move_ctor_from_different_type
+[       OK ] StaticVector.cant_move_ctor_from_different_type (0 ms)
+[ RUN      ] StaticVector.cant_copy_assign_from_different_type
+[       OK ] StaticVector.cant_copy_assign_from_different_type (0 ms)
+[ RUN      ] StaticVector.cant_move_assign_from_different_type
+[       OK ] StaticVector.cant_move_assign_from_different_type (0 ms)
+[ RUN      ] StaticVector.cant_copy_ctor_from_different_capacity
+[       OK ] StaticVector.cant_copy_ctor_from_different_capacity (0 ms)
+[ RUN      ] StaticVector.cant_move_ctor_from_different_capacity
+[       OK ] StaticVector.cant_move_ctor_from_different_capacity (0 ms)
+[ RUN      ] StaticVector.cant_copy_assign_from_different_capacity
+[       OK ] StaticVector.cant_copy_assign_from_different_capacity (0 ms)
+[ RUN      ] StaticVector.cant_move_assign_from_different_capacity
+[       OK ] StaticVector.cant_move_assign_from_different_capacity (0 ms)
+[ RUN      ] StaticVector.erase_single_element_at_beginning
+[       OK ] StaticVector.erase_single_element_at_beginning (0 ms)
+[ RUN      ] StaticVector.erase_single_element_in_the_middle
+[       OK ] StaticVector.erase_single_element_in_the_middle (0 ms)
+[ RUN      ] StaticVector.erase_single_element_at_the_end
+[       OK ] StaticVector.erase_single_element_at_the_end (0 ms)
+[ RUN      ] StaticVector.erase_single_element_past_end_segfaults
+
+[WARNING] /workspace/CV-CUDA/3rdparty/googletest/googletest/src/gtest-death-test.cc:1108:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test detected 6 threads. See https://github.com/google/googletest/blob/main/docs/advanced.md#death-tests-and-threads for more explanation and suggested solutions, especially if this is the last message you see before your test times out.
+[       OK ] StaticVector.erase_single_element_past_end_segfaults (91 ms)
+[ RUN      ] StaticVector.erase_single_element_before_beginning_segfaults
+
+[WARNING] /workspace/CV-CUDA/3rdparty/googletest/googletest/src/gtest-death-test.cc:1108:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test detected 6 threads. See https://github.com/google/googletest/blob/main/docs/advanced.md#death-tests-and-threads for more explanation and suggested solutions, especially if this is the last message you see before your test times out.
+[       OK ] StaticVector.erase_single_element_before_beginning_segfaults (89 ms)
+[ RUN      ] StaticVector.erase_range_begin_before_start_segfaults
+
+[WARNING] /workspace/CV-CUDA/3rdparty/googletest/googletest/src/gtest-death-test.cc:1108:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test detected 6 threads. See https://github.com/google/googletest/blob/main/docs/advanced.md#death-tests-and-threads for more explanation and suggested solutions, especially if this is the last message you see before your test times out.
+[       OK ] StaticVector.erase_range_begin_before_start_segfaults (88 ms)
+[ RUN      ] StaticVector.erase_range_begin_after_end_segfaults
+
+[WARNING] /workspace/CV-CUDA/3rdparty/googletest/googletest/src/gtest-death-test.cc:1108:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test detected 6 threads. See https://github.com/google/googletest/blob/main/docs/advanced.md#death-tests-and-threads for more explanation and suggested solutions, especially if this is the last message you see before your test times out.
+[       OK ] StaticVector.erase_range_begin_after_end_segfaults (88 ms)
+[ RUN      ] StaticVector.erase_empty_range_noop
+[       OK ] StaticVector.erase_empty_range_noop (0 ms)
+[ RUN      ] StaticVector.erase_empty_range_at_end_noop
+[       OK ] StaticVector.erase_empty_range_at_end_noop (0 ms)
+[ RUN      ] StaticVector.erase_empty_range_at_end_returns_end
+[       OK ] StaticVector.erase_empty_range_at_end_returns_end (0 ms)
+[ RUN      ] StaticVector.erase_empty_range_returns_begin_range
+[       OK ] StaticVector.erase_empty_range_returns_begin_range (0 ms)
+[ RUN      ] StaticVector.erase_range_end_before_begin_segfaults
+
+[WARNING] /workspace/CV-CUDA/3rdparty/googletest/googletest/src/gtest-death-test.cc:1108:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test detected 6 threads. See https://github.com/google/googletest/blob/main/docs/advanced.md#death-tests-and-threads for more explanation and suggested solutions, especially if this is the last message you see before your test times out.
+[       OK ] StaticVector.erase_range_end_before_begin_segfaults (91 ms)
+[ RUN      ] StaticVector.erase_range_end_after_vector_end_segfaults
+
+[WARNING] /workspace/CV-CUDA/3rdparty/googletest/googletest/src/gtest-death-test.cc:1108:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test detected 6 threads. See https://github.com/google/googletest/blob/main/docs/advanced.md#death-tests-and-threads for more explanation and suggested solutions, especially if this is the last message you see before your test times out.
+[       OK ] StaticVector.erase_range_end_after_vector_end_segfaults (90 ms)
+[ RUN      ] StaticVector.erase_all_elements_empties_container
+[       OK ] StaticVector.erase_all_elements_empties_container (0 ms)
+[ RUN      ] StaticVector.erase_range_at_beginning_with_bigger_range_remaining
+[       OK ] StaticVector.erase_range_at_beginning_with_bigger_range_remaining (0 ms)
+[ RUN      ] StaticVector.erase_range_at_beginning_with_smaller_range_remaining
+[       OK ] StaticVector.erase_range_at_beginning_with_smaller_range_remaining (0 ms)
+[ RUN      ] StaticVector.erase_range_at_end
+[       OK ] StaticVector.erase_range_at_end (0 ms)
+[ RUN      ] StaticVector.erase_range_in_the_middle
+[       OK ] StaticVector.erase_range_in_the_middle (0 ms)
+[ RUN      ] StaticVector.erase_in_middle_return_iterator_to_next_element
+[       OK ] StaticVector.erase_in_middle_return_iterator_to_next_element (0 ms)
+[ RUN      ] StaticVector.erase_at_end_return_end_iterator
+[       OK ] StaticVector.erase_at_end_return_end_iterator (0 ms)
+[ RUN      ] StaticVector.rbegin_and_rend_are_equal_on_empty_container
+[       OK ] StaticVector.rbegin_and_rend_are_equal_on_empty_container (0 ms)
+[ RUN      ] StaticVector.rbegin_point_to_last_element
+[       OK ] StaticVector.rbegin_point_to_last_element (0 ms)
+[ RUN      ] StaticVector.rend_point_to_previous_to_first_element
+[       OK ] StaticVector.rend_point_to_previous_to_first_element (0 ms)
+[ RUN      ] StaticVector.reverse_iteration_works
+[       OK ] StaticVector.reverse_iteration_works (0 ms)
+[ RUN      ] StaticVector.reverse_iterator_implicitly_converts_to_const_reverse_iterator
+[       OK ] StaticVector.reverse_iterator_implicitly_converts_to_const_reverse_iterator (0 ms)
+[ RUN      ] StaticVector.const_reverse_iterator_doesnt_convert_to_reverse_iterator
+[       OK ] StaticVector.const_reverse_iterator_doesnt_convert_to_reverse_iterator (0 ms)
+[ RUN      ] StaticVector.cant_increase_size_of_non_default_constructible_type_vector
+[       OK ] StaticVector.cant_increase_size_of_non_default_constructible_type_vector (0 ms)
+[ RUN      ] StaticVector.can_decrease_size_of_non_default_constructible_type_vector
+[       OK ] StaticVector.can_decrease_size_of_non_default_constructible_type_vector (0 ms)
+[ RUN      ] StaticVector.can_add_non_default_constructible_type
+[       OK ] StaticVector.can_add_non_default_constructible_type (0 ms)
+[ RUN      ] StaticVector.can_erase_non_default_constructible_type
+[       OK ] StaticVector.can_erase_non_default_constructible_type (0 ms)
+[ RUN      ] StaticVector.has_nothrow_move_ctor_when_type_has_it
+[       OK ] StaticVector.has_nothrow_move_ctor_when_type_has_it (0 ms)
+[ RUN      ] StaticVector.has_nothrow_move_assign_when_type_has_it
+[       OK ] StaticVector.has_nothrow_move_assign_when_type_has_it (0 ms)
+[ RUN      ] StaticVector.has_throwable_move_ctor_when_type_has_it
+[       OK ] StaticVector.has_throwable_move_ctor_when_type_has_it (0 ms)
+[ RUN      ] StaticVector.has_throwable_move_assign_when_type_has_it
+[       OK ] StaticVector.has_throwable_move_assign_when_type_has_it (0 ms)
+[ RUN      ] StaticVector.has_nothrow_copy_ctor_when_type_has_it
+[       OK ] StaticVector.has_nothrow_copy_ctor_when_type_has_it (0 ms)
+[ RUN      ] StaticVector.has_nothrow_copy_assign_when_type_has_it
+[       OK ] StaticVector.has_nothrow_copy_assign_when_type_has_it (0 ms)
+[ RUN      ] StaticVector.has_throwable_copy_ctor_when_type_has_it
+[       OK ] StaticVector.has_throwable_copy_ctor_when_type_has_it (0 ms)
+[ RUN      ] StaticVector.has_throwable_copy_assign_when_type_has_it
+[       OK ] StaticVector.has_throwable_copy_assign_when_type_has_it (0 ms)
+[ RUN      ] StaticVector.construct_from_empty_range
+[       OK ] StaticVector.construct_from_empty_range (0 ms)
+[ RUN      ] StaticVector.construct_from_range
+[       OK ] StaticVector.construct_from_range (0 ms)
+[ RUN      ] StaticVector.construct_from_range_bigger_than_capacity_fails
+[       OK ] StaticVector.construct_from_range_bigger_than_capacity_fails (0 ms)
+[----------] 128 tests from StaticVector (540 ms total)
+
+[----------] 1 test from IndexSequence/0, where TypeParam = testing::internal::ProxyTypeList<nvcv::test::type::Value<0>, nvcv::detail::IndexSequence<> >
+[ RUN      ] IndexSequence/0.make_index_sequence
+[       OK ] IndexSequence/0.make_index_sequence (0 ms)
+[----------] 1 test from IndexSequence/0 (0 ms total)
+
+[----------] 1 test from IndexSequence/1, where TypeParam = testing::internal::ProxyTypeList<nvcv::test::type::Value<1>, nvcv::detail::IndexSequence<0ul> >
+[ RUN      ] IndexSequence/1.make_index_sequence
+[       OK ] IndexSequence/1.make_index_sequence (0 ms)
+[----------] 1 test from IndexSequence/1 (0 ms total)
+
+[----------] 1 test from IndexSequence/2, where TypeParam = testing::internal::ProxyTypeList<nvcv::test::type::Value<2>, nvcv::detail::IndexSequence<0ul, 1ul> >
+[ RUN      ] IndexSequence/2.make_index_sequence
+[       OK ] IndexSequence/2.make_index_sequence (0 ms)
+[----------] 1 test from IndexSequence/2 (0 ms total)
+
+[----------] 1 test from IndexSequence/3, where TypeParam = testing::internal::ProxyTypeList<nvcv::test::type::Value<5>, nvcv::detail::IndexSequence<0ul, 1ul, 2ul, 3ul, 4ul> >
+[ RUN      ] IndexSequence/3.make_index_sequence
+[       OK ] IndexSequence/3.make_index_sequence (0 ms)
+[----------] 1 test from IndexSequence/3 (0 ms total)
+
+[----------] 1 test from MetaprogrammingTypeIdentityTest/0, where TypeParam = testing::internal::ProxyTypeList<int, int>
+[ RUN      ] MetaprogrammingTypeIdentityTest/0.works
+[       OK ] MetaprogrammingTypeIdentityTest/0.works (0 ms)
+[----------] 1 test from MetaprogrammingTypeIdentityTest/0 (0 ms total)
+
+[----------] 1 test from MetaprogrammingTypeIdentityTest/1, where TypeParam = testing::internal::ProxyTypeList<char&, char&>
+[ RUN      ] MetaprogrammingTypeIdentityTest/1.works
+[       OK ] MetaprogrammingTypeIdentityTest/1.works (0 ms)
+[----------] 1 test from MetaprogrammingTypeIdentityTest/1 (0 ms total)
+
+[----------] 1 test from MetaprogrammingTypeIdentityTest/2, where TypeParam = testing::internal::ProxyTypeList<short const*, short const*>
+[ RUN      ] MetaprogrammingTypeIdentityTest/2.works
+[       OK ] MetaprogrammingTypeIdentityTest/2.works (0 ms)
+[----------] 1 test from MetaprogrammingTypeIdentityTest/2 (0 ms total)
+
+[----------] 1 test from MetaprogrammingTypeIdentityTest/3, where TypeParam = testing::internal::ProxyTypeList<long volatile*, long volatile*>
+[ RUN      ] MetaprogrammingTypeIdentityTest/3.works
+[       OK ] MetaprogrammingTypeIdentityTest/3.works (0 ms)
+[----------] 1 test from MetaprogrammingTypeIdentityTest/3 (0 ms total)
+
+[----------] 1 test from MetaprogrammingTypeIdentityTest/4, where TypeParam = testing::internal::ProxyTypeList<long volatile*, long volatile*>
+[ RUN      ] MetaprogrammingTypeIdentityTest/4.works
+[       OK ] MetaprogrammingTypeIdentityTest/4.works (0 ms)
+[----------] 1 test from MetaprogrammingTypeIdentityTest/4 (0 ms total)
+
+[----------] 1 test from MetaprogrammingTypeIdentityTest/5, where TypeParam = testing::internal::ProxyTypeList<int const* [3], int const* [3]>
+[ RUN      ] MetaprogrammingTypeIdentityTest/5.works
+[       OK ] MetaprogrammingTypeIdentityTest/5.works (0 ms)
+[----------] 1 test from MetaprogrammingTypeIdentityTest/5 (0 ms total)
+
+[----------] 4 tests from Optional
+[ RUN      ] Optional.default_no_value
+[       OK ] Optional.default_no_value (0 ms)
+[ RUN      ] Optional.ctor_with_value
+[       OK ] Optional.ctor_with_value (0 ms)
+[ RUN      ] Optional.assignment
+[       OK ] Optional.assignment (0 ms)
+[ RUN      ] Optional.equality
+[       OK ] Optional.equality (0 ms)
+[----------] 4 tests from Optional (0 ms total)
+
+[----------] 3 tests from LockFreeStack
+[ RUN      ] LockFreeStack.smoke_push
+[       OK ] LockFreeStack.smoke_push (0 ms)
+[ RUN      ] LockFreeStack.smoke_push_stack
+[       OK ] LockFreeStack.smoke_push_stack (0 ms)
+[ RUN      ] LockFreeStack.smoke_release
+[       OK ] LockFreeStack.smoke_release (0 ms)
+[----------] 3 tests from LockFreeStack (0 ms total)
+
+[----------] 8 tests from HandleManager
+[ RUN      ] HandleManager.smoke_handle_generation_wraps_around
+[       OK ] HandleManager.smoke_handle_generation_wraps_around (0 ms)
+[ RUN      ] HandleManager.smoke_destroy_already_destroyed
+[       OK ] HandleManager.smoke_destroy_already_destroyed (0 ms)
+[ RUN      ] HandleManager.smoke_ref_unref
+[       OK ] HandleManager.smoke_ref_unref (0 ms)
+[ RUN      ] HandleManager.smoke_dec_ref_invalid
+[       OK ] HandleManager.smoke_dec_ref_invalid (0 ms)
+[ RUN      ] HandleManager.smoke_validate_already_destroyed
+[       OK ] HandleManager.smoke_validate_already_destroyed (0 ms)
+[ RUN      ] HandleManager.smoke_validate_invalid
+[       OK ] HandleManager.smoke_validate_invalid (0 ms)
+[ RUN      ] HandleManager.smoke_handle_count_overflow
+[       OK ] HandleManager.smoke_handle_count_overflow (0 ms)
+[ RUN      ] HandleManager.smoke_no_handle_leak_if_object_creation_throws
+[       OK ] HandleManager.smoke_no_handle_leak_if_object_creation_throws (0 ms)
+[----------] 8 tests from HandleManager (0 ms total)
+
+[----------] 2 tests from AlgorithmMaxTest
+[ RUN      ] AlgorithmMaxTest.works
+[       OK ] AlgorithmMaxTest.works (0 ms)
+[ RUN      ] AlgorithmMaxTest.constexpr_works
+[       OK ] AlgorithmMaxTest.constexpr_works (0 ms)
+[----------] 2 tests from AlgorithmMaxTest (0 ms total)
+
+[----------] 4 tests from RangeTest/0, where TypeParam = (anonymous namespace)::RangeMember
+[ RUN      ] RangeTest/0.begin
+[       OK ] RangeTest/0.begin (0 ms)
+[ RUN      ] RangeTest/0.end
+[       OK ] RangeTest/0.end (0 ms)
+[ RUN      ] RangeTest/0.size
+[       OK ] RangeTest/0.size (0 ms)
+[ RUN      ] RangeTest/0.data
+[       OK ] RangeTest/0.data (0 ms)
+[----------] 4 tests from RangeTest/0 (0 ms total)
+
+[----------] 4 tests from RangeTest/1, where TypeParam = (anonymous namespace)::range::RangeGlobal
+[ RUN      ] RangeTest/1.begin
+[       OK ] RangeTest/1.begin (0 ms)
+[ RUN      ] RangeTest/1.end
+[       OK ] RangeTest/1.end (0 ms)
+[ RUN      ] RangeTest/1.size
+[       OK ] RangeTest/1.size (0 ms)
+[ RUN      ] RangeTest/1.data
+[       OK ] RangeTest/1.data (0 ms)
+[----------] 4 tests from RangeTest/1 (0 ms total)
+
+[----------] 4 tests from RangeTest/2, where TypeParam = int [5]
+[ RUN      ] RangeTest/2.begin
+[       OK ] RangeTest/2.begin (0 ms)
+[ RUN      ] RangeTest/2.end
+[       OK ] RangeTest/2.end (0 ms)
+[ RUN      ] RangeTest/2.size
+[       OK ] RangeTest/2.size (0 ms)
+[ RUN      ] RangeTest/2.data
+[       OK ] RangeTest/2.data (0 ms)
+[----------] 4 tests from RangeTest/2 (0 ms total)
+
+[----------] 1 test from RangePositiveTest/0, where TypeParam = std::vector<float, std::allocator<float> >
+[ RUN      ] RangePositiveTest/0.works
+[       OK ] RangePositiveTest/0.works (0 ms)
+[----------] 1 test from RangePositiveTest/0 (0 ms total)
+
+[----------] 1 test from RangePositiveTest/1, where TypeParam = (anonymous namespace)::RangeMember
+[ RUN      ] RangePositiveTest/1.works
+[       OK ] RangePositiveTest/1.works (0 ms)
+[----------] 1 test from RangePositiveTest/1 (0 ms total)
+
+[----------] 1 test from RangePositiveTest/2, where TypeParam = (anonymous namespace)::range::RangeGlobal
+[ RUN      ] RangePositiveTest/2.works
+[       OK ] RangePositiveTest/2.works (0 ms)
+[----------] 1 test from RangePositiveTest/2 (0 ms total)
+
+[----------] 1 test from RangePositiveTest/3, where TypeParam = int [10]
+[ RUN      ] RangePositiveTest/3.works
+[       OK ] RangePositiveTest/3.works (0 ms)
+[----------] 1 test from RangePositiveTest/3 (0 ms total)
+
+[----------] 1 test from RangeNegativeTest/0, where TypeParam = int
+[ RUN      ] RangeNegativeTest/0.works
+[       OK ] RangeNegativeTest/0.works (0 ms)
+[----------] 1 test from RangeNegativeTest/0 (0 ms total)
+
+[----------] 1 test from RangeNegativeTest/1, where TypeParam = (anonymous namespace)::NotRange
+[ RUN      ] RangeNegativeTest/1.works
+[       OK ] RangeNegativeTest/1.works (0 ms)
+[----------] 1 test from RangeNegativeTest/1 (0 ms total)
+
+[----------] 1 test from RangeNegativeTest/2, where TypeParam = (anonymous namespace)::NotRangeBegin
+[ RUN      ] RangeNegativeTest/2.works
+[       OK ] RangeNegativeTest/2.works (0 ms)
+[----------] 1 test from RangeNegativeTest/2 (0 ms total)
+
+[----------] 1 test from RangeNegativeTest/3, where TypeParam = (anonymous namespace)::NotRangeEnd
+[ RUN      ] RangeNegativeTest/3.works
+[       OK ] RangeNegativeTest/3.works (0 ms)
+[----------] 1 test from RangeNegativeTest/3 (0 ms total)
+
+[----------] 1 test from RangeValueTest/0, where TypeParam = testing::internal::ProxyTypeList<std::vector<float, std::allocator<float> > const, float const>
+[ RUN      ] RangeValueTest/0.works
+[       OK ] RangeValueTest/0.works (0 ms)
+[----------] 1 test from RangeValueTest/0 (0 ms total)
+
+[----------] 1 test from RangeValueTest/1, where TypeParam = testing::internal::ProxyTypeList<std::vector<float, std::allocator<float> >, float>
+[ RUN      ] RangeValueTest/1.works
+[       OK ] RangeValueTest/1.works (0 ms)
+[----------] 1 test from RangeValueTest/1 (0 ms total)
+
+[----------] 1 test from RangeValueTest/2, where TypeParam = testing::internal::ProxyTypeList<(anonymous namespace)::RangeMember, int>
+[ RUN      ] RangeValueTest/2.works
+[       OK ] RangeValueTest/2.works (0 ms)
+[----------] 1 test from RangeValueTest/2 (0 ms total)
+
+[----------] 1 test from RangeValueTest/3, where TypeParam = testing::internal::ProxyTypeList<(anonymous namespace)::range::RangeGlobal, int>
+[ RUN      ] RangeValueTest/3.works
+[       OK ] RangeValueTest/3.works (0 ms)
+[----------] 1 test from RangeValueTest/3 (0 ms total)
+
+[----------] 1 test from RangeRandomAccessPositiveTest/0, where TypeParam = int [10]
+[ RUN      ] RangeRandomAccessPositiveTest/0.works
+[       OK ] RangeRandomAccessPositiveTest/0.works (0 ms)
+[----------] 1 test from RangeRandomAccessPositiveTest/0 (0 ms total)
+
+[----------] 7 tests from CallbackTest
+[ RUN      ] CallbackTest.FromFunction
+[       OK ] CallbackTest.FromFunction (0 ms)
+[ RUN      ] CallbackTest.FromEmptyCallable
+[       OK ] CallbackTest.FromEmptyCallable (0 ms)
+[ RUN      ] CallbackTest.FromSimpleCallable
+[       OK ] CallbackTest.FromSimpleCallable (0 ms)
+[ RUN      ] CallbackTest.ComplexObjectLifecycle
+[       OK ] CallbackTest.ComplexObjectLifecycle (0 ms)
+[ RUN      ] CallbackTest.FromStdFunction
+[       OK ] CallbackTest.FromStdFunction (0 ms)
+[ RUN      ] CallbackTest.FromLambda
+[       OK ] CallbackTest.FromLambda (0 ms)
+[ RUN      ] CallbackTest.TestCCleanup
+[       OK ] CallbackTest.TestCCleanup (0 ms)
+[----------] 7 tests from CallbackTest (0 ms total)
+
+[----------] 4 tests from CleanupCallbackTest
+[ RUN      ] CleanupCallbackTest.TestSelfCleanup
+[       OK ] CleanupCallbackTest.TestSelfCleanup (0 ms)
+[ RUN      ] CleanupCallbackTest.LambdaWithDestructorCalledFromC
+[       OK ] CleanupCallbackTest.LambdaWithDestructorCalledFromC (0 ms)
+[ RUN      ] CleanupCallbackTest.LambdaWithDestructorNotCalled
+[       OK ] CleanupCallbackTest.LambdaWithDestructorNotCalled (0 ms)
+[ RUN      ] CleanupCallbackTest.ThrowInC
+[       OK ] CleanupCallbackTest.ThrowInC (0 ms)
+[----------] 4 tests from CleanupCallbackTest (0 ms total)
+
+[----------] 1 test from HandleWrapperTest
+[ RUN      ] HandleWrapperTest.TestHandleOps
+[       OK ] HandleWrapperTest.TestHandleOps (0 ms)
+[----------] 1 test from HandleWrapperTest (0 ms total)
+
+[----------] 3 tests from UniqueHandleTest
+[ RUN      ] UniqueHandleTest.CreateDestroy
+[       OK ] UniqueHandleTest.CreateDestroy (0 ms)
+[ RUN      ] UniqueHandleTest.ResetRelease
+[       OK ] UniqueHandleTest.ResetRelease (0 ms)
+[ RUN      ] UniqueHandleTest.Overwrite
+[       OK ] UniqueHandleTest.Overwrite (0 ms)
+[----------] 3 tests from UniqueHandleTest (0 ms total)
+
+[----------] 3 tests from SharedHandleTest
+[ RUN      ] SharedHandleTest.CreateDestroy
+[       OK ] SharedHandleTest.CreateDestroy (0 ms)
+[ RUN      ] SharedHandleTest.ResetRelease
+[       OK ] SharedHandleTest.ResetRelease (0 ms)
+[ RUN      ] SharedHandleTest.CopyMove
+[       OK ] SharedHandleTest.CopyMove (0 ms)
+[----------] 3 tests from SharedHandleTest (0 ms total)
+
+[----------] 3 tests from SharedCoreObjTest
+[ RUN      ] SharedCoreObjTest.Construct
+[       OK ] SharedCoreObjTest.Construct (0 ms)
+[ RUN      ] SharedCoreObjTest.Comparison
+[       OK ] SharedCoreObjTest.Comparison (0 ms)
+[ RUN      ] SharedCoreObjTest.AssignCopyMove
+[       OK ] SharedCoreObjTest.AssignCopyMove (0 ms)
+[----------] 3 tests from SharedCoreObjTest (0 ms total)
+
+[----------] 5 tests from ExceptionTest
+[ RUN      ] ExceptionTest.exception_what
+[       OK ] ExceptionTest.exception_what (0 ms)
+[ RUN      ] ExceptionTest.priv_protect_call_invalid_argument
+[       OK ] ExceptionTest.priv_protect_call_invalid_argument (0 ms)
+[ RUN      ] ExceptionTest.priv_protect_call_bad_alloc
+[       OK ] ExceptionTest.priv_protect_call_bad_alloc (0 ms)
+[ RUN      ] ExceptionTest.priv_protect_call_std_exception
+[       OK ] ExceptionTest.priv_protect_call_std_exception (0 ms)
+[ RUN      ] ExceptionTest.priv_protect_call_unexpected
+[       OK ] ExceptionTest.priv_protect_call_unexpected (0 ms)
+[----------] 5 tests from ExceptionTest (0 ms total)
+
+[----------] 6 tests from DataLayoutTest
+[ RUN      ] DataLayoutTest.GetBlockHeightLog2
+[       OK ] DataLayoutTest.GetBlockHeightLog2 (0 ms)
+[ RUN      ] DataLayoutTest.FlipByteOrder
+[       OK ] DataLayoutTest.FlipByteOrder (0 ms)
+[ RUN      ] DataLayoutTest.MakeNVCVPacking
+[       OK ] DataLayoutTest.MakeNVCVPacking (0 ms)
+[ RUN      ] DataLayoutTest.IsSubWord
+[       OK ] DataLayoutTest.IsSubWord (0 ms)
+[ RUN      ] DataLayoutTest.GetBitsPerPixel_Corner
+[       OK ] DataLayoutTest.GetBitsPerPixel_Corner (0 ms)
+[ RUN      ] DataLayoutTest.MergePlaneSwizzles_Corner
+[       OK ] DataLayoutTest.MergePlaneSwizzles_Corner (0 ms)
+[----------] 6 tests from DataLayoutTest (0 ms total)
+
+[----------] 1 test from ByteOrderTests
+[ RUN      ] ByteOrderTests.get_name_operator
+[       OK ] ByteOrderTests.get_name_operator (0 ms)
+[----------] 1 test from ByteOrderTests (0 ms total)
+
+[----------] 1 test from AlphaTypeTests
+[ RUN      ] AlphaTypeTests.get_name_operator
+[       OK ] AlphaTypeTests.get_name_operator (0 ms)
+[----------] 1 test from AlphaTypeTests (0 ms total)
+
+[----------] 1 test from ExtraChannelTests
+[ RUN      ] ExtraChannelTests.get_name_operator
+[       OK ] ExtraChannelTests.get_name_operator (0 ms)
+[----------] 1 test from ExtraChannelTests (0 ms total)
+
+[----------] 20 tests from ImageFormatTests
+[ RUN      ] ImageFormatTests.blockHeightLog2
+[       OK ] ImageFormatTests.blockHeightLog2 (0 ms)
+[ RUN      ] ImageFormatTests.colorRange
+[       OK ] ImageFormatTests.colorRange (0 ms)
+[ RUN      ] ImageFormatTests.newColorRange
+[       OK ] ImageFormatTests.newColorRange (0 ms)
+[ RUN      ] ImageFormatTests.bitDepth
+[       OK ] ImageFormatTests.bitDepth (0 ms)
+[ RUN      ] ImageFormatTests.newColorFormat
+[       OK ] ImageFormatTests.newColorFormat (0 ms)
+[ RUN      ] ImageFormatTests.compareColorSpec
+[       OK ] ImageFormatTests.compareColorSpec (0 ms)
+[ RUN      ] ImageFormatTests.UpdateColorSpec
+[       OK ] ImageFormatTests.UpdateColorSpec (0 ms)
+[ RUN      ] ImageFormatTests.newDataKind
+[       OK ] ImageFormatTests.newDataKind (0 ms)
+[ RUN      ] ImageFormatTests.StrNVCVImageFormat
+[       OK ] ImageFormatTests.StrNVCVImageFormat (0 ms)
+[ RUN      ] ImageFormatTests.newCSS
+[       OK ] ImageFormatTests.newCSS (0 ms)
+[ RUN      ] ImageFormatTests.newExtraChannelInfo_const
+[       OK ] ImageFormatTests.newExtraChannelInfo_const (0 ms)
+[ RUN      ] ImageFormatTests.newRawPattern
+[       OK ] ImageFormatTests.newRawPattern (0 ms)
+[ RUN      ] ImageFormatTests.newSwizzleAndPacking
+[       OK ] ImageFormatTests.newSwizzleAndPacking (0 ms)
+[ RUN      ] ImageFormatTests.validateExtraChannelInfo
+[       OK ] ImageFormatTests.validateExtraChannelInfo (0 ms)
+[ RUN      ] ImageFormatTests.planeSwizzle
+[       OK ] ImageFormatTests.planeSwizzle (0 ms)
+[ RUN      ] ImageFormatTests.bpc
+[       OK ] ImageFormatTests.bpc (0 ms)
+[ RUN      ] ImageFormatTests.FromPlanes
+[       OK ] ImageFormatTests.FromPlanes (0 ms)
+[ RUN      ] ImageFormatTests.constructor_0
+[       OK ] ImageFormatTests.constructor_0 (0 ms)
+[ RUN      ] ImageFormatTests.constructor_1
+[       OK ] ImageFormatTests.constructor_1 (0 ms)
+[ RUN      ] ImageFormatTests.operator_insertion
+[       OK ] ImageFormatTests.operator_insertion (0 ms)
+[----------] 20 tests from ImageFormatTests (0 ms total)
+
+[----------] 2 tests from ArrayTests
+[ RUN      ] ArrayTests.rank
+[       OK ] ArrayTests.rank (0 ms)
+[ RUN      ] ArrayTests.warp_rank
+[       OK ] ArrayTests.warp_rank (0 ms)
+[----------] 2 tests from ArrayTests (0 ms total)
+
+[----------] 5 tests from ColorSpecTests
+[ RUN      ] ColorSpecTests.whitePoint
+[       OK ] ColorSpecTests.whitePoint (0 ms)
+[ RUN      ] ColorSpecTests.GetName
+[       OK ] ColorSpecTests.GetName (0 ms)
+[ RUN      ] ColorSpecTests.operator_insertion_NVCVWhitePoint
+[       OK ] ColorSpecTests.operator_insertion_NVCVWhitePoint (0 ms)
+[ RUN      ] ColorSpecTests.operator_insertion_NVCVColorSpec
+[       OK ] ColorSpecTests.operator_insertion_NVCVColorSpec (0 ms)
+[ RUN      ] ColorSpecTests.StrNVCVColorSpec
+[       OK ] ColorSpecTests.StrNVCVColorSpec (0 ms)
+[----------] 5 tests from ColorSpecTests (0 ms total)
+
+[----------] 1 test from DefaultAllocatorTest
+[ RUN      ] DefaultAllocatorTest.invalidGet
+[       OK ] DefaultAllocatorTest.invalidGet (0 ms)
+[----------] 1 test from DefaultAllocatorTest (0 ms total)
+
+[----------] 1 test from TensorLayoutTest
+[ RUN      ] TensorLayoutTest.createExceedMaxRank
+[       OK ] TensorLayoutTest.createExceedMaxRank (0 ms)
+[----------] 1 test from TensorLayoutTest (0 ms total)
+
+[----------] 4 tests from _/ValueTestsTests
+[ RUN      ] _/ValueTestsTests.test/067499fe
+[       OK ] _/ValueTestsTests.test/067499fe (0 ms)
+[ RUN      ] _/ValueTestsTests.test/e5a06415
+[       OK ] _/ValueTestsTests.test/e5a06415 (0 ms)
+[ RUN      ] _/ValueTestsTests.test/a7987083
+[       OK ] _/ValueTestsTests.test/a7987083 (0 ms)
+[ RUN      ] _/ValueTestsTests.test/1d5fbee8
+[       OK ] _/ValueTestsTests.test/1d5fbee8 (0 ms)
+[----------] 4 tests from _/ValueTestsTests (0 ms total)
+
+[----------] 1 test from _/ValueTestsConversionTests
+[ RUN      ] _/ValueTestsConversionTests.test/6f367aee
+[       OK ] _/ValueTestsConversionTests.test/6f367aee (0 ms)
+[----------] 1 test from _/ValueTestsConversionTests (0 ms total)
+
+[----------] 4 tests from _/ValueTestsNamedParameterTests
+[ RUN      ] _/ValueTestsNamedParameterTests.test/07cc1d67
+[       OK ] _/ValueTestsNamedParameterTests.test/07cc1d67 (0 ms)
+[ RUN      ] _/ValueTestsNamedParameterTests.test/f84f7644
+[       OK ] _/ValueTestsNamedParameterTests.test/f84f7644 (0 ms)
+[ RUN      ] _/ValueTestsNamedParameterTests.test/364686c2
+[       OK ] _/ValueTestsNamedParameterTests.test/364686c2 (0 ms)
+[ RUN      ] _/ValueTestsNamedParameterTests.test/b91815b7
+[       OK ] _/ValueTestsNamedParameterTests.test/b91815b7 (0 ms)
+[----------] 4 tests from _/ValueTestsNamedParameterTests (0 ms total)
+
+[----------] 2 tests from _/ValueTestsNamedDefaultExplicitParameterTests
+[ RUN      ] _/ValueTestsNamedDefaultExplicitParameterTests.test/067499fe
+[       OK ] _/ValueTestsNamedDefaultExplicitParameterTests.test/067499fe (0 ms)
+[ RUN      ] _/ValueTestsNamedDefaultExplicitParameterTests.test/a7987083
+[       OK ] _/ValueTestsNamedDefaultExplicitParameterTests.test/a7987083 (0 ms)
+[----------] 2 tests from _/ValueTestsNamedDefaultExplicitParameterTests (0 ms total)
+
+[----------] 2 tests from _/ValueTestsNamedDefaultImplicitParameterTests
+[ RUN      ] _/ValueTestsNamedDefaultImplicitParameterTests.test/b06ac88b
+[       OK ] _/ValueTestsNamedDefaultImplicitParameterTests.test/b06ac88b (0 ms)
+[ RUN      ] _/ValueTestsNamedDefaultImplicitParameterTests.test/53f5bfc3
+[       OK ] _/ValueTestsNamedDefaultImplicitParameterTests.test/53f5bfc3 (0 ms)
+[----------] 2 tests from _/ValueTestsNamedDefaultImplicitParameterTests (0 ms total)
+
+[----------] 2 tests from _/ValueTestsNamedNoDefaultParameterTests
+[ RUN      ] _/ValueTestsNamedNoDefaultParameterTests.test/60263978
+[       OK ] _/ValueTestsNamedNoDefaultParameterTests.test/60263978 (0 ms)
+[ RUN      ] _/ValueTestsNamedNoDefaultParameterTests.test/de2aaf6a
+[       OK ] _/ValueTestsNamedNoDefaultParameterTests.test/de2aaf6a (0 ms)
+[----------] 2 tests from _/ValueTestsNamedNoDefaultParameterTests (0 ms total)
+
+[----------] 3 tests from _/ValueTestsInferParameterTypesTests
+[ RUN      ] _/ValueTestsInferParameterTypesTests.test/1c4d70c9
+[       OK ] _/ValueTestsInferParameterTypesTests.test/1c4d70c9 (0 ms)
+[ RUN      ] _/ValueTestsInferParameterTypesTests.test/cfb8712f
+[       OK ] _/ValueTestsInferParameterTypesTests.test/cfb8712f (0 ms)
+[ RUN      ] _/ValueTestsInferParameterTypesTests.test/117006f2
+[       OK ] _/ValueTestsInferParameterTypesTests.test/117006f2 (0 ms)
+[----------] 3 tests from _/ValueTestsInferParameterTypesTests (0 ms total)
+
+[----------] 4 tests from _/CheckErrorCudaConversionTests
+[ RUN      ] _/CheckErrorCudaConversionTests.check_conversion_to_nvcvstatus/0e70152f
+[       OK ] _/CheckErrorCudaConversionTests.check_conversion_to_nvcvstatus/0e70152f (0 ms)
+[ RUN      ] _/CheckErrorCudaConversionTests.check_conversion_to_nvcvstatus/5a4c8aa3
+[       OK ] _/CheckErrorCudaConversionTests.check_conversion_to_nvcvstatus/5a4c8aa3 (0 ms)
+[ RUN      ] _/CheckErrorCudaConversionTests.check_conversion_to_nvcvstatus/f134f1a7
+[       OK ] _/CheckErrorCudaConversionTests.check_conversion_to_nvcvstatus/f134f1a7 (0 ms)
+[ RUN      ] _/CheckErrorCudaConversionTests.check_conversion_to_nvcvstatus/a8fd529a
+[       OK ] _/CheckErrorCudaConversionTests.check_conversion_to_nvcvstatus/a8fd529a (0 ms)
+[----------] 4 tests from _/CheckErrorCudaConversionTests (0 ms total)
+
+[----------] 9 tests from _/CheckStatusMacroTests
+[ RUN      ] _/CheckStatusMacroTests.return_value/c90832f0
+[       OK ] _/CheckStatusMacroTests.return_value/c90832f0 (0 ms)
+[ RUN      ] _/CheckStatusMacroTests.return_value/4e13df72
+[       OK ] _/CheckStatusMacroTests.return_value/4e13df72 (0 ms)
+[ RUN      ] _/CheckStatusMacroTests.return_value/1057a21f
+[       OK ] _/CheckStatusMacroTests.return_value/1057a21f (0 ms)
+[ RUN      ] _/CheckStatusMacroTests.throw_return_void/c90832f0
+[       OK ] _/CheckStatusMacroTests.throw_return_void/c90832f0 (0 ms)
+[ RUN      ] _/CheckStatusMacroTests.throw_return_void/4e13df72
+[       OK ] _/CheckStatusMacroTests.throw_return_void/4e13df72 (0 ms)
+[ RUN      ] _/CheckStatusMacroTests.throw_return_void/1057a21f
+[       OK ] _/CheckStatusMacroTests.throw_return_void/1057a21f (0 ms)
+[ RUN      ] _/CheckStatusMacroTests.throw_return_something_else/c90832f0
+[       OK ] _/CheckStatusMacroTests.throw_return_something_else/c90832f0 (0 ms)
+[ RUN      ] _/CheckStatusMacroTests.throw_return_something_else/4e13df72
+[       OK ] _/CheckStatusMacroTests.throw_return_something_else/4e13df72 (0 ms)
+[ RUN      ] _/CheckStatusMacroTests.throw_return_something_else/1057a21f
+[       OK ] _/CheckStatusMacroTests.throw_return_something_else/1057a21f (0 ms)
+[----------] 9 tests from _/CheckStatusMacroTests (0 ms total)
+
+[----------] 25 tests from _/ReplaceAllInlineTests
+[ RUN      ] _/ReplaceAllInlineTests.test/15af9dfc
+[       OK ] _/ReplaceAllInlineTests.test/15af9dfc (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/0afd7432
+[       OK ] _/ReplaceAllInlineTests.test/0afd7432 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/1cd9a9d9
+[       OK ] _/ReplaceAllInlineTests.test/1cd9a9d9 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/011eae5d
+[       OK ] _/ReplaceAllInlineTests.test/011eae5d (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/1e9f413f
+[       OK ] _/ReplaceAllInlineTests.test/1e9f413f (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/001cc81b
+[       OK ] _/ReplaceAllInlineTests.test/001cc81b (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/17e9a990
+[       OK ] _/ReplaceAllInlineTests.test/17e9a990 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/6d0878da
+[       OK ] _/ReplaceAllInlineTests.test/6d0878da (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/3df23145
+[       OK ] _/ReplaceAllInlineTests.test/3df23145 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/7574f764
+[       OK ] _/ReplaceAllInlineTests.test/7574f764 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/1e24dd40
+[       OK ] _/ReplaceAllInlineTests.test/1e24dd40 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/f6d42723
+[       OK ] _/ReplaceAllInlineTests.test/f6d42723 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/88fae89d
+[       OK ] _/ReplaceAllInlineTests.test/88fae89d (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/75203a78
+[       OK ] _/ReplaceAllInlineTests.test/75203a78 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/414fcbbc
+[       OK ] _/ReplaceAllInlineTests.test/414fcbbc (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/70324251
+[       OK ] _/ReplaceAllInlineTests.test/70324251 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/102afd4f
+[       OK ] _/ReplaceAllInlineTests.test/102afd4f (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/c1865140
+[       OK ] _/ReplaceAllInlineTests.test/c1865140 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/e65be20c
+[       OK ] _/ReplaceAllInlineTests.test/e65be20c (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/80fc16e0
+[       OK ] _/ReplaceAllInlineTests.test/80fc16e0 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/01e22122
+[       OK ] _/ReplaceAllInlineTests.test/01e22122 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/205450fe
+[       OK ] _/ReplaceAllInlineTests.test/205450fe (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/7e608d48
+[       OK ] _/ReplaceAllInlineTests.test/7e608d48 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/89705bb6
+[       OK ] _/ReplaceAllInlineTests.test/89705bb6 (0 ms)
+[ RUN      ] _/ReplaceAllInlineTests.test/2f46a304
+[       OK ] _/ReplaceAllInlineTests.test/2f46a304 (0 ms)
+[----------] 25 tests from _/ReplaceAllInlineTests (0 ms total)
+
+[----------] 28 tests from Positive/VersionTests
+[ RUN      ] Positive/VersionTests.code_to_version/48acefc2
+[       OK ] Positive/VersionTests.code_to_version/48acefc2 (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/c7d9e1a3
+[       OK ] Positive/VersionTests.code_to_version/c7d9e1a3 (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/1b2fa470
+[       OK ] Positive/VersionTests.code_to_version/1b2fa470 (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/72d0a71f
+[       OK ] Positive/VersionTests.code_to_version/72d0a71f (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/aa17a531
+[       OK ] Positive/VersionTests.code_to_version/aa17a531 (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/d3f7c824
+[       OK ] Positive/VersionTests.code_to_version/d3f7c824 (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/941ae522
+[       OK ] Positive/VersionTests.code_to_version/941ae522 (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/e8356a9f
+[       OK ] Positive/VersionTests.code_to_version/e8356a9f (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/c4406dfd
+[       OK ] Positive/VersionTests.code_to_version/c4406dfd (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/1a571124
+[       OK ] Positive/VersionTests.code_to_version/1a571124 (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/a55ba0e9
+[       OK ] Positive/VersionTests.code_to_version/a55ba0e9 (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/104b0efa
+[       OK ] Positive/VersionTests.code_to_version/104b0efa (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/7169b411
+[       OK ] Positive/VersionTests.code_to_version/7169b411 (0 ms)
+[ RUN      ] Positive/VersionTests.code_to_version/7c4171be
+[       OK ] Positive/VersionTests.code_to_version/7c4171be (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/48acefc2
+[       OK ] Positive/VersionTests.version_to_code/48acefc2 (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/c7d9e1a3
+[       OK ] Positive/VersionTests.version_to_code/c7d9e1a3 (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/1b2fa470
+[       OK ] Positive/VersionTests.version_to_code/1b2fa470 (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/72d0a71f
+[       OK ] Positive/VersionTests.version_to_code/72d0a71f (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/aa17a531
+[       OK ] Positive/VersionTests.version_to_code/aa17a531 (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/d3f7c824
+[       OK ] Positive/VersionTests.version_to_code/d3f7c824 (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/941ae522
+[       OK ] Positive/VersionTests.version_to_code/941ae522 (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/e8356a9f
+[       OK ] Positive/VersionTests.version_to_code/e8356a9f (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/c4406dfd
+[       OK ] Positive/VersionTests.version_to_code/c4406dfd (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/1a571124
+[       OK ] Positive/VersionTests.version_to_code/1a571124 (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/a55ba0e9
+[       OK ] Positive/VersionTests.version_to_code/a55ba0e9 (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/104b0efa
+[       OK ] Positive/VersionTests.version_to_code/104b0efa (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/7169b411
+[       OK ] Positive/VersionTests.version_to_code/7169b411 (0 ms)
+[ RUN      ] Positive/VersionTests.version_to_code/7c4171be
+[       OK ] Positive/VersionTests.version_to_code/7c4171be (0 ms)
+[----------] 28 tests from Positive/VersionTests (0 ms total)
+
+[----------] 12 tests from Negative_ctor_fail/VersionTests
+[ RUN      ] Negative_ctor_fail/VersionTests.code_to_version/9f7a072b
+[       OK ] Negative_ctor_fail/VersionTests.code_to_version/9f7a072b (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.code_to_version/abe5e338
+[       OK ] Negative_ctor_fail/VersionTests.code_to_version/abe5e338 (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.code_to_version/ee5acdf6
+[       OK ] Negative_ctor_fail/VersionTests.code_to_version/ee5acdf6 (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.code_to_version/d8f0bb92
+[       OK ] Negative_ctor_fail/VersionTests.code_to_version/d8f0bb92 (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.code_to_version/00357b59
+[       OK ] Negative_ctor_fail/VersionTests.code_to_version/00357b59 (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.code_to_version/7138653b
+[       OK ] Negative_ctor_fail/VersionTests.code_to_version/7138653b (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.version_to_code/9f7a072b
+[       OK ] Negative_ctor_fail/VersionTests.version_to_code/9f7a072b (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.version_to_code/abe5e338
+[       OK ] Negative_ctor_fail/VersionTests.version_to_code/abe5e338 (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.version_to_code/ee5acdf6
+[       OK ] Negative_ctor_fail/VersionTests.version_to_code/ee5acdf6 (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.version_to_code/d8f0bb92
+[       OK ] Negative_ctor_fail/VersionTests.version_to_code/d8f0bb92 (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.version_to_code/00357b59
+[       OK ] Negative_ctor_fail/VersionTests.version_to_code/00357b59 (0 ms)
+[ RUN      ] Negative_ctor_fail/VersionTests.version_to_code/7138653b
+[       OK ] Negative_ctor_fail/VersionTests.version_to_code/7138653b (0 ms)
+[----------] 12 tests from Negative_ctor_fail/VersionTests (0 ms total)
+
+[----------] 6 tests from Negative_values_fail/VersionTests
+[ RUN      ] Negative_values_fail/VersionTests.code_to_version/a6bf5835
+[       OK ] Negative_values_fail/VersionTests.code_to_version/a6bf5835 (0 ms)
+[ RUN      ] Negative_values_fail/VersionTests.code_to_version/a8ccfab3
+[       OK ] Negative_values_fail/VersionTests.code_to_version/a8ccfab3 (0 ms)
+[ RUN      ] Negative_values_fail/VersionTests.code_to_version/bcce1e99
+[       OK ] Negative_values_fail/VersionTests.code_to_version/bcce1e99 (0 ms)
+[ RUN      ] Negative_values_fail/VersionTests.version_to_code/a6bf5835
+[       OK ] Negative_values_fail/VersionTests.version_to_code/a6bf5835 (0 ms)
+[ RUN      ] Negative_values_fail/VersionTests.version_to_code/a8ccfab3
+[       OK ] Negative_values_fail/VersionTests.version_to_code/a8ccfab3 (0 ms)
+[ RUN      ] Negative_values_fail/VersionTests.version_to_code/bcce1e99
+[       OK ] Negative_values_fail/VersionTests.version_to_code/bcce1e99 (0 ms)
+[----------] 6 tests from Negative_values_fail/VersionTests (0 ms total)
+
+[----------] 5 tests from Positive/VersionStringTests
+[ RUN      ] Positive/VersionStringTests.test/02e0ca65
+[       OK ] Positive/VersionStringTests.test/02e0ca65 (0 ms)
+[ RUN      ] Positive/VersionStringTests.test/025f1d74
+[       OK ] Positive/VersionStringTests.test/025f1d74 (0 ms)
+[ RUN      ] Positive/VersionStringTests.test/694bebb0
+[       OK ] Positive/VersionStringTests.test/694bebb0 (0 ms)
+[ RUN      ] Positive/VersionStringTests.test/0c848732
+[       OK ] Positive/VersionStringTests.test/0c848732 (0 ms)
+[ RUN      ] Positive/VersionStringTests.test/0f303a89
+[       OK ] Positive/VersionStringTests.test/0f303a89 (0 ms)
+[----------] 5 tests from Positive/VersionStringTests (0 ms total)
+
+[----------] 18 tests from Positive/VersionComparisonTests
+[ RUN      ] Positive/VersionComparisonTests.lower_than/966bbcbf
+[       OK ] Positive/VersionComparisonTests.lower_than/966bbcbf (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.lower_than/ae92d0ab
+[       OK ] Positive/VersionComparisonTests.lower_than/ae92d0ab (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.lower_than/30de52b8
+[       OK ] Positive/VersionComparisonTests.lower_than/30de52b8 (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.lower_equal_than/966bbcbf
+[       OK ] Positive/VersionComparisonTests.lower_equal_than/966bbcbf (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.lower_equal_than/ae92d0ab
+[       OK ] Positive/VersionComparisonTests.lower_equal_than/ae92d0ab (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.lower_equal_than/30de52b8
+[       OK ] Positive/VersionComparisonTests.lower_equal_than/30de52b8 (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.equal_than/966bbcbf
+[       OK ] Positive/VersionComparisonTests.equal_than/966bbcbf (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.equal_than/ae92d0ab
+[       OK ] Positive/VersionComparisonTests.equal_than/ae92d0ab (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.equal_than/30de52b8
+[       OK ] Positive/VersionComparisonTests.equal_than/30de52b8 (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.not_equal_than/966bbcbf
+[       OK ] Positive/VersionComparisonTests.not_equal_than/966bbcbf (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.not_equal_than/ae92d0ab
+[       OK ] Positive/VersionComparisonTests.not_equal_than/ae92d0ab (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.not_equal_than/30de52b8
+[       OK ] Positive/VersionComparisonTests.not_equal_than/30de52b8 (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.greater_equal_than/966bbcbf
+[       OK ] Positive/VersionComparisonTests.greater_equal_than/966bbcbf (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.greater_equal_than/ae92d0ab
+[       OK ] Positive/VersionComparisonTests.greater_equal_than/ae92d0ab (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.greater_equal_than/30de52b8
+[       OK ] Positive/VersionComparisonTests.greater_equal_than/30de52b8 (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.greater_than/966bbcbf
+[       OK ] Positive/VersionComparisonTests.greater_than/966bbcbf (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.greater_than/ae92d0ab
+[       OK ] Positive/VersionComparisonTests.greater_than/ae92d0ab (0 ms)
+[ RUN      ] Positive/VersionComparisonTests.greater_than/30de52b8
+[       OK ] Positive/VersionComparisonTests.greater_than/30de52b8 (0 ms)
+[----------] 18 tests from Positive/VersionComparisonTests (0 ms total)
+
+[----------] 22 tests from _/MathRoundUpTests
+[ RUN      ] _/MathRoundUpTests.works/38f1e92f
+[       OK ] _/MathRoundUpTests.works/38f1e92f (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/426795ed
+[       OK ] _/MathRoundUpTests.works/426795ed (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/0c15d2e1
+[       OK ] _/MathRoundUpTests.works/0c15d2e1 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/511c9a30
+[       OK ] _/MathRoundUpTests.works/511c9a30 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/c10f58ff
+[       OK ] _/MathRoundUpTests.works/c10f58ff (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/de1edeaa
+[       OK ] _/MathRoundUpTests.works/de1edeaa (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/e282ff2b
+[       OK ] _/MathRoundUpTests.works/e282ff2b (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/5ef4f2bf
+[       OK ] _/MathRoundUpTests.works/5ef4f2bf (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/80219d50
+[       OK ] _/MathRoundUpTests.works/80219d50 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/91674fb2
+[       OK ] _/MathRoundUpTests.works/91674fb2 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/1310ce94
+[       OK ] _/MathRoundUpTests.works/1310ce94 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/f4794e6e
+[       OK ] _/MathRoundUpTests.works/f4794e6e (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/df5f5139
+[       OK ] _/MathRoundUpTests.works/df5f5139 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/e76cf1b9
+[       OK ] _/MathRoundUpTests.works/e76cf1b9 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/ccea4237
+[       OK ] _/MathRoundUpTests.works/ccea4237 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/514b2071
+[       OK ] _/MathRoundUpTests.works/514b2071 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/23b58cf6
+[       OK ] _/MathRoundUpTests.works/23b58cf6 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/403a592b
+[       OK ] _/MathRoundUpTests.works/403a592b (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/ef6e1baf
+[       OK ] _/MathRoundUpTests.works/ef6e1baf (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/dacd49e3
+[       OK ] _/MathRoundUpTests.works/dacd49e3 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/5c4ee215
+[       OK ] _/MathRoundUpTests.works/5c4ee215 (0 ms)
+[ RUN      ] _/MathRoundUpTests.works/23cdb1a5
+[       OK ] _/MathRoundUpTests.works/23cdb1a5 (0 ms)
+[----------] 22 tests from _/MathRoundUpTests (0 ms total)
+
+[----------] 16 tests from _/MathIsPowerOfTwoTests
+[ RUN      ] _/MathIsPowerOfTwoTests.works/0dcef061
+[       OK ] _/MathIsPowerOfTwoTests.works/0dcef061 (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/d2e24624
+[       OK ] _/MathIsPowerOfTwoTests.works/d2e24624 (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/6cb8d74b
+[       OK ] _/MathIsPowerOfTwoTests.works/6cb8d74b (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/84343544
+[       OK ] _/MathIsPowerOfTwoTests.works/84343544 (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/e1a9133a
+[       OK ] _/MathIsPowerOfTwoTests.works/e1a9133a (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/c02670e3
+[       OK ] _/MathIsPowerOfTwoTests.works/c02670e3 (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/46caa053
+[       OK ] _/MathIsPowerOfTwoTests.works/46caa053 (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/f60180a9
+[       OK ] _/MathIsPowerOfTwoTests.works/f60180a9 (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/98cf3db4
+[       OK ] _/MathIsPowerOfTwoTests.works/98cf3db4 (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/5546db0c
+[       OK ] _/MathIsPowerOfTwoTests.works/5546db0c (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/d12a920d
+[       OK ] _/MathIsPowerOfTwoTests.works/d12a920d (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/f8637aca
+[       OK ] _/MathIsPowerOfTwoTests.works/f8637aca (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/1ffc99bc
+[       OK ] _/MathIsPowerOfTwoTests.works/1ffc99bc (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/5580ad54
+[       OK ] _/MathIsPowerOfTwoTests.works/5580ad54 (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/bec62490
+[       OK ] _/MathIsPowerOfTwoTests.works/bec62490 (0 ms)
+[ RUN      ] _/MathIsPowerOfTwoTests.works/a6057704
+[       OK ] _/MathIsPowerOfTwoTests.works/a6057704 (0 ms)
+[----------] 16 tests from _/MathIsPowerOfTwoTests (0 ms total)
+
+[----------] 17 tests from _/MathRoundUpNextPowerOfTwoTests
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/028736f4
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/028736f4 (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/04b24ca5
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/04b24ca5 (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/6f95ae6f
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/6f95ae6f (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/ebff8ea1
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/ebff8ea1 (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/58bfa7e7
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/58bfa7e7 (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/7c4a6a74
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/7c4a6a74 (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/e627793f
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/e627793f (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/59ed9efc
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/59ed9efc (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/c37c64ed
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/c37c64ed (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/104ae1de
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/104ae1de (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/66c92bae
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/66c92bae (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/6a4dfff9
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/6a4dfff9 (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/80989a52
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/80989a52 (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/9aeacf37
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/9aeacf37 (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/8b61ee22
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/8b61ee22 (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/c9744d94
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/c9744d94 (0 ms)
+[ RUN      ] _/MathRoundUpNextPowerOfTwoTests.works/73fd146b
+[       OK ] _/MathRoundUpNextPowerOfTwoTests.works/73fd146b (0 ms)
+[----------] 17 tests from _/MathRoundUpNextPowerOfTwoTests (0 ms total)
+
+[----------] 4 tests from _/MathDivUpTests
+[ RUN      ] _/MathDivUpTests.works/38f1e92f
+[       OK ] _/MathDivUpTests.works/38f1e92f (0 ms)
+[ RUN      ] _/MathDivUpTests.works/baf67e99
+[       OK ] _/MathDivUpTests.works/baf67e99 (0 ms)
+[ RUN      ] _/MathDivUpTests.works/f58c2fd6
+[       OK ] _/MathDivUpTests.works/f58c2fd6 (0 ms)
+[ RUN      ] _/MathDivUpTests.works/46d77c0c
+[       OK ] _/MathDivUpTests.works/46d77c0c (0 ms)
+[----------] 4 tests from _/MathDivUpTests (0 ms total)
+
+[----------] 7 tests from _/MathRoundUpPowerOfTwoTests
+[ RUN      ] _/MathRoundUpPowerOfTwoTests.works/a0d2585e
+[       OK ] _/MathRoundUpPowerOfTwoTests.works/a0d2585e (0 ms)
+[ RUN      ] _/MathRoundUpPowerOfTwoTests.works/3e415073
+[       OK ] _/MathRoundUpPowerOfTwoTests.works/3e415073 (0 ms)
+[ RUN      ] _/MathRoundUpPowerOfTwoTests.works/3c229761
+[       OK ] _/MathRoundUpPowerOfTwoTests.works/3c229761 (0 ms)
+[ RUN      ] _/MathRoundUpPowerOfTwoTests.works/9cdefac3
+[       OK ] _/MathRoundUpPowerOfTwoTests.works/9cdefac3 (0 ms)
+[ RUN      ] _/MathRoundUpPowerOfTwoTests.works/913ca1ac
+[       OK ] _/MathRoundUpPowerOfTwoTests.works/913ca1ac (0 ms)
+[ RUN      ] _/MathRoundUpPowerOfTwoTests.works/70dab3be
+[       OK ] _/MathRoundUpPowerOfTwoTests.works/70dab3be (0 ms)
+[ RUN      ] _/MathRoundUpPowerOfTwoTests.works/563d154f
+[       OK ] _/MathRoundUpPowerOfTwoTests.works/563d154f (0 ms)
+[----------] 7 tests from _/MathRoundUpPowerOfTwoTests (0 ms total)
+
+[----------] 8 tests from _/MathILog2Tests
+[ RUN      ] _/MathILog2Tests.works/27b5bac1
+[       OK ] _/MathILog2Tests.works/27b5bac1 (0 ms)
+[ RUN      ] _/MathILog2Tests.works/b6e643de
+[       OK ] _/MathILog2Tests.works/b6e643de (0 ms)
+[ RUN      ] _/MathILog2Tests.works/048f2a2b
+[       OK ] _/MathILog2Tests.works/048f2a2b (0 ms)
+[ RUN      ] _/MathILog2Tests.works/d75e84e4
+[       OK ] _/MathILog2Tests.works/d75e84e4 (0 ms)
+[ RUN      ] _/MathILog2Tests.works/aa111653
+[       OK ] _/MathILog2Tests.works/aa111653 (0 ms)
+[ RUN      ] _/MathILog2Tests.works/f962a9a4
+[       OK ] _/MathILog2Tests.works/f962a9a4 (0 ms)
+[ RUN      ] _/MathILog2Tests.works/2cf8adf4
+[       OK ] _/MathILog2Tests.works/2cf8adf4 (0 ms)
+[ RUN      ] _/MathILog2Tests.works/05f3adfd
+[       OK ] _/MathILog2Tests.works/05f3adfd (0 ms)
+[----------] 8 tests from _/MathILog2Tests (0 ms total)
+
+[----------] 10 tests from _/MathDivUpPowerOfTwoTests
+[ RUN      ] _/MathDivUpPowerOfTwoTests.works/38f1e92f
+[       OK ] _/MathDivUpPowerOfTwoTests.works/38f1e92f (0 ms)
+[ RUN      ] _/MathDivUpPowerOfTwoTests.works/baf67e99
+[       OK ] _/MathDivUpPowerOfTwoTests.works/baf67e99 (0 ms)
+[ RUN      ] _/MathDivUpPowerOfTwoTests.works/f58c2fd6
+[       OK ] _/MathDivUpPowerOfTwoTests.works/f58c2fd6 (0 ms)
+[ RUN      ] _/MathDivUpPowerOfTwoTests.works/806fe0af
+[       OK ] _/MathDivUpPowerOfTwoTests.works/806fe0af (0 ms)
+[ RUN      ] _/MathDivUpPowerOfTwoTests.works/ec4ad1e8
+[       OK ] _/MathDivUpPowerOfTwoTests.works/ec4ad1e8 (0 ms)
+[ RUN      ] _/MathDivUpPowerOfTwoTests.works/bc238b9b
+[       OK ] _/MathDivUpPowerOfTwoTests.works/bc238b9b (0 ms)
+[ RUN      ] _/MathDivUpPowerOfTwoTests.works/14e9ff23
+[       OK ] _/MathDivUpPowerOfTwoTests.works/14e9ff23 (0 ms)
+[ RUN      ] _/MathDivUpPowerOfTwoTests.works/eea0b9d8
+[       OK ] _/MathDivUpPowerOfTwoTests.works/eea0b9d8 (0 ms)
+[ RUN      ] _/MathDivUpPowerOfTwoTests.works/b8fa9337
+[       OK ] _/MathDivUpPowerOfTwoTests.works/b8fa9337 (0 ms)
+[ RUN      ] _/MathDivUpPowerOfTwoTests.works/f102c37e
+[       OK ] _/MathDivUpPowerOfTwoTests.works/f102c37e (0 ms)
+[----------] 10 tests from _/MathDivUpPowerOfTwoTests (0 ms total)
+
+[----------] 4 tests from _/MathSincTests
+[ RUN      ] _/MathSincTests.works/354af474
+[       OK ] _/MathSincTests.works/354af474 (0 ms)
+[ RUN      ] _/MathSincTests.works/49a96ed2
+[       OK ] _/MathSincTests.works/49a96ed2 (0 ms)
+[ RUN      ] _/MathSincTests.works/6f5b6949
+[       OK ] _/MathSincTests.works/6f5b6949 (0 ms)
+[ RUN      ] _/MathSincTests.works/b2f4f623
+[       OK ] _/MathSincTests.works/b2f4f623 (0 ms)
+[----------] 4 tests from _/MathSincTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 679 tests from 85 test suites ran. (573 ms total)
+[  PASSED  ] 679 tests.

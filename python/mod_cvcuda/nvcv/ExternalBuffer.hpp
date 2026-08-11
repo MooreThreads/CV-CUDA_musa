@@ -20,7 +20,7 @@
 
 #include "DLPackUtils.hpp"
 
-#include <cuda_runtime.h>
+#include <common/CudaCompat.hpp>
 #include <nvcv/python/Shape.hpp>
 #include <pybind11/numpy.h>
 #include <pybind11/pybind11.h>

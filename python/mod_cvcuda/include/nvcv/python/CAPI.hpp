@@ -18,7 +18,7 @@
 #ifndef NVCV_PYTHON_CAPI_HPP
 #define NVCV_PYTHON_CAPI_HPP
 
-#include <cuda_runtime.h>
+#include <common/CudaCompat.hpp>
 #include <nvcv/Array.h>
 #include <nvcv/DataType.hpp>
 #include <nvcv/ImageBatch.h>

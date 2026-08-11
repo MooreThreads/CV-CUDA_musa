@@ -72,12 +72,25 @@ set(bench_sources
 # Metatarget for all benchmarks
 add_custom_target(bench_all)
 
+if(USE_MUSA)
+  # OpFindHomography is unavailable in the current MUSA build.
+  list(REMOVE_ITEM bench_sources BenchFindHomography.cpp)
+endif()
+
 foreach(bench_source IN LISTS bench_sources)
   get_filename_component(bench_file_name "${bench_source}" NAME_WLE)
   string(REPLACE "Bench" "cvcuda_bench_" algo_name ${bench_file_name})
   string(TOLOWER ${algo_name} bench_name)
   add_executable(${bench_name} "${bench_source}")
+  if(USE_MUSA)
+    target_include_directories(${bench_name} BEFORE PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/nvbench)
+  endif()
   target_link_libraries(${bench_name} PRIVATE cvcuda::nvbench::main cvcuda)
-  set_target_properties(${bench_name} PROPERTIES COMPILE_FEATURES cuda_std_17)
+  if(USE_MUSA)
+    target_compile_features(${bench_name} PRIVATE cxx_std_17)
+  else()
+    set_target_properties(${bench_name} PROPERTIES COMPILE_FEATURES cuda_std_17)
+  endif()
   add_dependencies(bench_all ${bench_name})
 endforeach()

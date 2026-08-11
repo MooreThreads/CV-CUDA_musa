@@ -18,7 +18,7 @@
 #ifndef NVCV_PYTHON_HASH_HPP
 #define NVCV_PYTHON_HASH_HPP
 
-#include <cvcuda/cuda_tools/TypeTraits.hpp>
+#include <common/CudaCompat.hpp>
 #include <nvcv/Size.hpp>
 #include <nvcv/util/Ranges.hpp>
 

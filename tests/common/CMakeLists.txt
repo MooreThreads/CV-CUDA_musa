@@ -25,20 +25,35 @@ find_package(OpenSSL COMPONENTS Crypto REQUIRED)
 set(ZLIB_USE_STATIC_LIBS TRUE)
 find_package(ZLIB REQUIRED)
 
+if(USE_MUSA)
+    set(_NVCV_TEST_COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../common_musa)
+else()
+    set(_NVCV_TEST_COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+endif()
+
 add_library(nvcv_test_common STATIC
-    Printers.cpp
-    HashMD5.cpp
-    TensorDataUtils.cpp
+    ${_NVCV_TEST_COMMON_DIR}/Printers.cpp
+    ${_NVCV_TEST_COMMON_DIR}/HashMD5.cpp
+    ${_NVCV_TEST_COMMON_DIR}/TensorDataUtils.cpp
 )
 
-target_include_directories(nvcv_test_common
+target_include_directories(nvcv_test_common BEFORE
     INTERFACE
-        ${CMAKE_CURRENT_SOURCE_DIR}/..
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:${CMAKE_CURRENT_SOURCE_DIR}/..>
+        $<$<BOOL:${USE_MUSA}>:${CMAKE_CURRENT_SOURCE_DIR}/../common_musa>
+        $<$<BOOL:${USE_MUSA}>:${CMAKE_CURRENT_SOURCE_DIR}/..>
+    PRIVATE
+        $<$<BOOL:${USE_MUSA}>:${CMAKE_CURRENT_SOURCE_DIR}/../common_musa>
 )
 
 target_compile_definitions(nvcv_test_common
     INTERFACE
         -DNVCV_EXPOSE_CODE=1
+)
+
+target_compile_options(nvcv_test_common
+    INTERFACE
+        $<$<BOOL:${USE_MUSA}>:-include${CMAKE_CURRENT_SOURCE_DIR}/../common_musa/cuda_runtime.h>
 )
 
 target_link_libraries(nvcv_test_common
@@ -58,13 +73,15 @@ target_link_libraries(nvcv_test_common
 # Utilities for system tests, they call the public API functions.
 
 add_library(nvcv_test_common_system STATIC
-    ObjectBag.cpp
-    BorderUtils.cpp
+    ${_NVCV_TEST_COMMON_DIR}/ObjectBag.cpp
+    ${_NVCV_TEST_COMMON_DIR}/BorderUtils.cpp
 )
 
-target_include_directories(nvcv_test_common_system
+target_include_directories(nvcv_test_common_system BEFORE
     INTERFACE
-        ${CMAKE_CURRENT_SOURCE_DIR}/..
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:${CMAKE_CURRENT_SOURCE_DIR}/..>
+        $<$<BOOL:${USE_MUSA}>:${CMAKE_CURRENT_SOURCE_DIR}/../common_musa>
+        $<$<BOOL:${USE_MUSA}>:${CMAKE_CURRENT_SOURCE_DIR}/..>
 )
 
 target_link_libraries(nvcv_test_common_system

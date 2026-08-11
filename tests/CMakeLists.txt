@@ -36,7 +36,8 @@ target_link_libraries(nvcv_test_main
         nvcv_util_compat
     PRIVATE
         nvcv_types
-        CUDA::cudart_static
+        $<$<BOOL:${USE_MUSA}>:MUSA::musart_static>
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:CUDA::cudart_static>
         -lrt
 )
 

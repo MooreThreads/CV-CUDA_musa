@@ -13,7 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-find_package(CUDAToolkit REQUIRED)
+if(USE_MUSA)
+    find_package(MUSAToolkit REQUIRED)
+else()
+    find_package(CUDAToolkit REQUIRED)
+endif()
 
 add_library(nvcv_types_priv STATIC
     Context.cpp
@@ -52,7 +56,8 @@ target_link_libraries(nvcv_types_priv
     PUBLIC
         nvcv_types_headers
         nvcv_util_sanitizer
-        CUDA::cudart_static
+        $<$<BOOL:${USE_MUSA}>:MUSA::musart_static>
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:CUDA::cudart_static>
 )
 
 if(NOT PLATFORM_IS_QNX)

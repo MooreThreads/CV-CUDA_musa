@@ -20,7 +20,11 @@
 
 #include "Assert.h"
 
-#include <driver_types.h> // for cudaError
+#if defined(NVCV_USE_MUSA)
+#    include <musa_runtime.h> // for musaError_t
+#else
+#    include <driver_types.h> // for cudaError_t
+#endif
 
 #include <cstring>
 #include <iostream>
@@ -56,6 +60,16 @@ std::string FormatErrorMessage(const std::string_view &errname, const std::strin
 
 // CUDA -----------------------
 
+#if defined(NVCV_USE_MUSA)
+inline bool CheckSucceeded(musaError_t err)
+{
+    return err == musaSuccess;
+}
+
+NVCVStatus  TranslateError(musaError_t err);
+const char *ToString(musaError_t err, const char **perrdescr = nullptr);
+void        PreprocessError(musaError_t err);
+#else
 inline bool CheckSucceeded(cudaError_t err)
 {
     return err == cudaSuccess;
@@ -64,6 +78,7 @@ inline bool CheckSucceeded(cudaError_t err)
 NVCVStatus  TranslateError(cudaError_t err);
 const char *ToString(cudaError_t err, const char **perrdescr = nullptr);
 void        PreprocessError(cudaError_t err);
+#endif
 
 // Default implementation --------------------
 

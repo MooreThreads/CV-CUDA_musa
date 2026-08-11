@@ -1,0 +1,384 @@
+Warning: Permanently added '192.168.101.133' (ED25519) to the list of known hosts.
+bash: warning: setlocale: LC_ALL: cannot change locale (zh_CN.UTF-8)
+Warning: Permanently added '192.168.101.133' (ED25519) to the list of known hosts.
+bash: warning: setlocale: LC_ALL: cannot change locale (zh_CN.UTF-8)
+ninja: warning: premature end of file; recovering
+[0/2] Re-checking globbed directories...
+[1/59] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/Tensor.cpp.o
+[2/59] Linking CXX static library src/nvcv/src/priv/libnvcv_types_priv.a
+[3/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpBoxBlur.cpp.o
+[4/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpHistogram.cpp.o
+[5/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpOSD.cpp.o
+[6/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpReformat.cpp.o
+[7/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpBndBox.cpp.o
+[8/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpResize.cpp.o
+[9/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpMinAreaRect.cpp.o
+[10/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpHistogramEq.cpp.o
+[11/59] Building CXX object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/CvCudaLegacyHelpers.cpp.o
+[12/59] Building CXX object src/nvcv/util/CMakeFiles/nvcv_util.dir/CheckError.cpp.o
+[13/59] Linking CXX static library src/nvcv/util/libnvcv_util.a
+[14/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpCustomCrop.cpp.o
+[15/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpCenterCrop.cpp.o
+[16/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpRotate.cpp.o
+[17/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpNormalize.cpp.o
+[18/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpCopyMakeBorder.cpp.o
+[19/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpGaussian.cpp.o
+[20/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpErase.cpp.o
+[21/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpPadAndStack.cpp.o
+[22/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpLaplacian.cpp.o
+[23/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpConvertTo.cpp.o
+[24/59] Linking CXX shared library lib/libnvcv_types.so.0.16.0
+[25/59] Creating library symlink lib/libnvcv_types.so.0 lib/libnvcv_types.so
+[26/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpAverageBlur.cpp.o
+[27/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpMedianBlur.cpp.o
+[28/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpConv2D.cpp.o
+[29/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpMorphology.cpp.o
+[30/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpJointBilateralFilter.cpp.o
+[31/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpWarpPerspective.cpp.o
+[32/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpWarpAffine.cpp.o
+[33/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpComposite.cpp.o
+[34/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpCvtColor.cpp.o
+[35/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpBilateralFilter.cpp.o
+[36/59] Building CXX object tests/common/CMakeFiles/nvcv_test_common_system.dir/__/common_musa/ObjectBag.cpp.o
+[37/59] Building CXX object tests/common/CMakeFiles/nvcv_test_common_system.dir/__/common_musa/BorderUtils.cpp.o
+[38/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpChannelReorder.cpp.o
+[39/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpFlip.cpp.o
+[40/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpGammaContrast.cpp.o
+[41/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpPillowResize.cpp.o
+[42/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpThreshold.cpp.o
+[43/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpRandomResizedCrop.cpp.o
+[44/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpAdaptiveThreshold.cpp.o
+[45/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpInpaint.cpp.o
+[46/59] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpGaussianNoise.cpp.o
+[47/59] Building CXX object tests/common/CMakeFiles/nvcv_test_common.dir/__/common_musa/TensorDataUtils.cpp.o
+[48/59] Linking CXX static library tests/common/libnvcv_test_common.a
+[49/59] Linking CXX static library tests/common/libnvcv_test_common_system.a
+[50/59] Building CXX object tests/cvcuda/system/CMakeFiles/cvcuda_test_system_smoke.dir/TestOpBndBox_Smoke.cpp.o
+[51/59] Building CXX object tests/cvcuda/system/CMakeFiles/cvcuda_test_system_smoke.dir/TestOpBoxBlur_Smoke.cpp.o
+[52/59] Building CXX object tests/cvcuda/system/CMakeFiles/cvcuda_test_system_smoke.dir/TestOpOSD_Smoke.cpp.o
+[53/59] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/osd.mu.o
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, false, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1169:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, false, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1170:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, true, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1171:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, true, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1172:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, false, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1169:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, false, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1170:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, true, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1171:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, true, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1172:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+9 warnings generated when compiling for mp_22.
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, false, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1169:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, false, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1170:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, true, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1171:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, true, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1172:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, false, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1169:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, false, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1170:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, true, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1171:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, true, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1172:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+9 warnings generated when compiling for host.
+[54/59] Linking CXX static library src/cvcuda/priv/legacy/libcvcuda_legacy.a
+[55/59] Linking CXX static library src/cvcuda/priv/libcvcuda_priv.a
+[56/59] Linking CXX shared library lib/libcvcuda.so.0.16.0
+[57/59] Creating library symlink lib/libcvcuda.so.0 lib/libcvcuda.so
+[58/59] Linking CXX executable bin/cvcuda_test_system_smoke
+[==========] Running 25 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 6 tests from OpBndBox_Smoke
+[ RUN      ] OpBndBox_Smoke.operator_creation
+[       OK ] OpBndBox_Smoke.operator_creation (0 ms)
+[ RUN      ] OpBndBox_Smoke.basic_functionality_rgb8
+[       OK ] OpBndBox_Smoke.basic_functionality_rgb8 (3 ms)
+[ RUN      ] OpBndBox_Smoke.basic_functionality_rgba8
+[       OK ] OpBndBox_Smoke.basic_functionality_rgba8 (1 ms)
+[ RUN      ] OpBndBox_Smoke.multiple_boxes
+[       OK ] OpBndBox_Smoke.multiple_boxes (0 ms)
+[ RUN      ] OpBndBox_Smoke.memory_management
+[       OK ] OpBndBox_Smoke.memory_management (1 ms)
+[ RUN      ] OpBndBox_Smoke.edge_cases
+[0;33mWARNING: [0mPlease check if there is anything to draw.
+
+[0;33mWARNING: [0mPlease check if there is anything to draw
+
+[       OK ] OpBndBox_Smoke.edge_cases (0 ms)
+[----------] 6 tests from OpBndBox_Smoke (39 ms total)
+
+[----------] 8 tests from OpBoxBlur_Smoke
+[ RUN      ] OpBoxBlur_Smoke.operator_creation
+[       OK ] OpBoxBlur_Smoke.operator_creation (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.basic_functionality_rgb8
+[       OK ] OpBoxBlur_Smoke.basic_functionality_rgb8 (1 ms)
+[ RUN      ] OpBoxBlur_Smoke.basic_functionality_rgba8
+[       OK ] OpBoxBlur_Smoke.basic_functionality_rgba8 (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.multiple_boxes
+[       OK ] OpBoxBlur_Smoke.multiple_boxes (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.various_kernel_sizes
+[       OK ] OpBoxBlur_Smoke.various_kernel_sizes (2 ms)
+[ RUN      ] OpBoxBlur_Smoke.memory_management
+[       OK ] OpBoxBlur_Smoke.memory_management (1 ms)
+[ RUN      ] OpBoxBlur_Smoke.edge_cases
+[       OK ] OpBoxBlur_Smoke.edge_cases (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.batch_processing
+[       OK ] OpBoxBlur_Smoke.batch_processing (0 ms)
+[----------] 8 tests from OpBoxBlur_Smoke (8 ms total)
+
+[----------] 11 tests from OpOSD_Smoke
+[ RUN      ] OpOSD_Smoke.operator_creation
+[       OK ] OpOSD_Smoke.operator_creation (0 ms)
+[ RUN      ] OpOSD_Smoke.rectangle_element
+[       OK ] OpOSD_Smoke.rectangle_element (0 ms)
+[ RUN      ] OpOSD_Smoke.text_element
+[       OK ] OpOSD_Smoke.text_element (1 ms)
+[ RUN      ] OpOSD_Smoke.line_element
+[       OK ] OpOSD_Smoke.line_element (0 ms)
+[ RUN      ] OpOSD_Smoke.point_element
+[       OK ] OpOSD_Smoke.point_element (0 ms)
+[ RUN      ] OpOSD_Smoke.circle_element
+[       OK ] OpOSD_Smoke.circle_element (0 ms)
+[ RUN      ] OpOSD_Smoke.multiple_elements
+[       OK ] OpOSD_Smoke.multiple_elements (1 ms)
+[ RUN      ] OpOSD_Smoke.memory_management
+[       OK ] OpOSD_Smoke.memory_management (1 ms)
+[ RUN      ] OpOSD_Smoke.edge_cases
+[0;33mWARNING: [0mPlease check if there is anything to draw.
+
+[0;33mWARNING: [0mPlease check if there is anything to draw
+
+[       OK ] OpOSD_Smoke.edge_cases (0 ms)
+[ RUN      ] OpOSD_Smoke.batch_processing
+[       OK ] OpOSD_Smoke.batch_processing (0 ms)
+[ RUN      ] OpOSD_Smoke.various_image_sizes
+[       OK ] OpOSD_Smoke.various_image_sizes (1 ms)
+[----------] 11 tests from OpOSD_Smoke (11 ms total)
+
+[----------] Global test environment tear-down
+[==========] 25 tests from 3 test suites ran. (59 ms total)
+[  PASSED  ] 25 tests.

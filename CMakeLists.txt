@@ -27,13 +27,45 @@ project(cvcuda
         DESCRIPTION "CUDA-accelerated Computer Vision algorithms"
 )
 
-# Make sure the cuda host compiler agrees with what we're using,
-# unless user overwrites it (at their own risk).
-if(NOT CMAKE_CUDA_HOST_COMPILER)
-    set(CMAKE_CUDA_HOST_COMPILER "${CMAKE_CXX_COMPILER}")
-endif()
+if(USE_MUSA)
+    if(DEFINED ENV{MUSA_HOME})
+        list(PREPEND CMAKE_MODULE_PATH "$ENV{MUSA_HOME}/cmake")
+    endif()
+    list(PREPEND CMAKE_MODULE_PATH "/usr/local/musa/cmake")
+    include(EnableMUSALanguage)
+    find_package(MUSAToolkit REQUIRED)
+    enable_language(MUSA)
+    set(CMAKE_MUSA_STANDARD 17)
+    set(CMAKE_MUSA_STANDARD_REQUIRED ON)
+    set(CMAKE_MUSA_EXTENSIONS ON)
+    set(CV_CUDA_MUSA_ARCH "" CACHE STRING "MUSA offload architecture, e.g. mp_22; empty uses the compiler/toolchain default")
+    set(CMAKE_MUSA_FLAGS "${CMAKE_MUSA_FLAGS} -std=c++17 -ffp-contract=off")
 
-enable_language(CUDA)
+    string(REGEX MATCH "^[0-9]+" _musa_host_cxx_major "${CMAKE_CXX_COMPILER_VERSION}")
+    set(_musa_host_cxx_include "/usr/include/c++/${_musa_host_cxx_major}")
+    set(_musa_host_cxx_target_include "/usr/include/${CMAKE_LIBRARY_ARCHITECTURE}/c++/${_musa_host_cxx_major}")
+    set(_musa_host_cxx_lib "/usr/lib/gcc/${CMAKE_LIBRARY_ARCHITECTURE}/${_musa_host_cxx_major}")
+    if(EXISTS "${_musa_host_cxx_include}")
+        set(CMAKE_MUSA_FLAGS "${CMAKE_MUSA_FLAGS} -stdlib++-isystem ${_musa_host_cxx_include}")
+    endif()
+    if(EXISTS "${_musa_host_cxx_target_include}")
+        set(CMAKE_MUSA_FLAGS "${CMAKE_MUSA_FLAGS} -stdlib++-isystem ${_musa_host_cxx_target_include}")
+    endif()
+    if(EXISTS "${_musa_host_cxx_lib}")
+        set(CMAKE_MUSA_FLAGS "${CMAKE_MUSA_FLAGS} -L${_musa_host_cxx_lib}")
+    endif()
+    if(NOT "${CV_CUDA_MUSA_ARCH}" STREQUAL "")
+        set(CMAKE_MUSA_FLAGS "${CMAKE_MUSA_FLAGS} --offload-arch=${CV_CUDA_MUSA_ARCH}")
+    endif()
+else()
+    # Make sure the cuda host compiler agrees with what we're using,
+    # unless user overwrites it (at their own risk).
+    if(NOT CMAKE_CUDA_HOST_COMPILER)
+        set(CMAKE_CUDA_HOST_COMPILER "${CMAKE_CXX_COMPILER}")
+    endif()
+
+    enable_language(CUDA)
+endif()
 
 # Used when creating special builds
 set(PROJECT_VERSION_SUFFIX "")
@@ -51,6 +83,7 @@ set(_BUILD_TESTS_WHEELS_CMDLINE ${BUILD_TESTS_WHEELS})
 set(_BUILD_TESTS_PYTHON_CMDLINE ${BUILD_TESTS_PYTHON})
 
 # Options to configure the build tree =======
+option(USE_MUSA "Build CV-CUDA with MUSA sources/toolchain" OFF)
 option(BUILD_TESTS "Enable testsuite" ON)
 option(BUILD_TESTS_CPP "Build C++ tests" OFF)
 option(BUILD_TESTS_WHEELS "Generate test_wheels.sh script" OFF)
@@ -59,6 +92,9 @@ option(BUILD_PYTHON "Build python bindings" ON)
 option(BUILD_BENCH "Build benchmark" OFF)
 option(BUILD_DOCS "Build documentation" OFF)
 option(ENABLE_SANITIZER "Enabled sanitized build" OFF)
+if(USE_MUSA AND BUILD_BENCH)
+    message(STATUS "musify: enabling BUILD_BENCH for MUSA with the MUSA nvbench fork")
+endif()
 
 # BUILD_TESTS enables all test sub-options by default, but respects explicit overrides
 # Normalize command-line values to uppercase for proper boolean comparison
@@ -107,7 +143,9 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" )
 include(ConfigVersion)
 include(ConfigBuildTree)
 include(ConfigCompiler)
-include(ConfigCUDA)
+if(NOT USE_MUSA)
+    include(ConfigCUDA)
+endif()
 include(ConfigCCache)
 if(BUILD_PYTHON)
     include(ConfigPython)

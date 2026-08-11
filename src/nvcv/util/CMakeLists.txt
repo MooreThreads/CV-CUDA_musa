@@ -13,7 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-find_package(CUDAToolkit REQUIRED)
+if(USE_MUSA)
+    find_package(MUSAToolkit REQUIRED)
+else()
+    find_package(CUDAToolkit REQUIRED)
+endif()
 
 # nvcv_util_sanitizer ---------------------------------
 add_library(nvcv_util_sanitizer STATIC
@@ -192,7 +196,8 @@ target_link_libraries(nvcv_util
     PUBLIC
         nvcv_util_sanitizer
         nvcv_types_headers
-        CUDA::cudart_static
+        $<$<BOOL:${USE_MUSA}>:MUSA::musart_static>
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:CUDA::cudart_static>
         nvcv_util_compat
 )
 

@@ -43,6 +43,7 @@ def test_clear_cache_inside_op():
 
 
 def test_gcbag_is_being_emptied():
+    util.require_torch_cuda_array_interface()
     # Make sure there's no work scheduled on the stream, it's all ours.
     workstream = cvcuda.Stream()
 
@@ -103,7 +104,7 @@ def test_cache_limit_get_set():
     cvcuda.clear_cache()
 
     # Verify initial cache limit (half of total gpu mem)
-    total = torch.cuda.mem_get_info()[1]
+    total = util.torch_device_total_memory()
     assert cvcuda.get_cache_limit_inbytes() == total // 2
 
     # Verify we can also set the cache limit
@@ -139,6 +140,7 @@ def test_cache_current_byte_size():
 
 
 def test_cache_external_cacheitem():
+    util.require_torch_cuda_array_interface()
     cvcuda.clear_cache()
 
     input_tensor = torch.rand(2, 30, 16, 1).cuda()
@@ -217,7 +219,7 @@ def test_parallel_cache_size():
         barrier.wait()
 
     # Ensure that the cache limit was not altered by another test
-    cvcuda.set_cache_limit_inbytes(torch.cuda.mem_get_info()[1] // 2)
+    cvcuda.set_cache_limit_inbytes(util.torch_device_total_memory() // 2)
     cvcuda.clear_cache()
 
     nb_threads = len(os.sched_getaffinity(0))
@@ -248,7 +250,7 @@ def test_parallel_clear_cache():
         clear_event.set()  # notify that the cache has been cleared
 
     # Ensure that the cache limit was not altered by another test
-    cvcuda.set_cache_limit_inbytes(torch.cuda.mem_get_info()[1] // 2)
+    cvcuda.set_cache_limit_inbytes(util.torch_device_total_memory() // 2)
     cvcuda.clear_cache()
 
     done_event = threading.Event()

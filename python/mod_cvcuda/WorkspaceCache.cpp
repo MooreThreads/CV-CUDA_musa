@@ -42,7 +42,7 @@ WorkspaceLease::~WorkspaceLease()
     if (m_pinned)
         m_owner->m_pinned.put(std::move(m_pinned), m_pinnedReleaseStream);
     if (m_cuda)
-        m_owner->m_cuda.put(std::move(m_cuda), m_hostReleaseStream);
+        m_owner->m_cuda.put(std::move(m_cuda), m_cudaReleaseStream);
 }
 
 WorkspaceCache::WorkspaceCache(nvcv::Allocator allocator)
@@ -65,9 +65,15 @@ WorkspaceLease WorkspaceCache::get(cvcuda::WorkspaceRequirements req, std::optio
                                    std::optional<cudaStream_t> cudaAcquireStream,
                                    std::optional<cudaStream_t> cudaReleaseStream)
 {
+#ifdef NVCV_USE_MUSA
+    return WorkspaceLease(this, m_host.get(req.hostMem, hostAcquireStream),
+                          m_pinned.get(req.pinnedMem, pinnedAcquireStream), m_cuda.get(req.musaMem, cudaAcquireStream),
+                          hostReleaseStream, pinnedReleaseStream, cudaReleaseStream);
+#else
     return WorkspaceLease(this, m_host.get(req.hostMem, hostAcquireStream),
                           m_pinned.get(req.pinnedMem, pinnedAcquireStream), m_cuda.get(req.cudaMem, cudaAcquireStream),
                           hostReleaseStream, pinnedReleaseStream, cudaReleaseStream);
+#endif
 }
 
 WorkspaceCache &WorkspaceCache::instance()

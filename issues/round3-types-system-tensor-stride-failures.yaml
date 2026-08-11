@@ -1,0 +1,31 @@
+id: round3-types-system-tensor-stride-failures
+round: 3
+source: CODE_ANALYSIS.md §4 Native Verification Discovery
+artifact: nvcv_test_types_system
+status: fixable_bug
+severity: high
+category: tensor-memory-layout-runtime
+summary: nvcv_test_types_system has tensor creation and TensorDataUtils failures for selected U8/image-vector layouts on MUSA.
+evidence:
+  log: verify/nvcv_test_types_system.log
+  xml: verify/nvcv_test_types_system.xml
+  result: 2132 passed, 1 skipped, 6 failed, 2139 total
+  failed_tests:
+    - _/TensorTests.smoke_create/e2ba9af1 shape(CHW{4x16x17}) dtype U8 strides({512,32,1})
+    - _/TensorTests.smoke_create/8ae931db shape(HWC{17x16x3}) dtype U8 strides({64,3,1})
+    - _/TensorTests.smoke_create/1750e886 shape(NCHW{53x4x16x17}) dtype U8 strides({2048,512,32,1})
+    - _/TensorTests.smoke_create/cd496f22 shape(NHWC{53x17x16x3}) dtype U8 strides({1088,64,3,1})
+    - _/TensorDataUtils.SetGetTensorFromImageVector/db615a0d NVCV_IMAGE_FORMAT_RGBAf32p
+    - _/TensorDataUtils.SetGetTensorFromImageVector/1219ce67 RGB float pitch-linear format
+expected_behavior: Tensor creation and tensor/image-vector data utilities should accept supported pitch-linear layouts and formats under the MUSA runtime.
+observed_behavior: A small subset of tensor creation and image-vector conversion cases fail while the broader type-system suite mostly passes.
+reproduction:
+  container: auto-musify-CV-CUDA
+  workspace: /workspace/CV-CUDA
+  command: ./build_musa_v2/bin/nvcv_test_types_system --gtest_color=no
+routing:
+  next_owner: musifier
+  recommended_action: Audit MUSA memory-allocation/pitch/stride handling for U8 tensor layouts and image-vector tensor data utility conversion.
+constraints:
+  - Do not mark these required native failures as passed.
+  - Fix in local source, commit, sync, rebuild, then re-run verifier.

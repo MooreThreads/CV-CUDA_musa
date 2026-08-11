@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="25" failures="22" disabled="0" errors="0" time="0.053" timestamp="2026-06-25T20:52:34.006" name="AllTests">
+  <testsuite name="OpBndBox_Smoke" tests="6" failures="5" disabled="0" skipped="0" errors="0" time="0.037" timestamp="2026-06-25T20:52:34.006">
+    <testcase name="operator_creation" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp" line="33" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.006" classname="OpBndBox_Smoke" />
+    <testcase name="basic_functionality_rgb8" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp" line="39" status="run" result="completed" time="0.002" timestamp="2026-06-25T20:52:34.038" classname="OpBndBox_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:86&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:86
+Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:121&#x0A;Value of: hasGray&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain gray background pixels (128,128,128)" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:121
+Value of: hasGray
+  Actual: false
+Expected: true
+Output should contain gray background pixels (128,128,128)]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:122&#x0A;Value of: hasRed&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain red fill pixels (255,0,0) from box fillColor" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:122
+Value of: hasRed
+  Actual: false
+Expected: true
+Output should contain red fill pixels (255,0,0) from box fillColor]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:123&#x0A;Value of: hasGreen&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain green border pixels (0,255,0) from box borderColor" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:123
+Value of: hasGreen
+  Actual: false
+Expected: true
+Output should contain green border pixels (0,255,0) from box borderColor]]></failure>
+    </testcase>
+    <testcase name="basic_functionality_rgba8" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp" line="128" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.040" classname="OpBndBox_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:177&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:177
+Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:213&#x0A;Value of: hasGray&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain gray background pixels (64,64,64,255)" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:213
+Value of: hasGray
+  Actual: false
+Expected: true
+Output should contain gray background pixels (64,64,64,255)]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:214&#x0A;Value of: hasBlue&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain blue pixels from opaque fill (alpha=255)" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:214
+Value of: hasBlue
+  Actual: false
+Expected: true
+Output should contain blue pixels from opaque fill (alpha=255)]]></failure>
+    </testcase>
+    <testcase name="multiple_boxes" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp" line="220" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.041" classname="OpBndBox_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:261&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:261
+Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+    <testcase name="memory_management" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp" line="266" status="run" result="completed" time="0.001" timestamp="2026-06-25T20:52:34.042" classname="OpBndBox_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:306&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:306
+Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:306&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:306
+Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:306&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:306
+Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:306&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:306
+Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:306&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:306
+Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+    <testcase name="edge_cases" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp" line="313" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.043" classname="OpBndBox_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:365&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:365
+Expected: op(stream, imgIn, imgOut, (NVCVBndBoxesI)bndBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:380&#x0A;Value of: hasWhite&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain white border pixels at image boundary" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBndBox_Smoke.cpp:380
+Value of: hasWhite
+  Actual: false
+Expected: true
+Output should contain white border pixels at image boundary]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="OpBoxBlur_Smoke" tests="8" failures="7" disabled="0" skipped="0" errors="0" time="0.005" timestamp="2026-06-25T20:52:34.044">
+    <testcase name="operator_creation" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp" line="33" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.044" classname="OpBoxBlur_Smoke" />
+    <testcase name="basic_functionality_rgb8" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp" line="39" status="run" result="completed" time="0.001" timestamp="2026-06-25T20:52:34.044" classname="OpBoxBlur_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:102&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:102
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:121&#x0A;Expected: (r) &gt; (0), actual: &apos;\0&apos; vs 0&#x0A;Blur should smooth edge pixels (not pure black)" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:121
+Expected: (r) > (0), actual: '\0' vs 0
+Blur should smooth edge pixels (not pure black)]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:123&#x0A;Expected: (g) &gt; (0), actual: &apos;\0&apos; vs 0" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:123
+Expected: (g) > (0), actual: '\0' vs 0]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:125&#x0A;Expected: (b) &gt; (0), actual: &apos;\0&apos; vs 0" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:125
+Expected: (b) > (0), actual: '\0' vs 0]]></failure>
+    </testcase>
+    <testcase name="basic_functionality_rgba8" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp" line="131" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.045" classname="OpBoxBlur_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:197&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:197
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:211&#x0A;Expected: (r) &gt; (0), actual: &apos;\0&apos; vs 0&#x0A;Blur should blend colors (red component should be present)" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:211
+Expected: (r) > (0), actual: '\0' vs 0
+Blur should blend colors (red component should be present)]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:213&#x0A;Expected: (b) &gt; (0), actual: &apos;\0&apos; vs 0&#x0A;Blur should blend colors (blue component should be present)" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:213
+Expected: (b) > (0), actual: '\0' vs 0
+Blur should blend colors (blue component should be present)]]></failure>
+    </testcase>
+    <testcase name="multiple_boxes" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp" line="219" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.046" classname="OpBoxBlur_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:246&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:246
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+    <testcase name="various_kernel_sizes" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp" line="251" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.046" classname="OpBoxBlur_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with kernel size 1" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with kernel size 1]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with kernel size 3" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with kernel size 3]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with kernel size 5" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with kernel size 5]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with kernel size 7" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with kernel size 7]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with kernel size 11" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with kernel size 11]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with kernel size 15" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with kernel size 15]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with kernel size 21" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:279
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with kernel size 21]]></failure>
+    </testcase>
+    <testcase name="memory_management" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp" line="286" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.047" classname="OpBoxBlur_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:312&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:312
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:312&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:312
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:312&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:312
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:312&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:312
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:312&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:312
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+    <testcase name="edge_cases" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp" line="319" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.048" classname="OpBoxBlur_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:335&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:335
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:351&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:351
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:367&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:367
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+    <testcase name="batch_processing" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp" line="374" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.049" classname="OpBoxBlur_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:401&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpBoxBlur_Smoke.cpp:401
+Expected: op(stream, imgIn, imgOut, (NVCVBlurBoxesI)blurBoxes.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="OpOSD_Smoke" tests="11" failures="10" disabled="0" skipped="0" errors="0" time="0.01" timestamp="2026-06-25T20:52:34.049">
+    <testcase name="operator_creation" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="33" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.049" classname="OpOSD_Smoke" />
+    <testcase name="rectangle_element" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="39" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.049" classname="OpOSD_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:79&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:79
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:97&#x0A;Value of: hasNonZero&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain pixels after drawing OSD rectangle" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:97
+Value of: hasNonZero
+  Actual: false
+Expected: true
+Output should contain pixels after drawing OSD rectangle]]></failure>
+    </testcase>
+    <testcase name="text_element" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="102" status="run" result="completed" time="0.002" timestamp="2026-06-25T20:52:34.050" classname="OpOSD_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:150&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:150
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:172&#x0A;Value of: hasWhiteText&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain white text pixels (255,255,255)" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:172
+Value of: hasWhiteText
+  Actual: false
+Expected: true
+Output should contain white text pixels (255,255,255)]]></failure>
+    </testcase>
+    <testcase name="line_element" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="177" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.053" classname="OpOSD_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:217&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:217
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+    <testcase name="point_element" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="222" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.053" classname="OpOSD_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:259&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:259
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+    <testcase name="circle_element" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="264" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.054" classname="OpOSD_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:303&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:303
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+    <testcase name="multiple_elements" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="308" status="run" result="completed" time="0.001" timestamp="2026-06-25T20:52:34.054" classname="OpOSD_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:372&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:372
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:400&#x0A;Value of: hasRed&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain red pixels from rectangle" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:400
+Value of: hasRed
+  Actual: false
+Expected: true
+Output should contain red pixels from rectangle]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:401&#x0A;Value of: hasGreen&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain green pixels from line" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:401
+Value of: hasGreen
+  Actual: false
+Expected: true
+Output should contain green pixels from line]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:402&#x0A;Value of: hasBlue&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain blue pixels from circle" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:402
+Value of: hasBlue
+  Actual: false
+Expected: true
+Output should contain blue pixels from circle]]></failure>
+    </testcase>
+    <testcase name="memory_management" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="407" status="run" result="completed" time="0.001" timestamp="2026-06-25T20:52:34.056" classname="OpOSD_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:450&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:450
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:450&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:450
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:450&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:450
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:450&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:450
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:450&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:450
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+    <testcase name="edge_cases" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="457" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.057" classname="OpOSD_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:513&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:513
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:528&#x0A;Value of: hasWhite&#x0A;  Actual: false&#x0A;Expected: true&#x0A;Output should contain white border pixels at image boundary" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:528
+Value of: hasWhite
+  Actual: false
+Expected: true
+Output should contain white border pixels at image boundary]]></failure>
+    </testcase>
+    <testcase name="batch_processing" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="534" status="run" result="completed" time="0" timestamp="2026-06-25T20:52:34.058" classname="OpOSD_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:579&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;." type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:579
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".]]></failure>
+    </testcase>
+    <testcase name="various_image_sizes" file="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp" line="584" status="run" result="completed" time="0.001" timestamp="2026-06-25T20:52:34.059" classname="OpOSD_Smoke">
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:634&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with size 128x128" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:634
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with size 128x128]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:634&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with size 256x256" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:634
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with size 256x256]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:634&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with size 640x480" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:634
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with size 640x480]]></failure>
+      <failure message="/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:634&#x0A;Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn&apos;t throw an exception.&#x0A;  Actual: it throws nvcv::Exception with description &quot;NVCV_ERROR_INTERNAL: Unknown error -1&quot;.&#x0A;Failed with size 1920x1080" type=""><![CDATA[/workspace/CV-CUDA/tests/cvcuda/system/TestOpOSD_Smoke.cpp:634
+Expected: op(stream, imgIn, imgOut, (NVCVElements)ctx.get()) doesn't throw an exception.
+  Actual: it throws nvcv::Exception with description "NVCV_ERROR_INTERNAL: Unknown error -1".
+Failed with size 1920x1080]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

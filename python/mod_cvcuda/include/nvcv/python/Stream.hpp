@@ -21,7 +21,7 @@
 #include "CAPI.hpp"
 
 #include <common/Assert.hpp>
-#include <cuda_runtime.h>
+#include <common/CudaCompat.hpp>
 
 namespace nvcvpy {
 

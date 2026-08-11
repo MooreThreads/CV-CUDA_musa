@@ -177,6 +177,8 @@ PYBIND11_MODULE(_cvcuda, m)
         ExportOpGaussianNoise(m);
         ExportOpInpaint(m);
         ExportOpStack(m);
+#ifndef NVCV_USE_MUSA
         ExportOpFindHomography(m);
+#endif
     }
 }

@@ -33,7 +33,8 @@ target_link_libraries(cvcuda_test_unit
         nvcv_test_common
         cvcuda_priv
         cvcuda_util
-        CUDA::cuda_driver
+        $<$<BOOL:${USE_MUSA}>:MUSA::musa_driver>
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:CUDA::cuda_driver>
 )
 
 nvcv_add_test(cvcuda_test_unit cvcuda cpp)

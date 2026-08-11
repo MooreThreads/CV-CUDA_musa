@@ -44,7 +44,7 @@ add_executable(nvcv_test_types_unit
     TestTensorLayout.cpp
 )
 
-if(ENABLE_COMPAT_OLD_GLIBC)
+if(ENABLE_COMPAT_OLD_GLIBC AND NOT USE_MUSA)
     target_sources(nvcv_test_types_unit PRIVATE TestCompat.cpp)
 endif()
 
@@ -59,7 +59,8 @@ target_link_libraries(nvcv_test_types_unit
         nvcv_util
         nvcv_test_common
         nvcv_types_priv
-        CUDA::cuda_driver
+        $<$<BOOL:${USE_MUSA}>:MUSA::musa_driver>
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:CUDA::cuda_driver>
 )
 
 nvcv_add_test(nvcv_test_types_unit nvcv cpp)

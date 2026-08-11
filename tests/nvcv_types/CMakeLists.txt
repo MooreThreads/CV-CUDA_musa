@@ -52,9 +52,12 @@ if(BUILD_TESTS_CPP)
         -DENABLE_COMPAT_OLD_GLIBC=${ENABLE_COMPAT_OLD_GLIBC}
     )
 
+    # musify: disabled — standalone ExternalProject requires system GTest unavailable in MUSA container; not part of required artifact contract
+    if(USE_MUSA)
+        message(WARNING "Skipping nvcv_test_standalone and nvcv_test_standalone_static for MUSA builds; required V2 artifacts are built in-tree.")
     # Skip standalone tests with GCC-10 due to ABI incompatibility with system libgtest
     # These tests use find_package(GTest) which requires system GTest, causing ABI issues with GCC-10
-    if(NOT (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS 11.0))
+    elseif(NOT (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS 11.0))
         # Test NVCV can be built as a shared library via the standalone test
         ExternalProject_Add(
             nvcv_standalone

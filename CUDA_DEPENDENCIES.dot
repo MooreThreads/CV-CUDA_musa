@@ -1,0 +1,56 @@
+digraph CUDA_DEPENDENCIES {
+    rankdir=TB;
+    graph [fontname="Helvetica", fontsize=10, labelloc=t, label="CV-CUDA CUDA Dependency Graph (reader analysis)"];
+    node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10];
+    edge [fontname="Helvetica", fontsize=9];
+
+    cvcuda [label="CV-CUDA core [CU]\n70 src .cu, 8 .cuh\nMUSA: source-port required", fillcolor="#ff6b6b", fontcolor="white"];
+    cuda_tools [label="nvcv/cvcuda cuda_tools [CU]\nheaders/templates, __CUDA_ARCH__\nMUSA: source-port required", fillcolor="#ff6b6b", fontcolor="white"];
+    legacy_ops [label="legacy operators + cuOSD [CU]\nosd/box_blur/legacy kernels\nMUSA: source-port required", fillcolor="#ff6b6b", fontcolor="white"];
+    pybind [label="Python bindings [CB]\npybind11 wrapper, no own CUDA kernels\nMUSA: direct wrapper adaptation", fillcolor="#ffa07a"];
+    tests [label="project tests [CO]\ngtest/pytest/cudatools .cu\nMUSA: verification target", fillcolor="#88d8b0"];
+    nvbench [label="nvbench [CU]\n3rdparty/NVIDIA submodule\n55 .cu + 66 .cuh\nMUSA: skip/disable bench by default", fillcolor="#ff6b6b", fontcolor="white"];
+
+    subgraph cluster_ecosystem {
+        label="CUDA Ecosystem (SDK / NVIDIA surface)";
+        style=dashed;
+        cudart [label="CUDA Runtime [CE]\nMUSA: MUSA Runtime (confirmed)\nrow 43", fillcolor="#ffcc5c"];
+        driver [label="CUDA Driver [CE]\nMUSA: MUSA Driver (confirmed)\nrow 42", fillcolor="#ffcc5c"];
+        cublas [label="cuBLAS/cuBLASLt [CE]\nMUSA: muBLAS (confirmed)\nrow 1", fillcolor="#ffcc5c"];
+        cusolver [label="cuSOLVER [CE]\nMUSA: muSOLVER (confirmed)\nrow 4; syevj API concern", fillcolor="#ffcc5c"];
+        curand [label="cuRAND [CE]\nMUSA: muRAND (confirmed)\nrow 11", fillcolor="#ffcc5c"];
+        cub [label="CUB [CE]\nMUSA: cub/muAlg (confirmed)\nrow 28 + CCCL 5.1.0", fillcolor="#ffcc5c"];
+        thrust [label="Thrust [CE]\nMUSA: muThrust (confirmed)\nrow 27 + CCCL 5.1.0", fillcolor="#ffcc5c"];
+        fp16 [label="CUDA Math/fp16 [CE]\nMUSA Math (confirmed)\nrow 15", fillcolor="#ffcc5c"];
+        ptx [label="PTX/ptxas [CE]\nMUSA: MTX/mtxas (confirmed)\nrow 47; no project inline PTX detected", fillcolor="#ffcc5c"];
+    }
+
+    subgraph cluster_python {
+        label="Python ecosystem / samples (optional)";
+        style=dotted;
+        torch [label="PyTorch sample paths [PT]\nMUSA: torch_musa (confirmed)", fillcolor="#6c9bd9", fontcolor="white"];
+        pycuda [label="PyCUDA sample/bench dep [CB]\nMUSA counterpart: gap/unknown\nrow 83 CUDA Python / row 84 CuPy gaps", fillcolor="#ffa07a"];
+        cupy [label="CuPy interop sample [CB]\nMUSA counterpart: gap\nrow 84", fillcolor="#ffa07a"];
+        nvcodec [label="nvImageCodec / PyNvVideoCodec samples [CE]\nmtImageCodec partial for image codec; Video Codec SDK partial\nrows 35-36", fillcolor="#ffcc5c"];
+    }
+
+    cvcuda -> cuda_tools [label="local include dependency\ncuda_tools headers"];
+    cvcuda -> legacy_ops [label="build registration\nsrc/cvcuda/priv"];
+    cvcuda -> cudart [label="cuda_runtime.h / cuda* APIs\n180 files"];
+    cvcuda -> driver [label="cuda.h / driver API\n20 files"];
+    cvcuda -> curand [label="curand_kernel.h\nGaussianNoise"];
+    cvcuda -> cub [label="#include <cub/cub.cuh>\n10 files"];
+    cvcuda -> thrust [label="#include <thrust/...>\n8 files"];
+    cvcuda -> cublas [label="OpFindHomography\ncublas types"];
+    cvcuda -> cusolver [label="OpFindHomography\nsyevjBatched"];
+    cvcuda -> fp16 [label="cuda_fp16/math types"];
+    cvcuda -> ptx [label="PTX scan: none in project; wiki how-to read"];
+    pybind -> cvcuda [label="Python module wraps core library"];
+    tests -> cvcuda [label="gtest/pytest native verification"];
+    nvbench -> cudart [label="benchmark submodule uses CUDA runtime"];
+    nvbench -> cvcuda [label="bench targets only; BUILD_BENCH=OFF recommended"];
+    pybind -> torch [label="samples/tests torch interop; 36 torch.cuda calls"];
+    pybind -> pycuda [label="samples/bench requirements"];
+    pybind -> cupy [label="interop sample"];
+    pybind -> nvcodec [label="interop sample"];
+}

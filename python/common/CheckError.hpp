@@ -18,7 +18,7 @@
 #ifndef NVCV_PYTHON_CHECKERROR_HPP
 #define NVCV_PYTHON_CHECKERROR_HPP
 
-#include <cuda_runtime.h>
+#include <common/CudaCompat.hpp>
 #include <nvcv/detail/CheckError.hpp>
 
 namespace nvcvpy::util {

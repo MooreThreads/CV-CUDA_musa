@@ -13,7 +13,14 @@
 #ifndef NVCV_DETAIL_FWD_CUDA_H
 #define NVCV_DETAIL_FWD_CUDA_H
 
+#if defined(NVCV_USE_MUSA)
+#    include <musa.h>
+#    include <musa_runtime.h>
+typedef MUstream    CUstream;
+typedef musaArray_t cudaArray_t;
+#else
 typedef struct CUstream_st *CUstream;
 typedef struct cudaArray   *cudaArray_t;
+#endif
 
 #endif // NVCV_DETAIL_FWD_CUDA_H

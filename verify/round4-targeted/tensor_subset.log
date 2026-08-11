@@ -1,0 +1,58 @@
+Note: Google Test filter = */TensorTests.smoke_create/*:*/TensorDataUtils.SetGetTensorFromImageVector/*
+[==========] Running 23 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 4 tests from _/TensorTests
+[ RUN      ] _/TensorTests.smoke_create/e2ba9af1
+[       OK ] _/TensorTests.smoke_create/e2ba9af1 (31 ms)
+[ RUN      ] _/TensorTests.smoke_create/8ae931db
+[       OK ] _/TensorTests.smoke_create/8ae931db (0 ms)
+[ RUN      ] _/TensorTests.smoke_create/1750e886
+[       OK ] _/TensorTests.smoke_create/1750e886 (0 ms)
+[ RUN      ] _/TensorTests.smoke_create/cd496f22
+[       OK ] _/TensorTests.smoke_create/cd496f22 (0 ms)
+[----------] 4 tests from _/TensorTests (31 ms total)
+
+[----------] 19 tests from _/TensorDataUtils
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/8589f331
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/8589f331 (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/881a89fa
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/881a89fa (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/420c67c2
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/420c67c2 (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/b1e10c2c
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/b1e10c2c (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/7c536628
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/7c536628 (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/8317014f
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/8317014f (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/34c94aa5
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/34c94aa5 (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/184e498a
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/184e498a (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/ce1395a0
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/ce1395a0 (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/d0b1cdca
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/d0b1cdca (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/85f864fc
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/85f864fc (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/54990df1
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/54990df1 (1 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/352a8d89
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/352a8d89 (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/5ec3923c
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/5ec3923c (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/db615a0d
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/db615a0d (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/ec5ba727
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/ec5ba727 (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/1219ce67
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/1219ce67 (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/77a5bfab
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/77a5bfab (0 ms)
+[ RUN      ] _/TensorDataUtils.SetGetTensorFromImageVector/8d97bbce
+[       OK ] _/TensorDataUtils.SetGetTensorFromImageVector/8d97bbce (0 ms)
+[----------] 19 tests from _/TensorDataUtils (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 23 tests from 2 test suites ran. (36 ms total)
+[  PASSED  ] 23 tests.

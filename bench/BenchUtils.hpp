@@ -36,6 +36,29 @@
 #include <string>
 #include <vector>
 
+#if NVCV_USE_MUSA
+namespace nvcv {
+namespace cuda = musa;
+}
+using cudaError_t = musaError_t;
+using cudaMemcpyKind = musaMemcpyKind;
+inline constexpr auto cudaSuccess            = musaSuccess;
+inline constexpr auto cudaMemcpyHostToDevice = musaMemcpyHostToDevice;
+inline cudaError_t cudaMemcpy(void *dst, const void *src, size_t count, musaMemcpyKind kind)
+{
+    return musaMemcpy(dst, src, count, kind);
+}
+inline cudaError_t cudaMemcpy2D(void *dst, size_t dpitch, const void *src, size_t spitch, size_t width, size_t height,
+                                musaMemcpyKind kind)
+{
+    return musaMemcpy2D(dst, dpitch, src, spitch, width, height, kind);
+}
+inline const char *cudaGetErrorString(cudaError_t code)
+{
+    return musaGetErrorString(code);
+}
+#endif
+
 #define CVCUDA_CHECK_DATA(data)                   \
     if (!data)                                    \
     {                                             \

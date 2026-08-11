@@ -1,0 +1,80 @@
+[==========] Running 17 tests from 9 test suites.
+[----------] Global test environment set-up.
+[----------] 4 tests from WorkspaceMemAllocatorTest
+[ RUN      ] WorkspaceMemAllocatorTest.Get
+[       OK ] WorkspaceMemAllocatorTest.Get (0 ms)
+[ RUN      ] WorkspaceMemAllocatorTest.ExceedWorkspaceSize
+[       OK ] WorkspaceMemAllocatorTest.ExceedWorkspaceSize (0 ms)
+[ RUN      ] WorkspaceMemAllocatorTest.AcquireRelease
+[       OK ] WorkspaceMemAllocatorTest.AcquireRelease (0 ms)
+[ RUN      ] WorkspaceMemAllocatorTest.Sync
+[       OK ] WorkspaceMemAllocatorTest.Sync (119 ms)
+[----------] 4 tests from WorkspaceMemAllocatorTest (150 ms total)
+
+[----------] 1 test from WorkspaceAllocatorTest
+[ RUN      ] WorkspaceAllocatorTest.Get
+[       OK ] WorkspaceAllocatorTest.Get (0 ms)
+[----------] 1 test from WorkspaceAllocatorTest (0 ms total)
+
+[----------] 1 test from WorkspaceMemEstimatorTest
+[ RUN      ] WorkspaceMemEstimatorTest.Add
+[       OK ] WorkspaceMemEstimatorTest.Add (0 ms)
+[----------] 1 test from WorkspaceMemEstimatorTest (0 ms total)
+
+[----------] 1 test from WorkspaceEstimatorTest
+[ RUN      ] WorkspaceEstimatorTest.Add
+[       OK ] WorkspaceEstimatorTest.Add (0 ms)
+[----------] 1 test from WorkspaceEstimatorTest (0 ms total)
+
+[----------] 3 tests from StreamIdTest
+[ RUN      ] StreamIdTest.RegularAndDefault
+unknown file: Failure
+C++ exception with description "NVCV_ERROR_INVALID_ARGUMENT: Invalid stream handle" thrown in the test body.
+[  FAILED  ] StreamIdTest.RegularAndDefault (1 ms)
+[ RUN      ] StreamIdTest.HandleReuse
+/workspace/CV-CUDA/tests/cvcuda/unit/TestStreamId.cpp:107: Skipped
+Could not trigger handle reuse - no way to conduct the test
+[  SKIPPED ] StreamIdTest.HandleReuse (48 ms)
+[ RUN      ] StreamIdTest.PerThreadDefault
+[       OK ] StreamIdTest.PerThreadDefault (1 ms)
+[----------] 3 tests from StreamIdTest (51 ms total)
+
+[----------] 1 test from SimpleCacheTest
+[ RUN      ] SimpleCacheTest.PutGet
+[       OK ] SimpleCacheTest.PutGet (0 ms)
+[----------] 1 test from SimpleCacheTest (0 ms total)
+
+[----------] 1 test from StreamCacheItemAllocator
+[ RUN      ] StreamCacheItemAllocator.BasicTest
+[       OK ] StreamCacheItemAllocator.BasicTest (0 ms)
+[----------] 1 test from StreamCacheItemAllocator (0 ms total)
+
+[----------] 3 tests from StreamOrderedCacheTest
+[ RUN      ] StreamOrderedCacheTest.InsertGet
+[       OK ] StreamOrderedCacheTest.InsertGet (0 ms)
+[ RUN      ] StreamOrderedCacheTest.FindNextReady
+[       OK ] StreamOrderedCacheTest.FindNextReady (346 ms)
+[ RUN      ] StreamOrderedCacheTest.RemoveAllReady
+[       OK ] StreamOrderedCacheTest.RemoveAllReady (352 ms)
+[----------] 3 tests from StreamOrderedCacheTest (699 ms total)
+
+[----------] 2 tests from PerStreamCacheTest
+[ RUN      ] PerStreamCacheTest.NoStream
+[       OK ] PerStreamCacheTest.NoStream (0 ms)
+[ RUN      ] PerStreamCacheTest.TwoStream
+Insert time = 698ns
+Get time (stream) = 85.3333ns
+Get time (global, success) = 1481ns
+Get time (global, failed) = 984ns
+[       OK ] PerStreamCacheTest.TwoStream (21 ms)
+[----------] 2 tests from PerStreamCacheTest (21 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 9 test suites ran. (923 ms total)
+[  PASSED  ] 15 tests.
+[  SKIPPED ] 1 test, listed below:
+[  SKIPPED ] StreamIdTest.HandleReuse
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] StreamIdTest.RegularAndDefault
+
+ 1 FAILED TEST

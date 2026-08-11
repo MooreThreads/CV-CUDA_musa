@@ -14,7 +14,11 @@
 # limitations under the License.
 
 # nvcv_types private implementation
-add_subdirectory(priv)
+if(USE_MUSA)
+    add_subdirectory(priv_musa priv)
+else()
+    add_subdirectory(priv)
+endif()
 
 add_library(nvcv_types
     Config.cpp

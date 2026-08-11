@@ -1,0 +1,36 @@
+id: round3-cvcuda-smoke-osd-runtime-internal-error
+round: 3
+source: CODE_ANALYSIS.md §4 Native Verification Discovery
+artifact: cvcuda_test_system_smoke
+status: fixable_bug
+severity: high
+category: runtime-correctness
+summary: BndBox, BoxBlur, and OSD smoke operations throw NVCV_ERROR_INTERNAL: Unknown error -1 on MUSA runtime.
+evidence:
+  log: verify/cvcuda_test_system_smoke.log
+  xml: verify/cvcuda_test_system_smoke.xml
+  result: 3 passed, 22 failed, 25 total
+  failed_suites:
+    - OpBndBox_Smoke
+    - OpBoxBlur_Smoke
+    - OpOSD_Smoke
+  representative_failures:
+    - test: OpBndBox_Smoke.basic_functionality_rgb8
+      message: op(stream, imgIn, imgOut, bndBoxes) throws nvcv::Exception "NVCV_ERROR_INTERNAL: Unknown error -1"
+    - test: OpBoxBlur_Smoke.basic_functionality_rgb8
+      message: op(stream, imgIn, imgOut, blurBoxes) throws nvcv::Exception "NVCV_ERROR_INTERNAL: Unknown error -1"
+    - test: OpOSD_Smoke.rectangle_element
+      message: op(stream, imgIn, imgOut, elements) throws nvcv::Exception "NVCV_ERROR_INTERNAL: Unknown error -1"
+expected_behavior: Required smoke operations should execute without exception and produce expected output pixels.
+observed_behavior: Operator creation tests pass, but runtime invocation fails for drawing/blur functionality and output buffers remain unchanged.
+reproduction:
+  container: auto-musify-CV-CUDA
+  workspace: /workspace/CV-CUDA
+  command: ./build_musa_v2/bin/cvcuda_test_system_smoke --gtest_color=no
+routing:
+  next_owner: musifier
+  recommended_action: Inspect MUSA implementations for legacy OSD/BndBox/BoxBlur launch/runtime error propagation; fix real runtime failure without stubs or test suppression.
+constraints:
+  - Do not stub missing behavior.
+  - Do not comment out required-v1 smoke tests unless a true non-critical unsupported feature is documented as known limitation.
+  - Source changes must be local commits before remote sync.

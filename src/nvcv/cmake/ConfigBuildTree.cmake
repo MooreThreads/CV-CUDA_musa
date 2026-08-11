@@ -85,8 +85,12 @@ else()
     set(PLATFORM_IS_QNX OFF)
 endif()
 
-# Needed to get cuda version
-find_package(CUDAToolkit REQUIRED)
+if(USE_MUSA)
+    find_package(MUSAToolkit REQUIRED)
+else()
+    # Needed to get cuda version
+    find_package(CUDAToolkit REQUIRED)
+endif()
 
 # Are we inside a git repo and it has submodules enabled?
 if(EXISTS ${CMAKE_SOURCE_DIR}/.git AND EXISTS ${CMAKE_SOURCE_DIR}/.gitmodules)
@@ -104,7 +108,11 @@ else()
                         "CV-CUDA only supports Linux and QNX platforms.")
 endif()
 
-set(NVCV_BUILD_SUFFIX "cuda${CUDAToolkit_VERSION_MAJOR}-${NVCV_SYSTEM_NAME}")
+if(USE_MUSA)
+    set(NVCV_BUILD_SUFFIX "musa${MUSAToolkit_VERSION_MAJOR}-${NVCV_SYSTEM_NAME}")
+else()
+    set(NVCV_BUILD_SUFFIX "cuda${CUDAToolkit_VERSION_MAJOR}-${NVCV_SYSTEM_NAME}")
+endif()
 
 function(setup_dso target version)
     string(REGEX MATCHALL "[0-9]+" version_list "${version}")
@@ -141,6 +149,10 @@ function(setup_dso target version)
     #   Configure symbol visibility ---------------------------------------------
     set_target_properties(${target} PROPERTIES VISIBILITY_INLINES_HIDDEN on
                                                C_VISIBILITY_PRESET hidden
-                                               CXX_VISIBILITY_PRESET hidden
-                                               CUDA_VISIBILITY_PRESET hidden)
+                                               CXX_VISIBILITY_PRESET hidden)
+    if(USE_MUSA)
+        set_target_properties(${target} PROPERTIES MUSA_VISIBILITY_PRESET hidden)
+    else()
+        set_target_properties(${target} PROPERTIES CUDA_VISIBILITY_PRESET hidden)
+    endif()
 endfunction()

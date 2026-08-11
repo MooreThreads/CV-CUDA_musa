@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="17" failures="1" disabled="0" errors="0" time="0.923" timestamp="2026-06-25T20:53:23.719" name="AllTests">
+  <testsuite name="WorkspaceMemAllocatorTest" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.15" timestamp="2026-06-25T20:53:23.719">
+    <testcase name="Get" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestWorkspaceAllocator.cpp" line="24" status="run" result="completed" time="0" timestamp="2026-06-25T20:53:23.719" classname="WorkspaceMemAllocatorTest" />
+    <testcase name="ExceedWorkspaceSize" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestWorkspaceAllocator.cpp" line="39" status="run" result="completed" time="0" timestamp="2026-06-25T20:53:23.750" classname="WorkspaceMemAllocatorTest" />
+    <testcase name="AcquireRelease" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestWorkspaceAllocator.cpp" line="76" status="run" result="completed" time="0" timestamp="2026-06-25T20:53:23.750" classname="WorkspaceMemAllocatorTest" />
+    <testcase name="Sync" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestWorkspaceAllocator.cpp" line="145" status="run" result="completed" time="0.119" timestamp="2026-06-25T20:53:23.751" classname="WorkspaceMemAllocatorTest" />
+  </testsuite>
+  <testsuite name="WorkspaceAllocatorTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-06-25T20:53:23.870">
+    <testcase name="Get" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestWorkspaceAllocator.cpp" line="55" status="run" result="completed" time="0" timestamp="2026-06-25T20:53:23.870" classname="WorkspaceAllocatorTest" />
+  </testsuite>
+  <testsuite name="WorkspaceMemEstimatorTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-06-25T20:53:23.870">
+    <testcase name="Add" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestWorkspaceEstimator.cpp" line="22" status="run" result="completed" time="0" timestamp="2026-06-25T20:53:23.870" classname="WorkspaceMemEstimatorTest" />
+  </testsuite>
+  <testsuite name="WorkspaceEstimatorTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-06-25T20:53:23.870">
+    <testcase name="Add" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestWorkspaceEstimator.cpp" line="39" status="run" result="completed" time="0" timestamp="2026-06-25T20:53:23.870" classname="WorkspaceEstimatorTest" />
+  </testsuite>
+  <testsuite name="StreamIdTest" tests="3" failures="1" disabled="0" skipped="1" errors="0" time="0.051" timestamp="2026-06-25T20:53:23.870">
+    <testcase name="RegularAndDefault" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestStreamId.cpp" line="26" status="run" result="completed" time="0.001" timestamp="2026-06-25T20:53:23.870" classname="StreamIdTest">
+      <failure message="unknown file&#x0A;C++ exception with description &quot;NVCV_ERROR_INVALID_ARGUMENT: Invalid stream handle&quot; thrown in the test body." type=""><![CDATA[unknown file
+C++ exception with description "NVCV_ERROR_INVALID_ARGUMENT: Invalid stream handle" thrown in the test body.]]></failure>
+    </testcase>
+    <testcase name="HandleReuse" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestStreamId.cpp" line="52" status="run" result="skipped" time="0.048" timestamp="2026-06-25T20:53:23.871" classname="StreamIdTest">
+      <skipped message="/workspace/CV-CUDA/tests/cvcuda/unit/TestStreamId.cpp:107&#x0A;Could not trigger handle reuse - no way to conduct the test"><![CDATA[/workspace/CV-CUDA/tests/cvcuda/unit/TestStreamId.cpp:107
+Could not trigger handle reuse - no way to conduct the test]]></skipped>
+    </testcase>
+    <testcase name="PerThreadDefault" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestStreamId.cpp" line="110" status="run" result="completed" time="0.001" timestamp="2026-06-25T20:53:23.920" classname="StreamIdTest" />
+  </testsuite>
+  <testsuite name="SimpleCacheTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-06-25T20:53:23.921">
+    <testcase name="PutGet" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestSimpleCache.cpp" line="58" status="run" result="completed" time="0" timestamp="2026-06-25T20:53:23.921" classname="SimpleCacheTest" />
+  </testsuite>
+  <testsuite name="StreamCacheItemAllocator" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-06-25T20:53:23.921">
+    <testcase name="BasicTest" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestPerStreamCache.cpp" line="67" status="run" result="completed" time="0" timestamp="2026-06-25T20:53:23.921" classname="StreamCacheItemAllocator" />
+  </testsuite>
+  <testsuite name="StreamOrderedCacheTest" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.699" timestamp="2026-06-25T20:53:23.921">
+    <testcase name="InsertGet" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestPerStreamCache.cpp" line="124" status="run" result="completed" time="0" timestamp="2026-06-25T20:53:23.921" classname="StreamOrderedCacheTest" />
+    <testcase name="FindNextReady" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestPerStreamCache.cpp" line="143" status="run" result="completed" time="0.346" timestamp="2026-06-25T20:53:23.921" classname="StreamOrderedCacheTest" />
+    <testcase name="RemoveAllReady" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestPerStreamCache.cpp" line="216" status="run" result="completed" time="0.352" timestamp="2026-06-25T20:53:24.268" classname="StreamOrderedCacheTest" />
+  </testsuite>
+  <testsuite name="PerStreamCacheTest" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.021" timestamp="2026-06-25T20:53:24.621">
+    <testcase name="NoStream" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestPerStreamCache.cpp" line="285" status="run" result="completed" time="0" timestamp="2026-06-25T20:53:24.621" classname="PerStreamCacheTest" />
+    <testcase name="TwoStream" file="/workspace/CV-CUDA/tests/cvcuda/unit/TestPerStreamCache.cpp" line="308" status="run" result="completed" time="0.021" timestamp="2026-06-25T20:53:24.621" classname="PerStreamCacheTest" />
+  </testsuite>
+</testsuites>

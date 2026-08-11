@@ -10,7 +10,11 @@
  * its affiliates is strictly prohibited.
  */
 
-#include <cuda_runtime.h>
+#if defined(NVCV_USE_MUSA)
+#    include <musa_runtime.h>
+#else
+#    include <cuda_runtime.h>
+#endif
 #include <gtest/gtest.h>
 
 #if NVCV_UNIT_TESTS
@@ -42,15 +46,27 @@ public:
     virtual void OnTestEnd(const t::TestInfo &tinfo) override
     {
         int devCount = 0;
+#if defined(NVCV_USE_MUSA)
+        musaGetDeviceCount(&devCount);
+#else
         cudaGetDeviceCount(&devCount);
+#endif
 
         if (devCount)
         {
+#if defined(NVCV_USE_MUSA)
+            EXPECT_EQ(musaSuccess, musaGetLastError()) << "Some test leaked a musa error";
+
+            // Make sure all activities on the GPU are stopped.
+            EXPECT_EQ(musaSuccess, musaDeviceSynchronize());
+            musaGetLastError(); // swallow the error
+#else
             EXPECT_EQ(cudaSuccess, cudaGetLastError()) << "Some test leaked a cuda error";
 
             // Make sure all activities on the GPU are stopped.
             EXPECT_EQ(cudaSuccess, cudaDeviceSynchronize());
             cudaGetLastError(); // swallow the error
+#endif
         }
 
         EXPECT_FALSE(g_HasSanitizerError);

@@ -28,12 +28,69 @@ namespace cvcuda::priv {
 
 #define checkERR(call) check_error(call, #call, __LINE__, __FILE__)
 
-inline static bool check_error(cudaError_t e, const char *call, int line, const char *file)
+#if defined(NVCV_USE_MUSA)
+// musify: MUSA runtime API mappings from /usr/local/musa/tools/general.json.
+using DeviceError_t = musaError_t;
+using DeviceMemcpyKind_t = musaMemcpyKind;
+inline static constexpr DeviceError_t kDeviceSuccess = musaSuccess;
+inline static const char *DeviceGetErrorString(DeviceError_t e)
 {
-    if (e != cudaSuccess)
+    return musaGetErrorString(e);
+}
+inline static const char *DeviceGetErrorName(DeviceError_t e)
+{
+    return musaGetErrorName(e);
+}
+template<typename T>
+inline static DeviceError_t DeviceMalloc(T **ptr, size_t size)
+{
+    return musaMalloc(reinterpret_cast<void **>(ptr), size);
+}
+inline static DeviceError_t DeviceMemcpy(void *dst, const void *src, size_t count, DeviceMemcpyKind_t kind)
+{
+    return musaMemcpy(dst, src, count, kind);
+}
+inline static DeviceError_t DeviceFree(void *ptr)
+{
+    return musaFree(ptr);
+}
+inline static constexpr auto kDeviceMemcpyHostToDevice   = musaMemcpyHostToDevice;
+inline static constexpr auto kDeviceMemcpyDeviceToDevice = musaMemcpyDeviceToDevice;
+#else
+using DeviceError_t = cudaError_t;
+using DeviceMemcpyKind_t = cudaMemcpyKind;
+inline static constexpr DeviceError_t kDeviceSuccess = cudaSuccess;
+inline static const char *DeviceGetErrorString(DeviceError_t e)
+{
+    return cudaGetErrorString(e);
+}
+inline static const char *DeviceGetErrorName(DeviceError_t e)
+{
+    return cudaGetErrorName(e);
+}
+template<typename T>
+inline static DeviceError_t DeviceMalloc(T **ptr, size_t size)
+{
+    return cudaMalloc(reinterpret_cast<void **>(ptr), size);
+}
+inline static DeviceError_t DeviceMemcpy(void *dst, const void *src, size_t count, DeviceMemcpyKind_t kind)
+{
+    return cudaMemcpy(dst, src, count, kind);
+}
+inline static DeviceError_t DeviceFree(void *ptr)
+{
+    return cudaFree(ptr);
+}
+inline static constexpr auto kDeviceMemcpyHostToDevice   = cudaMemcpyHostToDevice;
+inline static constexpr auto kDeviceMemcpyDeviceToDevice = cudaMemcpyDeviceToDevice;
+#endif
+
+inline static bool check_error(DeviceError_t e, const char *call, int line, const char *file)
+{
+    if (e != kDeviceSuccess)
     {
-        fprintf(stderr, "CUDA Runtime error %s # %s, code = %s [ %d ] in file %s:%d\n", call, cudaGetErrorString(e),
-                cudaGetErrorName(e), e, file, line);
+        fprintf(stderr, "Device Runtime error %s # %s, code = %s [ %d ] in file %s:%d\n", call, DeviceGetErrorString(e),
+                DeviceGetErrorName(e), e, file, line);
         return false;
     }
     return true;
@@ -148,9 +205,9 @@ public:
         , borderColor(_borderColor)
         , segColor(_segColor)
     {
-        checkERR(cudaMalloc(&dSeg, static_cast<size_t>(segWidth) * segHeight * sizeof(float)));
+        checkERR(DeviceMalloc(&dSeg, static_cast<size_t>(segWidth) * segHeight * sizeof(float)));
         checkERR(
-            cudaMemcpy(dSeg, _hSeg, static_cast<size_t>(segWidth) * segHeight * sizeof(float), cudaMemcpyHostToDevice));
+            DeviceMemcpy(dSeg, _hSeg, static_cast<size_t>(segWidth) * segHeight * sizeof(float), kDeviceMemcpyHostToDevice));
     }
 
     NVCVSegment(const NVCVSegment &segment)
@@ -162,9 +219,9 @@ public:
         , borderColor(segment.borderColor)
         , segColor(segment.segColor)
     {
-        checkERR(cudaMalloc(&dSeg, static_cast<size_t>(segWidth) * segHeight * sizeof(float)));
-        checkERR(cudaMemcpy(dSeg, segment.dSeg, static_cast<size_t>(segWidth) * segHeight * sizeof(float),
-                            cudaMemcpyDeviceToDevice));
+        checkERR(DeviceMalloc(&dSeg, static_cast<size_t>(segWidth) * segHeight * sizeof(float)));
+        checkERR(DeviceMemcpy(dSeg, segment.dSeg, static_cast<size_t>(segWidth) * segHeight * sizeof(float),
+                            kDeviceMemcpyDeviceToDevice));
     }
 
     NVCVSegment &operator=(const NVCVSegment &) = delete;
@@ -173,7 +230,7 @@ public:
     {
         if (dSeg != nullptr)
         {
-            checkERR(cudaFree(dSeg));
+            checkERR(DeviceFree(dSeg));
             dSeg = nullptr;
         }
     };
@@ -206,10 +263,10 @@ public:
         , interpolation(_interpolation)
     {
         hPoints = (int *)malloc(numPoints * 2 * sizeof(int));
-        checkERR(cudaMalloc(&dPoints, 2 * numPoints * sizeof(int)));
+        checkERR(DeviceMalloc(&dPoints, 2 * numPoints * sizeof(int)));
 
         std::copy_n(_hPoints, 2 * numPoints, hPoints);
-        checkERR(cudaMemcpy(dPoints, _hPoints, 2 * numPoints * sizeof(int), cudaMemcpyHostToDevice));
+        checkERR(DeviceMemcpy(dPoints, _hPoints, 2 * numPoints * sizeof(int), kDeviceMemcpyHostToDevice));
     }
 
     NVCVPolyLine(const NVCVPolyLine &pl)
@@ -221,10 +278,10 @@ public:
         , interpolation(pl.interpolation)
     {
         hPoints = (int *)malloc(numPoints * 2 * sizeof(int));
-        checkERR(cudaMalloc(&dPoints, 2 * numPoints * sizeof(int)));
+        checkERR(DeviceMalloc(&dPoints, 2 * numPoints * sizeof(int)));
 
         std::copy_n(pl.hPoints, 2 * numPoints, hPoints);
-        checkERR(cudaMemcpy(dPoints, pl.dPoints, 2 * numPoints * sizeof(int), cudaMemcpyDeviceToDevice));
+        checkERR(DeviceMemcpy(dPoints, pl.dPoints, 2 * numPoints * sizeof(int), kDeviceMemcpyDeviceToDevice));
     }
 
     NVCVPolyLine &operator=(const NVCVPolyLine &) = delete;
@@ -238,7 +295,7 @@ public:
         }
         if (dPoints != nullptr)
         {
-            checkERR(cudaFree(dPoints));
+            checkERR(DeviceFree(dPoints));
             dPoints = nullptr;
         }
     };

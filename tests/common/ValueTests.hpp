@@ -163,7 +163,7 @@ struct TestSuffixPrinter
 #define NVCV_INSTANTIATE_TEST_SUITE_P(GROUP, TEST, ...)                                                         \
     INSTANTIATE_TEST_SUITE_P(                                                                                   \
         GROUP, TEST,                                                                                            \
-        ::testing::ValuesIn(UniqueSort(typename ::nvcv::test::detail::NormalizeValueList<                       \
+        ::testing::ValuesIn(::nvcv::test::UniqueSort(typename ::nvcv::test::detail::NormalizeValueList<        \
                                        ::nvcv::test::ValueList<typename TEST::ParamType>>::type(__VA_ARGS__))), \
         ::nvcv::test::TestSuffixPrinter())
 
@@ -171,6 +171,9 @@ struct TestSuffixPrinter
     static ::nvcv::test::ValueList g_##TEST##_Params = ::nvcv::test::UniqueSort(__VA_ARGS__); \
     class TEST : public ::testing::TestWithParam<decltype(g_##TEST##_Params)::value_type>     \
     {                                                                                         \
+    public:                                                                                   \
+        using ParamType = decltype(g_##TEST##_Params)::value_type;                            \
+                                                                                              \
     protected:                                                                                \
         template<int I>                                                                       \
         auto GetParamValue() const                                                            \

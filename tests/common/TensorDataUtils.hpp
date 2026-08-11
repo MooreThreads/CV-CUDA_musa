@@ -18,10 +18,17 @@
 #ifndef NVCV_TEST_COMMON_TENSOR_DATA_UTILS_HPP
 #define NVCV_TEST_COMMON_TENSOR_DATA_UTILS_HPP
 
-#include <cuda_runtime.h>
-#include <cvcuda/cuda_tools/DropCast.hpp>
-#include <cvcuda/cuda_tools/MathOps.hpp>
-#include <cvcuda/cuda_tools/TypeTraits.hpp>
+#if defined(NVCV_USE_MUSA)
+#    include <cuda_runtime.h>
+#    include <cvcuda/cuda_tools_musa/DropCast.hpp>
+#    include <cvcuda/cuda_tools_musa/MathOps.hpp>
+#    include <cvcuda/cuda_tools_musa/TypeTraits.hpp>
+#else
+#    include <cuda_runtime.h>
+#    include <cvcuda/cuda_tools/DropCast.hpp>
+#    include <cvcuda/cuda_tools/MathOps.hpp>
+#    include <cvcuda/cuda_tools/TypeTraits.hpp>
+#endif
 #include <nvcv/Tensor.hpp>
 #include <nvcv/TensorDataAccess.hpp>
 

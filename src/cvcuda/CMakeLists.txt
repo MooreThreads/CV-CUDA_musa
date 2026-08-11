@@ -13,10 +13,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-add_subdirectory(util)
-
-# cvcuda private implementation
-add_subdirectory(priv)
+if(USE_MUSA)
+    add_subdirectory(util_musa util)
+    add_subdirectory(priv_musa priv)
+else()
+    add_subdirectory(util)
+    # cvcuda private implementation
+    add_subdirectory(priv)
+endif()
 
 set(CV_CUDA_LIB_FILES Operator.cpp)
 
@@ -69,7 +73,7 @@ set(CV_CUDA_OP_FILES
     OpInpaint.cpp
     OpLabel.cpp
     OpPairwiseMatcher.cpp
-    OpFindHomography.cpp
+    # musify: disabled — muSOLVER syevjBatched API lacks CUDA syevjInfo_t-compatible path; see MUSIFY.md Known Limitations
     OpStack.cpp
     OpResizeCropConvertReformat.cpp
 )
@@ -93,13 +97,24 @@ else()
     list(APPEND CV_CUDA_LIB_FILES ${CV_CUDA_OP_FILES})
 endif()
 
+if(USE_MUSA)
+    set(_CV_CUDA_MUSA_LIB_FILES)
+    foreach(_src ${CV_CUDA_LIB_FILES})
+        list(APPEND _CV_CUDA_MUSA_LIB_FILES ${CMAKE_CURRENT_SOURCE_DIR}/../cvcuda_musa/${_src})
+    endforeach()
+    set(_CV_CUDA_SELECTED_LIB_FILES ${_CV_CUDA_MUSA_LIB_FILES})
+else()
+    set(_CV_CUDA_SELECTED_LIB_FILES ${CV_CUDA_LIB_FILES})
+endif()
+
 add_library(cvcuda SHARED
-    ${CV_CUDA_LIB_FILES}
+    ${_CV_CUDA_SELECTED_LIB_FILES}
 )
 
 target_link_libraries(cvcuda
     PUBLIC
-        CUDA::cudart_static
+        $<$<BOOL:${USE_MUSA}>:MUSA::musart>
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:CUDA::cudart_static>
         nvcv_types
         -lrt
     PRIVATE
@@ -108,15 +123,38 @@ target_link_libraries(cvcuda
         cvcuda_priv
 )
 
-target_include_directories(cvcuda
-    PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:include>
-)
+if(USE_MUSA)
+    target_include_directories(cvcuda
+        PUBLIC
+            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include_musa>
+            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+            $<INSTALL_INTERFACE:include>
+    )
+    if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64|arm64)$")
+        target_compile_definitions(cvcuda PRIVATE NVCV_MUSA_ARM_PORTABLE_BACKEND=1)
+    endif()
+else()
+    target_include_directories(cvcuda
+        PUBLIC
+            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+            $<INSTALL_INTERFACE:include>
+    )
+endif()
+if(USE_MUSA)
+    target_include_directories(cvcuda PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/priv_musa)
+endif()
 
 # target used when only public headers are needed
 add_library(cvcuda_headers INTERFACE)
-target_include_directories(cvcuda_headers INTERFACE include ${CMAKE_CURRENT_BINARY_DIR}/include)
+if(USE_MUSA)
+    target_include_directories(cvcuda_headers INTERFACE include_musa ${CMAKE_CURRENT_BINARY_DIR}/include)
+    target_compile_definitions(cvcuda_headers INTERFACE NVCV_USE_MUSA=1)
+    if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64|arm64)$")
+        target_compile_definitions(cvcuda_headers INTERFACE NVCV_MUSA_ARM_PORTABLE_BACKEND=1)
+    endif()
+else()
+    target_include_directories(cvcuda_headers INTERFACE include ${CMAKE_CURRENT_BINARY_DIR}/include)
+endif()
 target_link_libraries(cvcuda_headers INTERFACE nvcv_types_headers)
 
 configure_version(cvcuda CVCUDA cvcuda ${PROJECT_VERSION})

@@ -21,15 +21,12 @@
 #include "Object.hpp"
 #include "Stream.hpp"
 
-#include <nvcv/detail/CudaFwd.h>
+#include <common/CudaCompat.hpp>
 #include <nvcv/python/LockMode.hpp>
 #include <pybind11/pybind11.h>
 
 #include <memory>
 #include <mutex>
-
-// fwd declaration from driver_types.h
-typedef struct CUevent_st *cudaEvent_t;
 
 namespace nvcvpy::priv {
 namespace py = pybind11;

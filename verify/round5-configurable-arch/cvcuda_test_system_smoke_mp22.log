@@ -1,0 +1,919 @@
+Warning: Permanently added '192.168.101.133' (ED25519) to the list of known hosts.
+bash: warning: setlocale: LC_ALL: cannot change locale (zh_CN.UTF-8)
+Warning: Permanently added '192.168.101.133' (ED25519) to the list of known hosts.
+bash: warning: setlocale: LC_ALL: cannot change locale (zh_CN.UTF-8)
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The MUSA compiler identification is MooreThreads
+-- Found MUSAToolkit: /usr/local/musa/include  
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+CMake Deprecation Warning at cmake/ConfigCompiler.cmake:21 (cmake_policy):
+  The OLD behavior for policy CMP0116 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+Call Stack (most recent call first):
+  CMakeLists.txt:132 (include)
+
+
+CMake Deprecation Warning at 3rdparty/googletest/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at 3rdparty/googletest/googlemock/CMakeLists.txt:39 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at 3rdparty/googletest/googletest/CMakeLists.txt:49 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Found Python: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.a (found version "3.0.2") found components: Crypto
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.a (found version "1.2.11")
+CMake Warning at tests/nvcv_types/CMakeLists.txt:57 (message):
+  Skipping nvcv_test_standalone and nvcv_test_standalone_static for MUSA
+  builds; required V2 artifacts are built in-tree.
+
+
+-- 
+-- General configuration for CVCUDA-0.16.0
+-- 
+-- Build options
+--     CMAKE_INSTALL_PREFIX     : /opt/nvidia/cvcuda0
+--     WARNINGS_AS_ERRORS       : OFF
+--     ENABLE_COMPAT_OLD_GLIBC  : ON
+--     BUILD_TESTS              : ON
+--     BUILD_TESTS_CPP          : ON
+--     BUILD_TESTS_WHEELS       : ON
+--     BUILD_TESTS_PYTHON       : ON
+--     BUILD_PYTHON             : OFF
+--     ENABLE_SANITIZER         : OFF
+--     BUILD_BENCH              : OFF
+--     BUILD_DOCS               : OFF
+--     ARCH_X86_64              : ON
+--     ARCH_AARCH64             : OFF
+--     PLATFORM_IS_LINUX           : ON
+--     ENABLE_QNX               : OFF
+--     PLATFORM_IS_QNX          : OFF
+--     Compilers used in public API header compatibility tests:
+--         /usr/bin/gcc-11
+--         /usr/local/musa/bin/clang-14
+-- 
+-- Platform
+--     Host             : Linux 6.8.0-124-generic x86_64
+--     Target           : Linux 6.8.0-124-generic x86_64
+--     CMake            : 4.3.2
+--     CMake generator  : Ninja
+--     CMake build tool : /usr/local/bin/ninja
+--     Configuration    : Release
+--     ccache           : CCACHE_EXEC-NOTFOUND
+--     ccache stats log : 
+-- 
+-- Default compiler/linker config
+--     C++ Compiler : /usr/bin/c++ (11.4.0)
+--     C++ Standard : 17
+--     C++ Flags    :   -Wall -Wno-unknown-pragmas -Wpointer-arith -Wmissing-declarations -Wredundant-decls -Wmultichar -Wno-unused-local-typedefs -Wunused -Wsuggest-override -O3 -DNDEBUG
+-- 
+--     C Compiler   : /usr/bin/cc (11.4.0)
+--     C Flags      :   -Wall -Wno-unknown-pragmas -Wpointer-arith -Wmissing-declarations -Wredundant-decls -Wmultichar -Wno-unused-local-typedefs -Wunused -O3 -DNDEBUG
+-- 
+--     MUSA Compiler : /usr/local/musa/bin/mcc ()
+--     MUSA flags    :  -std=c++17 -ffp-contract=off --offload-arch=mp_22 
+--     MUSA toolkit target dir : /usr/local/musa
+-- 
+--     Compiler Options    : 
+--     Definitions         : 
+-- 
+--     Linker flags (exec) :  
+--     Linker flags (lib)  :  
+-- 
+--     Link-time optim.: supported YES, enabled ON
+-- 
+-- Configuring done (1.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/CV-CUDA/build_musa_configurable
+[0/2] Re-checking globbed directories...
+[1/235] Generating exports.ldscript
+[2/235] Building C object src/nvcv/util/CMakeFiles/nvcv_util_sanitizer.dir/SanitizerOptions.c.o
+[3/235] Building CXX object src/nvcv/util/CMakeFiles/nvcv_util.dir/Assert.cpp.o
+[4/235] Linking C static library src/nvcv/util/libnvcv_util_sanitizer.a
+[5/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/TLS.cpp.o
+[6/235] Building CXX object src/nvcv/util/CMakeFiles/nvcv_util.dir/Version.cpp.o
+[7/235] Building CXX object src/nvcv/util/CMakeFiles/nvcv_util.dir/String.cpp.o
+[8/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/Status.cpp.o
+[9/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/Exception.cpp.o
+[10/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/IAllocator.cpp.o
+[11/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/Requirements.cpp.o
+[12/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/CustomAllocator.cpp.o
+[13/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/DefaultAllocator.cpp.o
+[14/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/ColorFormat.cpp.o
+[15/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/TensorLayout.cpp.o
+[16/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/Image.cpp.o
+[17/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/ImageBatchVarShape.cpp.o
+[18/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/TensorData.cpp.o
+[19/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/TensorShape.cpp.o
+[20/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/ColorSpec.cpp.o
+[21/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/Version.cpp.o
+[22/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/TensorWrapDataStrided.cpp.o
+[23/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/Tensor.cpp.o
+[24/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/Context.cpp.o
+[25/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/DataLayout.cpp.o
+[26/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/Status.cpp.o
+[27/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/Requirements.cpp.o
+[28/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/DataType.cpp.o
+[29/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/Allocator.cpp.o
+[30/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/Array.cpp.o
+[31/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/ArrayWrapData.cpp.o
+[32/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/Config.cpp.o
+[33/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/TensorLayout.cpp.o
+[34/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/TensorBatch.cpp.o
+[35/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/Image.cpp.o
+[36/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/TensorShape.cpp.o
+[37/235] Building CXX object src/nvcv/src/priv/CMakeFiles/nvcv_types_priv.dir/ImageFormat.cpp.o
+[38/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/ColorSpec.cpp.o
+[39/235] Building CXX object src/nvcv/util/CMakeFiles/nvcv_util.dir/CheckError.cpp.o
+[40/235] Linking CXX static library src/nvcv/src/priv/libnvcv_types_priv.a
+[41/235] Linking CXX static library src/nvcv/util/libnvcv_util.a
+[42/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/ImageBatch.cpp.o
+[43/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/Tensor.cpp.o
+[44/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/DataLayout.cpp.o
+[45/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/DataType.cpp.o
+[46/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/ImageFormat.cpp.o
+[47/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/TensorBatch.cpp.o
+[48/235] Building CXX object src/nvcv/src/CMakeFiles/nvcv_types.dir/Array.cpp.o
+[49/235] Building CXX object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/CvCudaLegacyHelpers.cpp.o
+[50/235] Linking CXX shared library lib/libnvcv_types.so.0.16.0
+[51/235] Creating library symlink lib/libnvcv_types.so.0 lib/libnvcv_types.so
+[52/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/filter_utils.mu.o
+[53/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/custom_crop.mu.o
+[54/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/reformat.mu.o
+[55/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/center_crop.mu.o
+[56/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/normalize.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-0c911c.mtx
+[57/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/copy_make_border.mu.o
+[58/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/pad_and_stack.mu.o
+[59/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/convert_to.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-5fd299.mtx
+[60/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/copy_make_border_var_shape.mu.o
+[61/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/normalize_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-9109c9.mtx
+[62/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/erase.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-d7961c.mtx
+[63/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/resize_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-aa2428.mtx
+[64/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/erase_var_shape.mu.o
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/erase_var_shape.mu:273:74: warning: inequality comparison result unused [-Wunused-comparison]
+        for (auto init = inbatch.begin(), outit = outbatch.begin(); init != inbatch.end(), outit != outbatch.end();
+                                                                    ~~~~~^~~~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/erase_var_shape.mu:273:74: note: use '|=' to turn this inequality comparison into an or-assignment
+        for (auto init = inbatch.begin(), outit = outbatch.begin(); init != inbatch.end(), outit != outbatch.end();
+                                                                         ^~
+                                                                         |=
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-d4eb04.mtx
+1 warning generated when compiling for mp_22.
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/erase_var_shape.mu:273:74: warning: inequality comparison result unused [-Wunused-comparison]
+        for (auto init = inbatch.begin(), outit = outbatch.begin(); init != inbatch.end(), outit != outbatch.end();
+                                                                    ~~~~~^~~~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/erase_var_shape.mu:273:74: note: use '|=' to turn this inequality comparison into an or-assignment
+        for (auto init = inbatch.begin(), outit = outbatch.begin(); init != inbatch.end(), outit != outbatch.end();
+                                                                         ^~
+                                                                         |=
+1 warning generated when compiling for host.
+[65/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/median_blur.mu.o
+[66/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/rotate_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-031a22.mtx
+[67/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/rotate.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-8f241c.mtx
+[68/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/median_blur_var_shape.mu.o
+[69/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/filter.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-c7372a.mtx
+[70/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/cvt_color_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-44547c.mtx
+[71/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/composite.mu.o
+[72/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/cvt_color.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-f45fda.mtx
+[73/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/morphology.mu.o
+[74/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/channel_reorder_var_shape.mu.o
+[75/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/flip.mu.o
+[76/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/flip_or_copy_var_shape.mu.o
+[77/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/composite_var_shape.mu.o
+[78/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/morphology_var_shape.mu.o
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/morphology_var_shape.mu:250:74: warning: inequality comparison result unused [-Wunused-comparison]
+        for (auto init = inBatch.begin(), outit = outBatch.begin(); init != inBatch.end(), outit != outBatch.end();
+                                                                    ~~~~~^~~~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/morphology_var_shape.mu:250:74: note: use '|=' to turn this inequality comparison into an or-assignment
+        for (auto init = inBatch.begin(), outit = outBatch.begin(); init != inBatch.end(), outit != outBatch.end();
+                                                                         ^~
+                                                                         |=
+1 warning generated when compiling for mp_22.
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/morphology_var_shape.mu:250:74: warning: inequality comparison result unused [-Wunused-comparison]
+        for (auto init = inBatch.begin(), outit = outBatch.begin(); init != inBatch.end(), outit != outBatch.end();
+                                                                    ~~~~~^~~~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/morphology_var_shape.mu:250:74: note: use '|=' to turn this inequality comparison into an or-assignment
+        for (auto init = inBatch.begin(), outit = outBatch.begin(); init != inBatch.end(), outit != outBatch.end();
+                                                                         ^~
+                                                                         |=
+1 warning generated when compiling for host.
+[79/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/gamma_contrast_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-87bb45.mtx
+[80/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/pillow_resize.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-d4abe5.mtx
+[81/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/adaptive_threshold.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-49e8d1.mtx
+[82/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/pillow_resize_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-37764c.mtx
+[83/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/filter_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-f63048.mtx
+[84/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/adaptive_threshold_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-8b2401.mtx
+[85/235] Building CXX object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/textbackend/backend.cpp.o
+[86/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/bilateral_filter.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-9c3c9d.mtx
+[87/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/threshold_util.mu.o
+[88/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/box_blur.mu.o
+[89/235] Building CXX object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/textbackend/stb.cpp.o
+[90/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/threshold.mu.o
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold.mu:917:16: warning: & has lower precedence than !=; != will be evaluated first [-Wparentheses]
+    if (m_type & (m_type - 1) != 0)
+               ^~~~~~~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold.mu:917:16: note: place parentheses around the '!=' expression to silence this warning
+    if (m_type & (m_type - 1) != 0)
+               ^
+                 (                )
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold.mu:917:16: note: place parentheses around the & expression to evaluate it first
+    if (m_type & (m_type - 1) != 0)
+               ^
+        (                    )
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-f7d4ba.mtx
+1 warning generated when compiling for mp_22.
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold.mu:917:16: warning: & has lower precedence than !=; != will be evaluated first [-Wparentheses]
+    if (m_type & (m_type - 1) != 0)
+               ^~~~~~~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold.mu:917:16: note: place parentheses around the '!=' expression to silence this warning
+    if (m_type & (m_type - 1) != 0)
+               ^
+                 (                )
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold.mu:917:16: note: place parentheses around the & expression to evaluate it first
+    if (m_type & (m_type - 1) != 0)
+               ^
+        (                    )
+1 warning generated when compiling for host.
+[91/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/bilateral_filter_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-66738b.mtx
+[92/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/threshold_var_shape.mu.o
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold_var_shape.mu:1089:16: warning: & has lower precedence than !=; != will be evaluated first [-Wparentheses]
+    if (m_type & (m_type - 1) != 0)
+               ^~~~~~~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold_var_shape.mu:1089:16: note: place parentheses around the '!=' expression to silence this warning
+    if (m_type & (m_type - 1) != 0)
+               ^
+                 (                )
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold_var_shape.mu:1089:16: note: place parentheses around the & expression to evaluate it first
+    if (m_type & (m_type - 1) != 0)
+               ^
+        (                    )
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-a24ef4.mtx
+1 warning generated when compiling for mp_22.
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold_var_shape.mu:1089:16: warning: & has lower precedence than !=; != will be evaluated first [-Wparentheses]
+    if (m_type & (m_type - 1) != 0)
+               ^~~~~~~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold_var_shape.mu:1089:16: note: place parentheses around the '!=' expression to silence this warning
+    if (m_type & (m_type - 1) != 0)
+               ^
+                 (                )
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/threshold_var_shape.mu:1089:16: note: place parentheses around the & expression to evaluate it first
+    if (m_type & (m_type - 1) != 0)
+               ^
+        (                    )
+1 warning generated when compiling for host.
+[93/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/gaussian_noise_util.mu.o
+[94/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/gaussian_noise_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-0c6241.mtx
+[95/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/gaussian_noise.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-c95415.mtx
+[96/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/random_resized_crop.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-0ebab7.mtx
+[97/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/random_resized_crop_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-8a5b0e.mtx
+[98/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/inpaint_utils.mu.o
+[99/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/joint_bilateral_filter.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-4f809c.mtx
+[100/235] Generating exports.ldscript
+[101/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/IOperator.cpp.o
+[102/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/joint_bilateral_filter_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-50b797.mtx
+[103/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/calc_hist.mu.o
+[104/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/histogram_eq.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-b1fe38.mtx
+[105/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/histogram_eq_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-f130bb.mtx
+[106/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpOSD.cpp.o
+[107/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpHistogramEq.cpp.o
+[108/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/inpaint.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-8be6bf.mtx
+[109/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpHistogram.cpp.o
+[110/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/min_area_rect.mu.o
+[111/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpMinAreaRect.cpp.o
+[112/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/osd.mu.o
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, false, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1169:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, false, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1170:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, true, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1171:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, true, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1172:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, false, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1169:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, false, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1170:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, true, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1171:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, true, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1172:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+9 warnings generated when compiling for mp_22.
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, false, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1169:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, false, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1170:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, true, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1171:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, true, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1172:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1922:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, long, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, false, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1169:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, false, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1170:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, false>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, false>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGB, true, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1171:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGB, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGB, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1034:17: warning: enumeration values 'None' and 'BoxBlur' not handled in switch [-Wswitch]
+        switch (pcommand->type)
+                ^~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1147:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::render_elements_kernel<nvcv::musa::osd::cuOSDImageFormat::RGBA, true, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, unsigned char>' requested here
+    render_elements_kernel<format, have_rotate_msaa, SrcWrapper, DstWrapper><<<gridSize, blockSize, 0, stream>>>(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1172:13: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel_impl<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::osd::cuOSDImageFormat::RGBA, true>' requested here
+            cuosd_launch_kernel_impl<SrcWrapper, DstWrapper, cuOSDImageFormat::RGBA, true>,
+            ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:1206:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch_kernel<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch_kernel(
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/osd.mu:2008:5: note: in instantiation of function template specialization 'nvcv::legacy::musa_op::cuosd_launch<nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>, nvcv::musa::TensorWrapT<unsigned char, int, -1, -1, -1, 1>>' requested here
+    cuosd_launch(m_context, src, dst, inputShape.W, inputShape.C * inputShape.W, inputShape.H, format, inplace,
+    ^
+9 warnings generated when compiling for host.
+[113/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpBndBox.cpp.o
+[114/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpBoxBlur.cpp.o
+[115/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpAdvCvtColor.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-c7d7a8.mtx
+[116/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/inpaint_var_shape.mu.o
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/inpaint_var_shape.mu:677:70: warning: inequality comparison result unused [-Wunused-comparison]
+    for (auto init = inBatch.begin(), outit = outBatch.begin(); init != inBatch.end(), outit != outBatch.end();
+                                                                ~~~~~^~~~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/inpaint_var_shape.mu:677:70: note: use '|=' to turn this inequality comparison into an or-assignment
+    for (auto init = inBatch.begin(), outit = outBatch.begin(); init != inBatch.end(), outit != outBatch.end();
+                                                                     ^~
+                                                                     |=
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-3d7759.mtx
+1 warning generated when compiling for mp_22.
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/inpaint_var_shape.mu:677:70: warning: inequality comparison result unused [-Wunused-comparison]
+    for (auto init = inBatch.begin(), outit = outBatch.begin(); init != inBatch.end(), outit != outBatch.end();
+                                                                ~~~~~^~~~~~~~~~~~~~~~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/legacy/inpaint_var_shape.mu:677:70: note: use '|=' to turn this inequality comparison into an or-assignment
+    for (auto init = inBatch.begin(), outit = outBatch.begin(); init != inBatch.end(), outit != outBatch.end();
+                                                                     ^~
+                                                                     |=
+1 warning generated when compiling for host.
+[117/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpReformat.cpp.o
+[118/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpSIFT.mu.o
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:695:48: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                        || musa::abs(sol[0]) > musa::TypeTraits<int>::max / 3.f)
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:694:48: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                        || musa::abs(sol[1]) > musa::TypeTraits<int>::max / 3.f
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:693:45: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                    if (musa::abs(sol[2]) > musa::TypeTraits<int>::max / 3.f
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:695:48: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                        || musa::abs(sol[0]) > musa::TypeTraits<int>::max / 3.f)
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:928:9: note: in instantiation of function template specialization '(anonymous namespace)::DoFindExtrema<32, 4, unsigned char>' requested here
+        DoFindExtrema<BW, BH, DT><<<compBlocks1, compThreads1, 0, stream>>>(
+        ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:1417:5: note: in instantiation of function template specialization 'cvcuda::priv::SIFT::FindExtrema<unsigned char>' requested here
+    FindExtrema<uint8_t>(*featCoordsData, *featMetadataData, *featDescriptorsData, maxCapacity, *numFeaturesData,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:694:48: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                        || musa::abs(sol[1]) > musa::TypeTraits<int>::max / 3.f
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:693:45: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                    if (musa::abs(sol[2]) > musa::TypeTraits<int>::max / 3.f
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-be6511.mtx
+6 warnings generated when compiling for mp_22.
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:695:48: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                        || musa::abs(sol[0]) > musa::TypeTraits<int>::max / 3.f)
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:694:48: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                        || musa::abs(sol[1]) > musa::TypeTraits<int>::max / 3.f
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:693:45: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                    if (musa::abs(sol[2]) > musa::TypeTraits<int>::max / 3.f
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:695:48: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                        || musa::abs(sol[0]) > musa::TypeTraits<int>::max / 3.f)
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:928:9: note: in instantiation of function template specialization '(anonymous namespace)::DoFindExtrema<32, 4, unsigned char>' requested here
+        DoFindExtrema<BW, BH, DT><<<compBlocks1, compThreads1, 0, stream>>>(
+        ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:1417:5: note: in instantiation of function template specialization 'cvcuda::priv::SIFT::FindExtrema<unsigned char>' requested here
+    FindExtrema<uint8_t>(*featCoordsData, *featMetadataData, *featDescriptorsData, maxCapacity, *numFeaturesData,
+    ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:694:48: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                        || musa::abs(sol[1]) > musa::TypeTraits<int>::max / 3.f
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpSIFT.mu:693:45: warning: implicit conversion from 'const nvcv::musa::detail::TypeTraits<int>::base_type' (aka 'const int') to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+                    if (musa::abs(sol[2]) > musa::TypeTraits<int>::max / 3.f
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+6 warnings generated when compiling for host.
+[119/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpNonMaximumSuppression.mu.o
+[120/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpResize.cpp.o
+[121/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpCustomCrop.cpp.o
+[122/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpNormalize.cpp.o
+[123/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpColorTwist.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-691677.mtx
+[124/235] Building CXX object 3rdparty/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[125/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpPadAndStack.cpp.o
+[126/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpConvertTo.cpp.o
+[127/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpCopyMakeBorder.cpp.o
+[128/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpCenterCrop.cpp.o
+[129/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpRotate.cpp.o
+[130/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpLaplacian.cpp.o
+[131/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpGaussian.cpp.o
+[132/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpErase.cpp.o
+[133/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpAverageBlur.cpp.o
+[134/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpConv2D.cpp.o
+[135/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpMedianBlur.cpp.o
+[136/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpBilateralFilter.cpp.o
+[137/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpMorphology.cpp.o
+[138/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpJointBilateralFilter.cpp.o
+[139/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpCvtColor.cpp.o
+[140/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpWarpAffine.cpp.o
+[141/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpWarpPerspective.cpp.o
+[142/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpComposite.cpp.o
+[143/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpChannelReorder.cpp.o
+[144/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpFlip.cpp.o
+[145/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpGammaContrast.cpp.o
+[146/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpPillowResize.cpp.o
+[147/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpResize.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-494739.mtx
+[148/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpThreshold.cpp.o
+[149/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpAdaptiveThreshold.cpp.o
+[150/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpRandomResizedCrop.cpp.o
+[151/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpGaussianNoise.cpp.o
+[152/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpInpaint.cpp.o
+[153/235] Building CXX object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpStack.cpp.o
+[154/235] Linking CXX static library lib/libgtest.a
+[155/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/Operator.cpp.o
+[156/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/warp.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-42d8e2.mtx
+[157/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpOSD.cpp.o
+[158/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpBrightnessContrast.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-910139.mtx
+[159/235] Building CXX object 3rdparty/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[160/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpHistogramEq.cpp.o
+[161/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpAdvCvtColor.cpp.o
+[162/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpResizeCropConvertReformat.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-77c3a1.mtx
+[163/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpSIFT.cpp.o
+[164/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpMinMaxLoc.cpp.o
+[165/235] Building MUSA object src/cvcuda/priv/legacy/CMakeFiles/cvcuda_legacy.dir/warp_var_shape.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-eb4062.mtx
+[166/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpHistogram.cpp.o
+[167/235] Linking CXX static library src/cvcuda/priv/legacy/libcvcuda_legacy.a
+[168/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpMinAreaRect.cpp.o
+[169/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpBndBox.cpp.o
+[170/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpBrightnessContrast.cpp.o
+[171/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpBoxBlur.cpp.o
+[172/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpColorTwist.cpp.o
+[173/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpRemap.cpp.o
+[174/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpCropFlipNormalizeReformat.cpp.o
+[175/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpLabel.mu.o
+[176/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpHQResize.cpp.o
+[177/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpNonMaximumSuppression.cpp.o
+[178/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpReformat.cpp.o
+[179/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpCustomCrop.cpp.o
+[180/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpResize.cpp.o
+[181/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpPadAndStack.cpp.o
+[182/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpNormalize.cpp.o
+[183/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpConvertTo.cpp.o
+[184/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpCopyMakeBorder.cpp.o
+[185/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpCenterCrop.cpp.o
+[186/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpGaussian.cpp.o
+[187/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpLaplacian.cpp.o
+[188/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpRotate.cpp.o
+[189/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpErase.cpp.o
+[190/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpMinMaxLoc.mu.o
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+__global__ __launch_bounds__(BW *BH) void FindMinMax(InWrapper in, int2 size, OutWrapper out)
+                                          ^
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/workspace/CV-CUDA/src/cvcuda/priv_musa/OpMinMaxLoc.mu:336:43: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+48 warnings generated when compiling for mp_22.
+[191/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpAverageBlur.cpp.o
+[192/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpConv2D.cpp.o
+[193/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpMedianBlur.cpp.o
+[194/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpBilateralFilter.cpp.o
+[195/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpJointBilateralFilter.cpp.o
+[196/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpMorphology.cpp.o
+[197/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpCvtColor.cpp.o
+[198/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpWarpAffine.cpp.o
+[199/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpPairwiseMatcher.mu.o
+[200/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpWarpPerspective.cpp.o
+[201/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpComposite.cpp.o
+[202/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpChannelReorder.cpp.o
+[203/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpFlip.cpp.o
+[204/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpGammaContrast.cpp.o
+[205/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpPillowResize.cpp.o
+[206/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpThreshold.cpp.o
+[207/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpAdaptiveThreshold.cpp.o
+[208/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpRandomResizedCrop.cpp.o
+[209/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpLabel.cpp.o
+[210/235] Linking CXX static library lib/libgmock.a
+[211/235] Building CXX object tests/common/CMakeFiles/nvcv_test_common.dir/__/common_musa/Printers.cpp.o
+[212/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpGaussianNoise.cpp.o
+[213/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpInpaint.cpp.o
+[214/235] Building CXX object tests/common/CMakeFiles/nvcv_test_common_system.dir/__/common_musa/BorderUtils.cpp.o
+[215/235] Building CXX object tests/common/CMakeFiles/nvcv_test_common_system.dir/__/common_musa/ObjectBag.cpp.o
+[216/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpPairwiseMatcher.cpp.o
+[217/235] Building CXX object tests/common/CMakeFiles/nvcv_test_common.dir/__/common_musa/HashMD5.cpp.o
+[218/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpStack.cpp.o
+[219/235] Building CXX object src/cvcuda/CMakeFiles/cvcuda.dir/__/cvcuda_musa/OpResizeCropConvertReformat.cpp.o
+[220/235] Building CXX object tests/CMakeFiles/nvcv_test_main.dir/Main.cpp.o
+[221/235] Linking CXX static library tests/libnvcv_test_main.a
+[222/235] Building CXX object tests/common/CMakeFiles/nvcv_test_common.dir/__/common_musa/TensorDataUtils.cpp.o
+[223/235] Linking CXX static library tests/common/libnvcv_test_common.a
+[224/235] Linking CXX static library tests/common/libnvcv_test_common_system.a
+[225/235] Building CXX object tests/cvcuda/system/CMakeFiles/cvcuda_test_system_smoke.dir/TestOpBndBox_Smoke.cpp.o
+[226/235] Building CXX object tests/cvcuda/system/CMakeFiles/cvcuda_test_system_smoke.dir/TestOpBoxBlur_Smoke.cpp.o
+[227/235] Building CXX object tests/cvcuda/system/CMakeFiles/cvcuda_test_system_smoke.dir/TestOpOSD_Smoke.cpp.o
+[228/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpCropFlipNormalizeReformat.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-da8e96.mtx
+[229/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpRemap.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-348ea6.mtx
+[230/235] Building MUSA object src/cvcuda/priv/CMakeFiles/cvcuda_priv.dir/OpHQResize.mu.o
+mtxas: /usr/local/musa/bin/mtxas --mtx --emit-llvm-only --output-dir /tmp /tmp/mtx-inline-ee1cfa.mtx
+[231/235] Linking CXX static library src/cvcuda/priv/libcvcuda_priv.a
+[232/235] Linking CXX shared library lib/libcvcuda.so.0.16.0
+[233/235] Creating library symlink lib/libcvcuda.so.0 lib/libcvcuda.so
+[234/235] Linking CXX executable bin/cvcuda_test_system_smoke
+[==========] Running 25 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 6 tests from OpBndBox_Smoke
+[ RUN      ] OpBndBox_Smoke.operator_creation
+[       OK ] OpBndBox_Smoke.operator_creation (0 ms)
+[ RUN      ] OpBndBox_Smoke.basic_functionality_rgb8
+[       OK ] OpBndBox_Smoke.basic_functionality_rgb8 (3 ms)
+[ RUN      ] OpBndBox_Smoke.basic_functionality_rgba8
+[       OK ] OpBndBox_Smoke.basic_functionality_rgba8 (1 ms)
+[ RUN      ] OpBndBox_Smoke.multiple_boxes
+[       OK ] OpBndBox_Smoke.multiple_boxes (0 ms)
+[ RUN      ] OpBndBox_Smoke.memory_management
+[       OK ] OpBndBox_Smoke.memory_management (1 ms)
+[ RUN      ] OpBndBox_Smoke.edge_cases
+[0;33mWARNING: [0mPlease check if there is anything to draw.
+
+[0;33mWARNING: [0mPlease check if there is anything to draw
+
+[       OK ] OpBndBox_Smoke.edge_cases (0 ms)
+[----------] 6 tests from OpBndBox_Smoke (43 ms total)
+
+[----------] 8 tests from OpBoxBlur_Smoke
+[ RUN      ] OpBoxBlur_Smoke.operator_creation
+[       OK ] OpBoxBlur_Smoke.operator_creation (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.basic_functionality_rgb8
+[       OK ] OpBoxBlur_Smoke.basic_functionality_rgb8 (1 ms)
+[ RUN      ] OpBoxBlur_Smoke.basic_functionality_rgba8
+[       OK ] OpBoxBlur_Smoke.basic_functionality_rgba8 (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.multiple_boxes
+[       OK ] OpBoxBlur_Smoke.multiple_boxes (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.various_kernel_sizes
+[       OK ] OpBoxBlur_Smoke.various_kernel_sizes (1 ms)
+[ RUN      ] OpBoxBlur_Smoke.memory_management
+[       OK ] OpBoxBlur_Smoke.memory_management (1 ms)
+[ RUN      ] OpBoxBlur_Smoke.edge_cases
+[       OK ] OpBoxBlur_Smoke.edge_cases (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.batch_processing
+[       OK ] OpBoxBlur_Smoke.batch_processing (0 ms)
+[----------] 8 tests from OpBoxBlur_Smoke (7 ms total)
+
+[----------] 11 tests from OpOSD_Smoke
+[ RUN      ] OpOSD_Smoke.operator_creation
+[       OK ] OpOSD_Smoke.operator_creation (0 ms)
+[ RUN      ] OpOSD_Smoke.rectangle_element
+[       OK ] OpOSD_Smoke.rectangle_element (0 ms)
+[ RUN      ] OpOSD_Smoke.text_element
+[       OK ] OpOSD_Smoke.text_element (1 ms)
+[ RUN      ] OpOSD_Smoke.line_element
+[       OK ] OpOSD_Smoke.line_element (0 ms)
+[ RUN      ] OpOSD_Smoke.point_element
+[       OK ] OpOSD_Smoke.point_element (0 ms)
+[ RUN      ] OpOSD_Smoke.circle_element
+[       OK ] OpOSD_Smoke.circle_element (0 ms)
+[ RUN      ] OpOSD_Smoke.multiple_elements
+[       OK ] OpOSD_Smoke.multiple_elements (1 ms)
+[ RUN      ] OpOSD_Smoke.memory_management
+[       OK ] OpOSD_Smoke.memory_management (1 ms)
+[ RUN      ] OpOSD_Smoke.edge_cases
+[0;33mWARNING: [0mPlease check if there is anything to draw.
+
+[0;33mWARNING: [0mPlease check if there is anything to draw
+
+[       OK ] OpOSD_Smoke.edge_cases (0 ms)
+[ RUN      ] OpOSD_Smoke.batch_processing
+[       OK ] OpOSD_Smoke.batch_processing (0 ms)
+[ RUN      ] OpOSD_Smoke.various_image_sizes
+[       OK ] OpOSD_Smoke.various_image_sizes (1 ms)
+[----------] 11 tests from OpOSD_Smoke (11 ms total)
+
+[----------] Global test environment tear-down
+[==========] 25 tests from 3 test suites ran. (63 ms total)
+[  PASSED  ] 25 tests.

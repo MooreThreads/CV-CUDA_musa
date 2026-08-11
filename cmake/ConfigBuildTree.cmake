@@ -68,8 +68,12 @@ option(EXPOSE_CODE "Expose in resulting binaries parts of our code" ${DEFAULT_EX
 option(WARNINGS_AS_ERRORS "Treat compilation warnings as errors" OFF)
 cmake_dependent_option(ENABLE_COMPAT_OLD_GLIBC "Generates binaries that work with old distros, with old glibc" ON "NOT ARCH_AARCH64" OFF)
 
-# Needed to get cuda version
-find_package(CUDAToolkit REQUIRED)
+if(USE_MUSA)
+    find_package(MUSAToolkit REQUIRED)
+else()
+    # Needed to get cuda version
+    find_package(CUDAToolkit REQUIRED)
+endif()
 
 # Are we inside a git repo and it has submodules enabled?
 if(EXISTS ${CMAKE_SOURCE_DIR}/.git AND EXISTS ${CMAKE_SOURCE_DIR}/.gitmodules)
@@ -85,7 +89,11 @@ else()
                         "CV-CUDA only supports Linux platform.")
 endif()
 
-set(CVCUDA_BUILD_SUFFIX "cuda${CUDAToolkit_VERSION_MAJOR}-${CVCUDA_SYSTEM_NAME}")
+if(USE_MUSA)
+    set(CVCUDA_BUILD_SUFFIX "musa${MUSAToolkit_VERSION_MAJOR}-${CVCUDA_SYSTEM_NAME}")
+else()
+    set(CVCUDA_BUILD_SUFFIX "cuda${CUDAToolkit_VERSION_MAJOR}-${CVCUDA_SYSTEM_NAME}")
+endif()
 
 function(setup_dso target version)
     string(REGEX MATCHALL "[0-9]+" version_list "${version}")
@@ -114,6 +122,10 @@ function(setup_dso target version)
     #   Configure symbol visibility ---------------------------------------------
     set_target_properties(${target} PROPERTIES VISIBILITY_INLINES_HIDDEN on
                                                C_VISIBILITY_PRESET hidden
-                                               CXX_VISIBILITY_PRESET hidden
-                                               CUDA_VISIBILITY_PRESET hidden)
+                                               CXX_VISIBILITY_PRESET hidden)
+    if(USE_MUSA)
+        set_target_properties(${target} PROPERTIES MUSA_VISIBILITY_PRESET hidden)
+    else()
+        set_target_properties(${target} PROPERTIES CUDA_VISIBILITY_PRESET hidden)
+    endif()
 endfunction()

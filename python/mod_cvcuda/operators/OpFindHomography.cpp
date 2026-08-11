@@ -22,7 +22,7 @@
 #include <common/String.hpp>
 #include <cvcuda/OpFindHomography.hpp>
 #include <cvcuda/Types.h>
-#include <cvcuda/cuda_tools/TypeTraits.hpp>
+#include <common/CudaCompat.hpp>
 #include <nvcv/TensorDataAccess.hpp>
 #include <nvcv/python/Image.hpp>
 #include <nvcv/python/ImageFormat.hpp>

@@ -23,9 +23,52 @@ import numbers
 
 import copy
 import colorsys
+
+import pytest
 from typing_extensions import Callable, Concatenate, ParamSpec
 
 P = ParamSpec("P")
+
+
+def has_torch_cuda_backend():
+    return hasattr(torch, "cuda") and torch.cuda.is_available()
+
+
+def has_torch_musa_backend():
+    try:
+        import torch_musa  # noqa: F401
+    except Exception:
+        return False
+    return hasattr(torch, "musa") and torch.musa.is_available()
+
+
+def is_musa_test_backend():
+    return has_torch_musa_backend() and not has_torch_cuda_backend()
+
+
+def torch_device_name():
+    if has_torch_cuda_backend():
+        return "cuda"
+    if has_torch_musa_backend():
+        return "musa"
+    return "cpu"
+
+
+def torch_device_total_memory():
+    if has_torch_cuda_backend():
+        return torch.cuda.mem_get_info()[1]
+    if has_torch_musa_backend():
+        return torch.musa.mem_get_info()[1]
+    pytest.skip("No CUDA or MUSA torch backend is available")
+
+
+def require_torch_cuda_array_interface():
+    if not has_torch_cuda_backend():
+        pytest.skip(
+            "This test requires PyTorch CUDA __cuda_array_interface__ interop; "
+            "torch_musa does not expose a compatible CUDA array interface"
+        )
+
 
 IMG_FORMAT_TO_TYPE = {
     cvcuda.Format.U8: cvcuda.Type.U8,
@@ -133,6 +176,7 @@ def to_cpu_numpy_buffer(cuda_buffer):
     Returns:
         numpy array: The CUDA buffer copied to the CPU
     """
+    require_torch_cuda_array_interface()
     torch_dtype = copy.copy(cuda_buffer.dtype)
     torch_dtype = to_torch_dtype(torch_dtype)
 
@@ -153,6 +197,7 @@ def to_cuda_buffer(host_data):
     Returns:
         CudaBuffer: The converted CUDA buffer
     """
+    require_torch_cuda_array_interface()
     orig_dtype = copy.copy(host_data.dtype)
 
     host_data.dtype = to_torch_dtype(host_data.dtype)

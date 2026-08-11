@@ -1,0 +1,26 @@
+id: round3-types-error-string-cuda-residual
+round: 3
+source: CODE_ANALYSIS.md §4 Native Verification Discovery
+artifact: nvcv_test_types_unit
+status: fixable_bug
+severity: medium
+category: cuda-residual-api-surface
+summary: CheckErrorTest.cudaErr_to_String fails in nvcv_test_types_unit, indicating residual CUDA error-string expectations after MUSA port.
+evidence:
+  log: verify/nvcv_test_types_unit.log
+  xml: verify/nvcv_test_types_unit.xml
+  result: 678 passed, 1 failed, 679 total
+  failed_tests:
+    - CheckErrorTest.cudaErr_to_String
+expected_behavior: Error-to-string conversion tests should reflect the MUSA runtime mapping while preserving the exported API contract required by CV-CUDA.
+observed_behavior: The CUDA error string conversion test remains failing after the MUSA compatibility changes.
+reproduction:
+  container: auto-musify-CV-CUDA
+  workspace: /workspace/CV-CUDA
+  command: ./build_musa_v2/bin/nvcv_test_types_unit --gtest_color=no
+routing:
+  next_owner: musifier
+  recommended_action: Inspect error conversion helpers and authoritative CUDA→MUSA runtime error mappings; update compatibility behavior without inventing unsupported names.
+constraints:
+  - API mappings must come from container JSON or auto-musify-wiki.
+  - Do not mask the failure by returning dummy strings.

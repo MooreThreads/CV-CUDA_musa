@@ -1,0 +1,11 @@
+Note: Google Test filter = CheckErrorTest.cudaErr_to_String
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CheckErrorTest
+[ RUN      ] CheckErrorTest.cudaErr_to_String
+[       OK ] CheckErrorTest.cudaErr_to_String (0 ms)
+[----------] 1 test from CheckErrorTest (32 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (32 ms total)
+[  PASSED  ] 1 test.

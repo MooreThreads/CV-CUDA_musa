@@ -14,7 +14,11 @@
 # limitations under the License.
 
 find_package(cvcuda REQUIRED)
-find_package(CUDAToolkit REQUIRED)
+if(USE_MUSA)
+    find_package(MUSAToolkit REQUIRED)
+else()
+    find_package(CUDAToolkit REQUIRED)
+endif()
 
 add_library(cvcuda_python_common STATIC
     Assert.cpp
@@ -33,6 +37,7 @@ target_link_libraries(cvcuda_python_common
         nvcv_types
         nvcv_util
         cvcuda
-        CUDA::cudart_static
+        $<$<BOOL:${USE_MUSA}>:MUSA::musart_static>
+        $<$<NOT:$<BOOL:${USE_MUSA}>>:CUDA::cudart_static>
         pybind11::pybind11
 )

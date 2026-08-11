@@ -46,15 +46,19 @@ set(CUOSD_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/cuOSD" PARENT_SCOPE)
 if(BUILD_BENCH)
     set(NVBench_ENABLE_CUPTI off)
     set(BUILD_SHARED_LIBS off)
-    add_subdirectory(nvbench)
-    # Because nvbench::main is an object library, cmake<=3.20 doesn't treat it
-    # like regular libraries, and just creating an cvcuda_nvbench interface
-    # library that depends on it doesn't work. We need to create an static
-    # library and pull in the objects created by nvbench::main, as per cmake
-    # docs.
-    add_library(cvcuda_nvbench_main STATIC $<TARGET_OBJECTS:nvbench::main>)
-    target_link_libraries(cvcuda_nvbench_main PUBLIC nvbench::nvbench)
-    target_include_directories(cvcuda_nvbench_main SYSTEM INTERFACE
-        ${CMAKE_CURRENT_SOURCE_DIR}/nvbench)
-    add_library(cvcuda::nvbench::main ALIAS cvcuda_nvbench_main)
+    if(USE_MUSA)
+        add_subdirectory(nvbench_musa)
+    else()
+        add_subdirectory(nvbench)
+        # Because nvbench::main is an object library, cmake<=3.20 doesn't treat it
+        # like regular libraries, and just creating an cvcuda_nvbench interface
+        # library that depends on it doesn't work. We need to create an static
+        # library and pull in the objects created by nvbench::main, as per cmake
+        # docs.
+        add_library(cvcuda_nvbench_main STATIC $<TARGET_OBJECTS:nvbench::main>)
+        target_link_libraries(cvcuda_nvbench_main PUBLIC nvbench::nvbench)
+        target_include_directories(cvcuda_nvbench_main SYSTEM INTERFACE
+            ${CMAKE_CURRENT_SOURCE_DIR}/nvbench)
+        add_library(cvcuda::nvbench::main ALIAS cvcuda_nvbench_main)
+    endif()
 endif()

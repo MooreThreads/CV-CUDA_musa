@@ -1,0 +1,27 @@
+id: round3-stream-id-invalid-default-stream
+round: 3
+source: CODE_ANALYSIS.md §4 Native Verification Discovery
+artifact: cvcuda_test_unit
+status: fixable_bug
+severity: medium
+category: runtime-api-compatibility
+summary: StreamIdTest.RegularAndDefault throws NVCV_ERROR_INVALID_ARGUMENT for a MUSA stream handle.
+evidence:
+  log: verify/cvcuda_test_unit.log
+  xml: verify/cvcuda_test_unit.xml
+  result: 15 passed, 1 skipped, 1 failed, 17 total
+  failed_tests:
+    - StreamIdTest.RegularAndDefault
+  message: C++ exception with description "NVCV_ERROR_INVALID_ARGUMENT: Invalid stream handle" thrown in the test body.
+expected_behavior: Regular and default stream identifiers should be accepted consistently by the MUSA runtime compatibility layer.
+observed_behavior: The test throws an invalid stream handle exception while other stream/cache tests pass.
+reproduction:
+  container: auto-musify-CV-CUDA
+  workspace: /workspace/CV-CUDA
+  command: ./build_musa_v2/bin/cvcuda_test_unit --gtest_color=no
+routing:
+  next_owner: musifier
+  recommended_action: Audit CUDA-to-MUSA stream handle translation and default/per-thread stream handling in the runtime shim and test compatibility layer.
+constraints:
+  - Do not special-case the test with a stub or skip.
+  - Preserve real invalid-handle errors if the runtime genuinely rejects a capability.

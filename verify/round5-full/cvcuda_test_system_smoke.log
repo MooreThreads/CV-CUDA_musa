@@ -1,0 +1,72 @@
+[==========] Running 25 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 6 tests from OpBndBox_Smoke
+[ RUN      ] OpBndBox_Smoke.operator_creation
+[       OK ] OpBndBox_Smoke.operator_creation (0 ms)
+[ RUN      ] OpBndBox_Smoke.basic_functionality_rgb8
+[       OK ] OpBndBox_Smoke.basic_functionality_rgb8 (3 ms)
+[ RUN      ] OpBndBox_Smoke.basic_functionality_rgba8
+[       OK ] OpBndBox_Smoke.basic_functionality_rgba8 (1 ms)
+[ RUN      ] OpBndBox_Smoke.multiple_boxes
+[       OK ] OpBndBox_Smoke.multiple_boxes (0 ms)
+[ RUN      ] OpBndBox_Smoke.memory_management
+[       OK ] OpBndBox_Smoke.memory_management (1 ms)
+[ RUN      ] OpBndBox_Smoke.edge_cases
+[0;33mWARNING: [0mPlease check if there is anything to draw.
+
+[0;33mWARNING: [0mPlease check if there is anything to draw
+
+[       OK ] OpBndBox_Smoke.edge_cases (0 ms)
+[----------] 6 tests from OpBndBox_Smoke (38 ms total)
+
+[----------] 8 tests from OpBoxBlur_Smoke
+[ RUN      ] OpBoxBlur_Smoke.operator_creation
+[       OK ] OpBoxBlur_Smoke.operator_creation (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.basic_functionality_rgb8
+[       OK ] OpBoxBlur_Smoke.basic_functionality_rgb8 (1 ms)
+[ RUN      ] OpBoxBlur_Smoke.basic_functionality_rgba8
+[       OK ] OpBoxBlur_Smoke.basic_functionality_rgba8 (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.multiple_boxes
+[       OK ] OpBoxBlur_Smoke.multiple_boxes (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.various_kernel_sizes
+[       OK ] OpBoxBlur_Smoke.various_kernel_sizes (2 ms)
+[ RUN      ] OpBoxBlur_Smoke.memory_management
+[       OK ] OpBoxBlur_Smoke.memory_management (1 ms)
+[ RUN      ] OpBoxBlur_Smoke.edge_cases
+[       OK ] OpBoxBlur_Smoke.edge_cases (0 ms)
+[ RUN      ] OpBoxBlur_Smoke.batch_processing
+[       OK ] OpBoxBlur_Smoke.batch_processing (0 ms)
+[----------] 8 tests from OpBoxBlur_Smoke (7 ms total)
+
+[----------] 11 tests from OpOSD_Smoke
+[ RUN      ] OpOSD_Smoke.operator_creation
+[       OK ] OpOSD_Smoke.operator_creation (0 ms)
+[ RUN      ] OpOSD_Smoke.rectangle_element
+[       OK ] OpOSD_Smoke.rectangle_element (0 ms)
+[ RUN      ] OpOSD_Smoke.text_element
+[       OK ] OpOSD_Smoke.text_element (1 ms)
+[ RUN      ] OpOSD_Smoke.line_element
+[       OK ] OpOSD_Smoke.line_element (0 ms)
+[ RUN      ] OpOSD_Smoke.point_element
+[       OK ] OpOSD_Smoke.point_element (0 ms)
+[ RUN      ] OpOSD_Smoke.circle_element
+[       OK ] OpOSD_Smoke.circle_element (0 ms)
+[ RUN      ] OpOSD_Smoke.multiple_elements
+[       OK ] OpOSD_Smoke.multiple_elements (1 ms)
+[ RUN      ] OpOSD_Smoke.memory_management
+[       OK ] OpOSD_Smoke.memory_management (1 ms)
+[ RUN      ] OpOSD_Smoke.edge_cases
+[0;33mWARNING: [0mPlease check if there is anything to draw.
+
+[0;33mWARNING: [0mPlease check if there is anything to draw
+
+[       OK ] OpOSD_Smoke.edge_cases (0 ms)
+[ RUN      ] OpOSD_Smoke.batch_processing
+[       OK ] OpOSD_Smoke.batch_processing (0 ms)
+[ RUN      ] OpOSD_Smoke.various_image_sizes
+[       OK ] OpOSD_Smoke.various_image_sizes (1 ms)
+[----------] 11 tests from OpOSD_Smoke (11 ms total)
+
+[----------] Global test environment tear-down
+[==========] 25 tests from 3 test suites ran. (58 ms total)
+[  PASSED  ] 25 tests.

@@ -19,7 +19,7 @@
 
 #include <common/String.hpp>
 #include <cvcuda/Types.h>
-#include <cvcuda/cuda_tools/TypeTraits.hpp>
+#include <common/CudaCompat.hpp>
 
 #include <map>
 #include <unordered_map>

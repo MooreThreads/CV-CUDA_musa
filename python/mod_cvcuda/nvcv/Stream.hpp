@@ -21,7 +21,7 @@
 #include "Cache.hpp"
 #include "Object.hpp"
 
-#include <cuda_runtime.h>
+#include <common/CudaCompat.hpp>
 #include <nvcv/python/LockMode.hpp>
 
 #include <atomic>

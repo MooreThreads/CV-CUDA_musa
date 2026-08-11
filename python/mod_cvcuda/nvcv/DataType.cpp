@@ -19,7 +19,7 @@
 
 #include <common/Assert.hpp>
 #include <common/String.hpp>
-#include <cvcuda/cuda_tools/TypeTraits.hpp>
+#include <common/CudaCompat.hpp>
 #include <nvcv/DataType.hpp>
 #include <pybind11/numpy.h>
 #include <pybind11/operators.h>

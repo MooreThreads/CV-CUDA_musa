@@ -21,7 +21,7 @@
 #include <common/String.hpp>
 #include <cvcuda/OpCopyMakeBorder.hpp>
 #include <cvcuda/Types.h>
-#include <cvcuda/cuda_tools/TypeTraits.hpp>
+#include <common/CudaCompat.hpp>
 #include <nvcv/DataType.hpp>
 #include <nvcv/python/ImageBatchVarShape.hpp>
 #include <nvcv/python/ResourceGuard.hpp>

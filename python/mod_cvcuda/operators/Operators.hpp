@@ -16,7 +16,11 @@
  */
 
 #include <common/Hash.hpp>
-#include <cvcuda/cuda_tools/MathOps.hpp>
+#ifdef NVCV_USE_MUSA
+#    include <cvcuda/cuda_tools_musa/MathOps.hpp>
+#else
+#    include <cvcuda/cuda_tools/MathOps.hpp>
+#endif
 #include <nvcv/python/Array.hpp>
 #include <nvcv/python/Cache.hpp>
 #include <nvcv/python/Container.hpp>
@@ -98,7 +102,9 @@ void ExportOpAdvCvtColor(py::module &m);
 void ExportOpLabel(py::module &m);
 void ExportOpPairwiseMatcher(py::module &m);
 void ExportOpStack(py::module &m);
+#ifndef NVCV_USE_MUSA
 void ExportOpFindHomography(py::module &m);
+#endif
 void ExportOpResizeCropConvertReformat(py::module &m);
 
 // Helper class that serves as generic python-side operator class.

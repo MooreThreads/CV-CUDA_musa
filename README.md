@@ -119,6 +119,10 @@ Please read our [Security](SECURITY.md) page to learn more.
 
 CV-CUDA originated as a collaboration between [NVIDIA][NVIDIA Develop] and [ByteDance][ByteDance].
 
+## CV-CUDA With MUSA
+
+Please refer to [MUSA](docs/musa/musa.md).
+
 ## References:
 
 - [CV-CUDA Online Documentation][CV-CUDA Documentation]

@@ -13,12 +13,21 @@
 #include "Definitions.hpp"
 
 #include <common/ValueTests.hpp>
-#include <cvcuda/priv/legacy/CvCudaLegacyHelpers.hpp>
+
+#ifdef NVCV_USE_MUSA
+#    include <cvcuda/priv_musa/legacy/CvCudaLegacyHelpers.hpp>
+#else
+#    include <cvcuda/priv/legacy/CvCudaLegacyHelpers.hpp>
+#endif
 
 namespace gt      = ::testing;
 namespace test    = nvcv::test;
 namespace util    = nvcv::util;
+#ifdef NVCV_USE_MUSA
+namespace legOp   = nvcv::legacy::musa_op;
+#else
 namespace legOp   = nvcv::legacy::cuda_op;
+#endif
 namespace helpers = nvcv::legacy::helpers;
 
 // clang-format off
